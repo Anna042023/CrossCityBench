@@ -3,7 +3,7 @@
 ## 🏆 Contribution
 
 <div align="center">
-  <img src="![The CrossCityBench architecture](./images/crosscitybench.png)" width="100%">
+  <img src="![The CrossCityBench architecture](./images/crosscitybench.jpg)" width="100%">
   <br>
   <small> The CrossCityBench architecture</small>
 </div>

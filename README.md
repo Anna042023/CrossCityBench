@@ -22,12 +22,12 @@ All analyses are supported by a complete set of supplementary materials (includi
 ## 📊 Core Datasets
 <div align="center">
 
-|  Dataset  |     Task      | #Sensors |   Time Range   | Interval |
+|  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
 |:---------:|:-------------:|:--------:|:-------------:|:--------:|
-| PeMS03    | Traffic Flow  | 358      | 09/2018-11/2018| 5 min    |
-| PeMS08    | Traffic Flow  | 170      | 07/2016-08/2016| 5 min    |
-| METR-LA   | Traffic Speed | 207      | 03/2012-06/2012| 5 min    |
-| PeMS-BAY  | Traffic Speed | 325      | 01/2017-05/2017| 5 min    |
+| PeMS03    | Traffic Flow  | 358      | 5 min| 131,040    |
+| PeMS08    | Traffic Flow  | 170      | 5 min| 89,280    |
+| PeMS-BAY  | Traffic Speed | 325      | 5 min| 217,440    |
+| METR-LA   | Traffic Speed | 207      | 5 min| 175,680    |
 
 </div>
 

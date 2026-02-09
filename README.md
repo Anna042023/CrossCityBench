@@ -95,9 +95,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
   </tbody>
 </table>
 
-<div align="center">
-  <strong>The technical pathway decision matrix for cross-city traffic prediction</strong>
-</div>
+## 🏷️ The technical pathway decision matrix for cross-city traffic prediction
 
 <table align="center" border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; margin: 20px 0;">
   <thead>
@@ -117,7 +115,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Alignment</td>
       <td align="center">D2MHyper</td>
       <td align="center">Needs source data; Unstable training</td>
-      <td align="center">High ΔM_shift (see robustness figure)</td>
+      <td align="center">High $\Delta\mathcal{M}_\text{shift}$</td>
     </tr>
     <tr>
       <td align="center">Extreme data scarcity</td>
@@ -125,7 +123,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Meta-learning</td>
       <td align="center">ST-GFSL</td>
       <td align="center">High meta-training cost; Task-sensitive</td>
-      <td align="center">High latency (see pareto figure); Section 4.2.2</td>
+      <td align="center">High latency</td>
     </tr>
     <tr>
       <td align="center">Multi-source data available</td>
@@ -133,7 +131,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Pre-training</td>
       <td align="center">CrossST</td>
       <td align="center">High pre-training resource cost</td>
-      <td align="center">High memory use (see pareto figure); Robustness (Section 4.2.2)</td>
+      <td align="center">High memory use; Robustness</td>
     </tr>
     <tr>
       <td align="center">Deployment efficiency critical</td>
@@ -141,7 +139,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Distillation</td>
       <td align="center">FGITrans</td>
       <td align="center">Teacher-dependent</td>
-      <td align="center">Low latency, small size (see pareto figure)</td>
+      <td align="center">Low latency, small size</td>
     </tr>
     <tr>
       <td align="center">Privacy constraints</td>
@@ -149,7 +147,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Federated learning</td>
       <td align="center">FedCTPM</td>
       <td align="center">Communication cost; Utility gap</td>
-      <td align="center">Communication overhead and G_util (Section 4.2.3)</td>
+      <td align="center">Communication overhead and $\mathcal{G}_\text{util}$</td>
     </tr>
     <tr>
       <td align="center">Ample resources</td>

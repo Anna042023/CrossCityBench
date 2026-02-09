@@ -3,7 +3,7 @@
 ## 🏆 Contribution
 
 <div align="center">
-  <img src="images/crosscitybench.jpg" alt="The CrossCityBench architecture" width="100%">
+  <img src="images/crosscitybench.jpg" alt="The CrossCityBench architecture" width="90%">
   <br>
   <small>The CrossCityBench architecture</small>
 </div>
@@ -147,7 +147,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Federated learning</td>
       <td align="center">FedCTPM</td>
       <td align="center">Communication cost; Utility gap</td>
-      <td align="center">Communication overhead and $\mathcal{G}_\text{util}$</td>
+      <td align="center">Communication overhead and <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_\text{util}" alt="G_util"></td>
     </tr>
     <tr>
       <td align="center">Ample resources</td>

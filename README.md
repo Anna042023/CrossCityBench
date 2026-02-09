@@ -95,7 +95,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
   </tbody>
 </table>
 
-## 🏷️ The technical pathway decision matrix for cross-city traffic prediction
+## 🧩 The technical pathway decision matrix for cross-city traffic prediction
 
 <table align="center" border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; margin: 20px 0;">
   <thead>
@@ -123,7 +123,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Meta-learning</td>
       <td align="center">ST-GFSL</td>
       <td align="center">High meta-training cost; Task-sensitive</td>
-      <td align="center">High latency</td>
+      <td align="center">High latency; Robustness</td>
     </tr>
     <tr>
       <td align="center">Multi-source data available</td>

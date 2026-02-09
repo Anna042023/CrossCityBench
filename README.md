@@ -115,7 +115,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
       <td align="center">Alignment</td>
       <td align="center">D2MHyper</td>
       <td align="center">Needs source data; Unstable training</td>
-      <td align="center">High $\Delta\mathcal{M}_\text{shift}$</td>
+      <td align="center">High <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_\text{shift}" alt="ΔM_shift"></td>
     </tr>
     <tr>
       <td align="center">Extreme data scarcity</td>

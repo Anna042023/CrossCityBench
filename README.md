@@ -35,12 +35,62 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 ## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
-| Categories | Guiding Principles | Representative Methods | Key Strengths | Primary Challenges |
-| :---: | :---: | :---: | :---: | :---: |
-| **Single-Domain Models** | Learn city-specific dynamics without transfer | GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE | No cross-city bias | Performance degrades under data scarcity |
-| **Cross-City Transfer Models** | | | | |
-| **↳ Alignment-based transfer** | Explicitly align source-target distributions | DASTNet, D2MHyper, DAGN, ST-DAAN | Mitigates moderate distribution shifts | Sensitive to large heterogeneity; alignment cost |
-| **↳ Meta-learning-based transfer** | Learn-to-adapt rapidly with few examples | MAML, ST-GFSL | Fast adaptation to new cities | Requires diverse meta-tasks; unstable optimization |
-| **↳ Pre-training-based transfer** | Learn transferable representations from multi-city data | CrossST, MTPB, STGCN-FT | Strong generalization; scalable | Needs large pre-training corpus; catastrophic forgetting |
-| **↳ Knowledge-distillation-based transfer** | Compress teacher knowledge into a lightweight student | FGITrans | Efficient deployment | Teacher-student capability gap; distillation loss |
-| **Privacy-Preserving Collaborative Models** | Collaborate without sharing raw data | FedCTPM, pFedCTP, FedGTP | Addresses scarcity and privacy jointly | Communication overhead; client heterogeneity |
+<table>
+  <thead>
+    <tr>
+      <th>Categories</th>
+      <th>Sub-categories</th>
+      <th>Guiding Principles</th>
+      <th>Representative Methods</th>
+      <th>Key Strengths</th>
+      <th>Primary Challenges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1"><strong>Single-Domain Models</strong></td>
+      <td></td>
+      <td>Learn city-specific dynamics without transfer</td>
+      <td>GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE</td>
+      <td>No cross-city bias</td>
+      <td>Performance degrades under data scarcity</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><strong>Cross-City Transfer Models</strong></td>
+      <td><em>Alignment-based transfer</em></td>
+      <td>Explicitly align source-target distributions</td>
+      <td>DASTNet, D2MHyper, DAGN, ST-DAAN</td>
+      <td>Mitigates moderate distribution shifts</td>
+      <td>Sensitive to large heterogeneity; alignment cost</td>
+    </tr>
+    <tr>
+      <td><em>Meta-learning-based transfer</em></td>
+      <td>Learn-to-adapt rapidly with few examples</td>
+      <td>MAML, ST-GFSL</td>
+      <td>Fast adaptation to new cities</td>
+      <td>Requires diverse meta-tasks; unstable optimization</td>
+    </tr>
+    <tr>
+      <td><em>Pre-training-based transfer</em></td>
+      <td>Learn transferable representations from multi-city data</td>
+      <td>CrossST, MTPB, STGCN-FT</td>
+      <td>Strong generalization; scalable</td>
+      <td>Needs large pre-training corpus; catastrophic forgetting</td>
+    </tr>
+    <tr>
+      <td><em>Knowledge-distillation-based transfer</em></td>
+      <td>Compress teacher knowledge into a lightweight student</td>
+      <td>FGITrans</td>
+      <td>Efficient deployment</td>
+      <td>Teacher-student capability gap; distillation loss</td>
+    </tr>
+    <tr>
+      <td rowspan="1"><strong>Privacy-Preserving Collaborative Models</strong></td>
+      <td></td>
+      <td>Collaborate without sharing raw data</td>
+      <td>FedCTPM, pFedCTP, FedGTP</td>
+      <td>Addresses scarcity and privacy jointly</td>
+      <td>Communication overhead; client heterogeneity</td>
+    </tr>
+  </tbody>
+</table>

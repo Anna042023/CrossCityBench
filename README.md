@@ -1,5 +1,15 @@
 # 🏙️ CrossCityBench: A Comprehensive Benchmark for Cross-City Traffic Prediction
 
+## 🗺️ Architecture
+
+<div align="center">
+  <img src="https://github.com/user-attachments/files/25177839/fig2.pdf" width="65%">
+  <br>
+  <small> The CrossCityBench architecture</small>
+</div>
+<br>
+
+
 ## 📊 Core Datasets
 <div align="center">
 

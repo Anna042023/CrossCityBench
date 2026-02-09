@@ -3,8 +3,7 @@
 ## 🗺️ Architecture
 
 <div align="center">
-  <img src="![fig2](https://github.com/user-attachments/assets/0088f9b2-df3e-45d4-aef9-4318343845a9)
-" width="65%">
+  <img src="https://github.com/user-attachments/assets/0088f9b2-df3e-45d4-aef9-4318343845a9" width="65%">
   <br>
   <small> The CrossCityBench architecture</small>
 </div>

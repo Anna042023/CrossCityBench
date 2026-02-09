@@ -3,7 +3,7 @@
 ## 🏆 Contribution
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/0088f9b2-df3e-45d4-aef9-4318343845a9" width="100%">
+  <img src="![The CrossCityBench architecture](./images/crosscitybench.png)" width="100%">
   <br>
   <small> The CrossCityBench architecture</small>
 </div>

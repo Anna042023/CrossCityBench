@@ -95,4 +95,69 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
   </tbody>
 </table>
 
+<div align="center">
+  <strong>The technical pathway decision matrix for cross-city traffic prediction</strong>
+</div>
 
+<table align="center" border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; margin: 20px 0;">
+  <thead>
+    <tr>
+      <th align="center"><strong>Constraints</strong></th>
+      <th align="center"><strong>Primary Goals</strong></th>
+      <th align="center"><strong>Paradigms</strong></th>
+      <th align="center"><strong>Example Models</strong></th>
+      <th align="center"><strong>Key Limitations</strong></th>
+      <th align="center"><strong>Quantitative References</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">Large distribution shift</td>
+      <td align="center">Optimal accuracy</td>
+      <td align="center">Alignment</td>
+      <td align="center">D2MHyper</td>
+      <td align="center">Needs source data; Unstable training</td>
+      <td align="center">High ΔM_shift (see robustness figure)</td>
+    </tr>
+    <tr>
+      <td align="center">Extreme data scarcity</td>
+      <td align="center">Fast adaptation</td>
+      <td align="center">Meta-learning</td>
+      <td align="center">ST-GFSL</td>
+      <td align="center">High meta-training cost; Task-sensitive</td>
+      <td align="center">High latency (see pareto figure); Section 4.2.2</td>
+    </tr>
+    <tr>
+      <td align="center">Multi-source data available</td>
+      <td align="center">Zero-shot robustness</td>
+      <td align="center">Pre-training</td>
+      <td align="center">CrossST</td>
+      <td align="center">High pre-training resource cost</td>
+      <td align="center">High memory use (see pareto figure); Robustness (Section 4.2.2)</td>
+    </tr>
+    <tr>
+      <td align="center">Deployment efficiency critical</td>
+      <td align="center">Efficient inference</td>
+      <td align="center">Distillation</td>
+      <td align="center">FGITrans</td>
+      <td align="center">Teacher-dependent</td>
+      <td align="center">Low latency, small size (see pareto figure)</td>
+    </tr>
+    <tr>
+      <td align="center">Privacy constraints</td>
+      <td align="center">Privacy-preserving performance</td>
+      <td align="center">Federated learning</td>
+      <td align="center">FedCTPM</td>
+      <td align="center">Communication cost; Utility gap</td>
+      <td align="center">Communication overhead and G_util (Section 4.2.3)</td>
+    </tr>
+    <tr>
+      <td align="center">Ample resources</td>
+      <td align="center">Generalization</td>
+      <td align="center">Foundation model</td>
+      <td align="center">Exploring</td>
+      <td align="center">Very high cost</td>
+      <td align="center">To be explored</td>
+    </tr>
+  </tbody>
+</table>

@@ -32,3 +32,15 @@ All analyses are supported by a complete set of supplementary materials (includi
 </div>
 
 All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Drive](https://drive.google.com/file/d/1oPLRyEN32peSLWLVNVcropHt5iBNUQxo).
+
+## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
+
+| Categories | Guiding Principles | Representative Methods | Key Strengths | Primary Challenges |
+| :--- | :--- | :--- | :--- | :--- |
+| **Single-Domain Models** | Learn city-specific dynamics without transfer | GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE | No cross‑city bias | Performance degrades under data scarcity |
+| **Cross‑City Transfer Models** | | | | |
+| _Alignment‑based transfer_ | Explicitly align source‑target distributions | DASTNet, D2MHyper, DAGN, ST‑DAAN | Mitigates moderate distribution shifts | Sensitive to large heterogeneity; alignment cost |
+| _Meta‑learning‑based transfer_ | Learn‑to‑adapt rapidly with few examples | MAML, ST‑GFSL | Fast adaptation to new cities | Requires diverse meta‑tasks; unstable optimization |
+| _Pre‑training‑based transfer_ | Learn transferable representations from multi‑city data | CrossST, MTPB, STGCN‑FT | Strong generalization; scalable | Needs large pre‑training corpus; catastrophic forgetting |
+| _Knowledge-distillation‑based transfer_ | Compress teacher knowledge into a lightweight student | FGITrans | Efficient deployment | Teacher‑student capability gap; distillation loss |
+| **Privacy‑Preserving Collaborative Models** | Collaborate without sharing raw data | FedCTPM, pFedCTP, FedGTP | Addresses scarcity and privacy jointly | Communication overhead; client heterogeneity |

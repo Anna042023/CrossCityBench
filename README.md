@@ -35,62 +35,64 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 ## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
-<table>
+<table align="center">
   <thead>
     <tr>
-      <th>Categories</th>
-      <th>Sub-categories</th>
-      <th>Guiding Principles</th>
-      <th>Representative Methods</th>
-      <th>Key Strengths</th>
-      <th>Primary Challenges</th>
+      <th align="center">Categories</th>
+      <th align="center">Sub-categories</th>
+      <th align="center">Guiding Principles</th>
+      <th align="center">Representative Methods</th>
+      <th align="center">Key Strengths</th>
+      <th align="center">Primary Challenges</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1"><strong>Single-Domain Models</strong></td>
-      <td></td>
-      <td>Learn city-specific dynamics without transfer</td>
-      <td>GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE</td>
-      <td>No cross-city bias</td>
-      <td>Performance degrades under data scarcity</td>
+      <td align="center" rowspan="1"><strong>Single-Domain Models</strong></td>
+      <td align="center"></td>
+      <td align="center">Learn city-specific dynamics without transfer</td>
+      <td align="center">GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE</td>
+      <td align="center">No cross-city bias</td>
+      <td align="center">Performance degrades under data scarcity</td>
     </tr>
     <tr>
-      <td rowspan="4"><strong>Cross-City Transfer Models</strong></td>
-      <td><em>Alignment-based transfer</em></td>
-      <td>Explicitly align source-target distributions</td>
-      <td>DASTNet, D2MHyper, DAGN, ST-DAAN</td>
-      <td>Mitigates moderate distribution shifts</td>
-      <td>Sensitive to large heterogeneity; alignment cost</td>
+      <td align="center" rowspan="4"><strong>Cross-City Transfer Models</strong></td>
+      <td align="center"><em>Alignment-based transfer</em></td>
+      <td align="center">Explicitly align source-target distributions</td>
+      <td align="center">DASTNet, D2MHyper, DAGN, ST-DAAN</td>
+      <td align="center">Mitigates moderate distribution shifts</td>
+      <td align="center">Sensitive to large heterogeneity; alignment cost</td>
     </tr>
     <tr>
-      <td><em>Meta-learning-based transfer</em></td>
-      <td>Learn-to-adapt rapidly with few examples</td>
-      <td>MAML, ST-GFSL</td>
-      <td>Fast adaptation to new cities</td>
-      <td>Requires diverse meta-tasks; unstable optimization</td>
+      <td align="center"><em>Meta-learning-based transfer</em></td>
+      <td align="center">Learn-to-adapt rapidly with few examples</td>
+      <td align="center">MAML, ST-GFSL</td>
+      <td align="center">Fast adaptation to new cities</td>
+      <td align="center">Requires diverse meta-tasks; unstable optimization</td>
     </tr>
     <tr>
-      <td><em>Pre-training-based transfer</em></td>
-      <td>Learn transferable representations from multi-city data</td>
-      <td>CrossST, MTPB, STGCN-FT</td>
-      <td>Strong generalization; scalable</td>
-      <td>Needs large pre-training corpus; catastrophic forgetting</td>
+      <td align="center"><em>Pre-training-based transfer</em></td>
+      <td align="center">Learn transferable representations from multi-city data</td>
+      <td align="center">CrossST, MTPB, STGCN-FT</td>
+      <td align="center">Strong generalization; scalable</td>
+      <td align="center">Needs large pre-training corpus; catastrophic forgetting</td>
     </tr>
     <tr>
-      <td><em>Knowledge-distillation-based transfer</em></td>
-      <td>Compress teacher knowledge into a lightweight student</td>
-      <td>FGITrans</td>
-      <td>Efficient deployment</td>
-      <td>Teacher-student capability gap; distillation loss</td>
+      <td align="center"><em>Knowledge-distillation-based transfer</em></td>
+      <td align="center">Compress teacher knowledge into a lightweight student</td>
+      <td align="center">FGITrans</td>
+      <td align="center">Efficient deployment</td>
+      <td align="center">Teacher-student capability gap; distillation loss</td>
     </tr>
     <tr>
-      <td rowspan="1"><strong>Privacy-Preserving Collaborative Models</strong></td>
-      <td></td>
-      <td>Collaborate without sharing raw data</td>
-      <td>FedCTPM, pFedCTP, FedGTP</td>
-      <td>Addresses scarcity and privacy jointly</td>
-      <td>Communication overhead; client heterogeneity</td>
+      <td align="center" rowspan="1"><strong>Privacy-Preserving Collaborative Models</strong></td>
+      <td align="center"></td>
+      <td align="center">Collaborate without sharing raw data</td>
+      <td align="center">FedCTPM, pFedCTP, FedGTP</td>
+      <td align="center">Addresses scarcity and privacy jointly</td>
+      <td align="center">Communication overhead; client heterogeneity</td>
     </tr>
   </tbody>
 </table>
+
+

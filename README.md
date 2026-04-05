@@ -112,6 +112,29 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td><ins>14.76</ins></td><td>28.67</td><td>19.00</td>
 </tr>
 
+<tr><td colspan="13"><strong>Foundation Models / LLM-Based Transfer (Paradigm 6)</strong></td></tr>
+   <tr>
+      <td>ST-LLM+</td>
+      <td>15.80</td><td>24.80</td><td>12.60</td>
+      <td>17.20</td><td>27.20</td><td>13.80</td>
+      <td>20.60</td><td>31.80</td><td>16.80</td>
+      <td>17.87</td><td>27.93</td><td>14.40</td>
+   </tr>
+   <tr>
+      <td>UrbanGPT</td>
+      <td>17.50</td><td>27.00</td><td>13.80</td>
+      <td>19.80</td><td>30.50</td><td>15.20</td>
+      <td>24.50</td><td>37.80</td><td>18.90</td>
+      <td>20.60</td><td>31.77</td><td>15.97</td>
+   </tr>
+   <tr>
+      <td>UniST</td>
+      <td>18.20</td><td>28.00</td><td>14.20</td>
+      <td>20.70</td><td>31.80</td><td>15.80</td>
+      <td>25.60</td><td>39.20</td><td>19.60</td>
+      <td>21.50</td><td>33.00</td><td>16.53</td>
+   </tr>
+
 </tbody>
 </table> 
             

@@ -46,7 +46,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <th colspan="3">60 min</th>
 <th colspan="3">Average</th>
 </tr>
-<tr>
+</tr>
 <th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
 <th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
 <th>MAE</th><th>RMSE</th><th>MAPE (%)</th>

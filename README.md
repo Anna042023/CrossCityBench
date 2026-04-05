@@ -78,6 +78,20 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td>17.54</td><td><u>26.98</u></td><td><u>13.48</u></td>
 </tr>
 
+<tr><td>DAGN</td>
+<td>16.83</td><td>24.53</td><td>12.57</td>
+<td>17.73</td><td>26.86</td><td>14.03</td>
+<td>21.78</td><td>33.88</td><td>17.20</td>
+<td>18.36</td><td>27.95</td><td>14.56</td>
+</tr>
+
+<tr><td>ST-DAAN</td>
+<td>18.33</td><td>27.37</td><td>12.27</td>
+<td>21.98</td><td>32.99</td><td>15.19</td>
+<td>29.33</td><td>43.47</td><td>19.78</td>
+<td>22.44</td><td>33.63</td><td>15.23</td>
+</tr>
+
 <tr><td colspan="13"><b>Pre-Training-Based Transfer (Paradigm 4)</b></td></tr>
 <tr>
 <td>CrossST</td>
@@ -85,6 +99,20 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td><b>14.65</b></td><td><b>23.60</b></td><td><b>9.63</b></td>
 <td><u>16.25</u></td><td><b>26.00</b></td><td><b>10.60</b></td>
 <td><b>14.67</b></td><td><b>23.49</b></td><td><b>9.59</b></td>
+</tr>
+
+<tr><td>MTPB</td>
+<td>21.92</td><td>31.69</td><td>15.17</td>
+<td>24.21</td><td>34.71</td><td>15.50</td>
+<td>27.53</td><td>39.75</td><td>18.30</td>
+<td>24.47</td><td>35.39</td><td>16.14</td>
+</tr>
+
+<tr><td>STGCN-FT</td>
+<td>18.11</td><td>27.17</td><td>13.99</td>
+<td>20.94</td><td>31.39</td><td>16.83</td>
+<td>26.63</td><td>39.17</td><td>20.09</td>
+<td>21.92</td><td>32.72</td><td>16.77</td>
 </tr>
 
 <tr><td colspan="13"><b>Knowledge Distillation (Paradigm 5)</b></td></tr>

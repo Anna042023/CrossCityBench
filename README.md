@@ -63,8 +63,16 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <tr><td>GBRT</td><td>27.11</td><td>44.28</td><td>16.41</td><td>29.35</td><td>46.93</td><td>17.79</td><td>34.12</td><td>52.76</td><td>21.05</td><td>29.68</td><td>47.37</td><td>18.09</td></tr>
 <tr><td>VAR</td><td>30.04</td><td>44.90</td><td>18.38</td><td>32.37</td><td>48.58</td><td>19.85</td><td>37.83</td><td>56.31</td><td>23.81</td><td>32.86</td><td>49.16</td><td>20.33</td></tr>
 <tr><td>AGCRN</td><td>26.48</td><td>46.25</td><td>13.59</td><td>26.65</td><td>46.92</td><td>13.61</td><td>32.49</td><td>52.35</td><td>17.22</td><td>28.03</td><td>48.09</td><td>14.50</td></tr>
+<tr><td>AllDeepSet</td><td>19.90</td><td>29.33</td><td>13.66</td><td>25.37</td><td>34.25</td><td>37.15</td><td>36.84</td><td>52.75</td><td>25.88</td><td>26.72</td><td>38.65</td><td>19.82</td></tr>
+<tr><td>DCRNN</td><td>17.06</td><td>26.46</td><td>12.71</td><td>20.11</td><td>31.26</td><td>14.29</td><td>26.61</td><td>40.51</td><td>19.51</td><td>20.53</td><td>31.66</td><td>14.82</td></tr>
+<tr><td>DyHSL</td><td>16.87</td><td>25.46</td><td>12.70</td><td>18.95</td><td>29.44</td><td>14.09</td><td>23.45</td><td>35.98</td><td>17.05</td><td>19.16</td><td>29.64</td><td>14.71</td></tr>
+<tr><td>GRU</td><td>23.79</td><td>33.02</td><td>24.61</td><td>33.34</td><td>42.95</td><td>38.50</td><td>37.22</td><td>51.33</td><td>45.44</td><td>30.02</td><td>40.80</td><td>34.02</td></tr>
+<tr><td>GWNet</td><td>21.03</td><td>29.92</td><td>20.19</td><td>25.51</td><td>36.89</td><td>22.65</td><td>36.30</td><td>51.17</td><td>29.62</td><td>26.56</td><td>38.07</td><td>23.83</td></tr>
+<tr><td>STGCN</td><td>18.85</td><td>29.14</td><td>12.87</td><td>23.65</td><td>36.55</td><td>15.60</td><td>33.31</td><td>51.41</td><td>20.49</td><td>24.61</td><td>38.00</td><td>15.95</td></tr>
+<tr><td>STG-NCDE</td><td>16.94</td><td>25.59</td><td>13.34</td><td>18.02</td><td>28.71</td><td>14.32</td><td>22.31</td><td>35.11</td><td>17.02</td><td>18.62</td><td>29.41</td><td>14.72</td></tr>
 
 <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
+<tr><td>DASTNet</td><td>17.79</td><td>26.65</td><td>13.03</td><td>20.64</td><td>31.09</td><td>14.56</td><td>27.14</td><td>40.02</td><td>18.80</td><td>21.15</td><td>31.98</td><td>15.47</td></tr>
 <tr>
 <td>D2MHyper</td>
 <td>15.34</td><td><u>23.49</u></td><td><u>12.01</u></td>
@@ -72,6 +80,12 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td>21.69</td><td>33.37</td><td><u>16.79</u></td>
 <td>17.54</td><td><u>26.98</u></td><td><u>13.48</u></td>
 </tr>
+<tr><td>DAGN</td><td>16.83</td><td>24.53</td><td>12.57</td><td>17.73</td><td>26.86</td><td>14.03</td><td>21.78</td><td>33.88</td><td>17.20</td><td>18.36</td><td>27.95</td><td>14.56</td></tr>
+<tr><td>ST-DAAN</td><td>18.33</td><td>27.37</td><td>12.27</td><td>21.98</td><td>32.99</td><td>15.19</td><td>29.33</td><td>43.47</td><td>19.78</td><td>22.44</td><td>33.63</td><td>15.23</td></tr>
+
+<tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr>
+<tr><td>MAML</td><td>20.20</td><td>28.61</td><td>19.33</td><td>24.30</td><td>33.70</td><td>25.05</td><td>32.65</td><td>44.25</td><td>36.49</td><td>24.89</td><td>34.40</td><td>26.11</td></tr>
+<tr><td>ST-GFSL</td><td>19.71</td><td>28.35</td><td>16.00</td><td>23.41</td><td>33.18</td><td>19.53</td><td>30.28</td><td>42.48</td><td>27.52</td><td>23.75</td><td>33.64</td><td>20.25</td></tr>
 
 <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
 <tr>
@@ -94,58 +108,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 </tbody>
 </table>
 
-<br>
-<hr>
-<br>
-
-<h4>🚗 Speed Prediction (PeMS-BAY → METR-LA)</h4>
-
-<table>
-<thead>
-<tr>
-<th rowspan="2">Methods (Paradigms)</th>
-<th colspan="3">15 min</th>
-<th colspan="3">30 min</th>
-<th colspan="3">60 min</th>
-<th colspan="3">Average</th>
-</tr>
-<tr>
-<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
-<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
-<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
-<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
-</tr>
-</thead>
-<tbody>
-
-<tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
-<tr>
-<td>D2MHyper</td>
-<td><strong>2.31</strong></td><td><strong>4.36</strong></td><td><strong>6.09</strong></td>
-<td><strong>2.66</strong></td><td><strong>5.00</strong></td><td><strong>6.99</strong></td>
-<td><strong>3.55</strong></td><td><strong>7.17</strong></td><td><strong>10.45</strong></td>
-<td><strong>2.74</strong></td><td><strong>5.28</strong></td><td><strong>7.47</strong></td>
-</tr>
-
-<tr>
-<td>DAGN</td>
-<td>3.04</td><td>5.57</td><td><u>7.24</u></td>
-<td>3.29</td><td><u>6.32</u></td><td><u>8.49</u></td>
-<td>3.93</td><td><u>7.41</u></td><td><u>10.78</u></td>
-<td>3.33</td><td><u>6.35</u></td><td><u>8.63</u></td>
-</tr>
-
-<tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
-<tr>
-<td>CrossST</td>
-<td><u>2.85</u></td><td><u>5.55</u></td><td>7.58</td>
-<td><u>3.26</u></td><td>6.58</td><td>9.21</td>
-<td><u>3.72</u></td><td>7.58</td><td>10.93</td>
-<td><u>3.21</u></td><td>6.40</td><td>9.02</td>
-</tr>
-
-</tbody>
-</table>
+<br><hr><br>
 
 ## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
 

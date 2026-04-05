@@ -71,10 +71,18 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <tr><td>DASTNet</td><td>17.79</td><td>26.65</td><td>13.03</td><td>20.64</td><td>31.09</td><td>14.56</td><td>27.14</td><td>40.02</td><td>18.80</td><td>21.15</td><td>31.98</td><td>15.47</td></tr>
 <tr>
 <td>D2MHyper</td>
-<td>15.34</td><td><u>23.49</u></td><td><u>12.01</u></td>
-<td>17.00</td><td><u>26.29</u></td><td><u>12.75</u></td>
-<td>21.69</td><td>33.37</td><td><u>16.79</u></td>
-<td>17.54</td><td><u>26.98</u></td><td><u>13.48</u></td>
+<td>15.34</td>
+<td><span style="text-decoration: underline;">23.49</span></td>
+<td><span style="text-decoration: underline;">12.01</span></td>
+<td>17.00</td>
+<td><span style="text-decoration: underline;">26.29</span></td>
+<td><span style="text-decoration: underline;">12.75</span></td>
+<td>21.69</td>
+<td>33.37</td>
+<td><span style="text-decoration: underline;">16.79</span></td>
+<td>17.54</td>
+<td><span style="text-decoration: underline;">26.98</span></td>
+<td><span style="text-decoration: underline;">13.48</span></td>
 </tr>
 <tr><td>DAGN</td><td>16.83</td><td>24.53</td><td>12.57</td><td>17.73</td><td>26.86</td><td>14.03</td><td>21.78</td><td>33.88</td><td>17.20</td><td>18.36</td><td>27.95</td><td>14.56</td></tr>
 <tr><td>ST-DAAN</td><td>18.33</td><td>27.37</td><td>12.27</td><td>21.98</td><td>32.99</td><td>15.19</td><td>29.33</td><td>43.47</td><td>19.78</td><td>22.44</td><td>33.63</td><td>15.23</td></tr>
@@ -95,16 +103,14 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></td></tr>
 <tr>
 <td>FGITrans</td>
-<td><u>14.63</u></td><td>28.29</td><td>18.91</td>
-<td><u>14.73</u></td><td>28.58</td><td>18.98</td>
-<td><strong>14.93</strong></td><td><u>29.14</u></td><td>19.10</td>
-<td><u>14.76</u></td><td>28.67</td><td>19.00</td>
+<td><span style="text-decoration: underline;">14.63</span></td><td>28.29</td><td>18.91</td>
+<td><span style="text-decoration: underline;">14.73</span></td><td>28.58</td><td>18.98</td>
+<td><strong>14.93</strong></td><td><span style="text-decoration: underline;">29.14</span></td><td>19.10</td>
+<td><span style="text-decoration: underline;">14.76</span></td><td>28.67</td><td>19.00</td>
 </tr>
 
 </tbody>
 </table>
-
-<br><hr><br>
 
 ### PeMS-BAY → METR-LA
 

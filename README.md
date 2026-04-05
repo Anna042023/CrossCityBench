@@ -40,61 +40,82 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <table>
 <thead>
 <tr>
-<th rowspan="2">Methods</th>
+<th rowspan="3">Methods (Paradigms)</th>
+<th colspan="12">PeMS08 (Target Domain)</th>
+</tr>
+<tr>
 <th colspan="3">15 min</th>
 <th colspan="3">30 min</th>
 <th colspan="3">60 min</th>
 <th colspan="3">Average</th>
 </tr>
 <tr>
-<th>MAE</th><th>RMSE</th><th>MAPE</th>
-<th>MAE</th><th>RMSE</th><th>MAPE</th>
-<th>MAE</th><th>RMSE</th><th>MAPE</th>
-<th>MAE</th><th>RMSE</th><th>MAPE</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr><td colspan="13"><b>Single-Domain Models (Paradigm 1)</b></td></tr>
+
 <tr><td>GBRT</td><td>27.11</td><td>44.28</td><td>16.41</td><td>29.35</td><td>46.93</td><td>17.79</td><td>34.12</td><td>52.76</td><td>21.05</td><td>29.68</td><td>47.37</td><td>18.09</td></tr>
 <tr><td>VAR</td><td>30.04</td><td>44.90</td><td>18.38</td><td>32.37</td><td>48.58</td><td>19.85</td><td>37.83</td><td>56.31</td><td>23.81</td><td>32.86</td><td>49.16</td><td>20.33</td></tr>
-<tr><td>AGCRN</td><td>26.48</td><td>46.25</td><td>13.59</td><td>26.65</td><td>46.92</td><td>13.61</td><td>32.49</td><td>52.35</td><td>17.22</td><td>28.03</td><td>48.09</td><td>14.50</td></tr>
-<tr><td>AllDeepSet</td><td>19.90</td><td>29.33</td><td>13.66</td><td>25.37</td><td>34.25</td><td>37.15</td><td>36.84</td><td>52.75</td><td>25.88</td><td>26.72</td><td>38.65</td><td>19.82</td></tr>
-<tr><td>DCRNN</td><td>17.06</td><td>26.46</td><td>12.71</td><td>20.11</td><td>31.26</td><td>14.29</td><td>26.61</td><td>40.51</td><td>19.51</td><td>20.53</td><td>31.66</td><td>14.82</td></tr>
-<tr><td>DyHSL</td><td>16.87</td><td>25.46</td><td>12.70</td><td>18.95</td><td>29.44</td><td>14.09</td><td>23.45</td><td>35.98</td><td>17.05</td><td>19.16</td><td>29.64</td><td>14.71</td></tr>
-<tr><td>GRU</td><td>23.79</td><td>33.02</td><td>24.61</td><td>33.34</td><td>42.95</td><td>38.50</td><td>37.22</td><td>51.33</td><td>45.44</td><td>30.02</td><td>40.80</td><td>34.02</td></tr>
-<tr><td>GWNet</td><td>21.03</td><td>29.92</td><td>20.19</td><td>25.51</td><td>36.89</td><td>22.65</td><td>36.30</td><td>51.17</td><td>29.62</td><td>26.56</td><td>38.07</td><td>23.83</td></tr>
-<tr><td>STGCN</td><td>18.85</td><td>29.14</td><td>12.87</td><td>23.65</td><td>36.55</td><td>15.60</td><td>33.31</td><td>51.41</td><td>20.49</td><td>24.61</td><td>38.00</td><td>15.95</td></tr>
-<tr><td>STG-NCDE</td><td>16.94</td><td>25.59</td><td>13.34</td><td>18.02</td><td>28.71</td><td>14.32</td><td>22.31</td><td>35.11</td><td>17.02</td><td>18.62</td><td>29.41</td><td>14.72</td></tr>
 
-<tr><td colspan="13"><b>Alignment-Based Transfer</b></td></tr>
-<tr><td>DASTNet</td><td>17.79</td><td>26.65</td><td>13.03</td><td>20.64</td><td>31.09</td><td>14.56</td><td>27.14</td><td>40.02</td><td>18.80</td><td>21.15</td><td>31.98</td><td>15.47</td></tr>
+<tr><td colspan="13"><b>Alignment-Based Transfer (Paradigm 2)</b></td></tr>
 
 <tr>
 <td>D2MHyper</td>
-<td>15.34</td><td><u>23.49</u></td><td><u>12.01</u></td>
-<td>17.00</td><td><u>26.29</u></td><td><u>12.75</u></td>
-<td>21.69</td><td>33.37</td><td><u>16.79</u></td>
-<td>17.54</td><td><u>26.98</u></td><td><u>13.48</u></td>
+<td>15.34</td>
+<td><u>23.49</u></td>
+<td><u>12.01</u></td>
+<td>17.00</td>
+<td><u>26.29</u></td>
+<td><u>12.75</u></td>
+<td>21.69</td>
+<td>33.37</td>
+<td><u>16.79</u></td>
+<td>17.54</td>
+<td><u>26.98</u></td>
+<td><u>13.48</u></td>
 </tr>
 
-<tr><td colspan="13"><b>Pre-Training-Based Transfer</b></td></tr>
+<tr><td colspan="13"><b>Pre-Training-Based Transfer (Paradigm 4)</b></td></tr>
+
 <tr>
-<td>CrossST</td>
-<td><b>13.68</b></td><td><b>21.79</b></td><td><b>8.81</b></td>
-<td><b>14.65</b></td><td><b>23.60</b></td><td><b>9.63</b></td>
-<td><u>16.25</u></td><td><b>26.00</b></td><td><b>10.60</b></td>
-<td><b>14.67</b></td><td><b>23.49</b></td><td><b>9.59</b></td>
+<td><b>CrossST</b></td>
+<td><b>13.68</b></td>
+<td><b>21.79</b></td>
+<td><b>8.81</b></td>
+<td><b>14.65</b></td>
+<td><b>23.60</b></td>
+<td><b>9.63</b></td>
+<td><u>16.25</u></td>
+<td><b>26.00</b></td>
+<td><b>10.60</b></td>
+<td><b>14.67</b></td>
+<td><b>23.49</b></td>
+<td><b>9.59</b></td>
 </tr>
 
-<tr><td colspan="13"><b>Knowledge Distillation</b></td></tr>
+<tr><td colspan="13"><b>Knowledge-Distillation-Based Transfer (Paradigm 5)</b></td></tr>
+
 <tr>
 <td>FGITrans</td>
-<td><u>14.63</u></td><td>28.29</td><td>18.91</td>
-<td><u>14.73</u></td><td>28.58</td><td>18.98</td>
-<td><b>14.93</b></td><td><u>29.14</u></td><td>19.10</td>
-<td><u>14.76</u></td><td>28.67</td><td>19.00</td>
+<td><u>14.63</u></td>
+<td>28.29</td>
+<td>18.91</td>
+<td><u>14.73</u></td>
+<td>28.58</td>
+<td>18.98</td>
+<td><b>14.93</b></td>
+<td><u>29.14</u></td>
+<td>19.10</td>
+<td><u>14.76</u></td>
+<td>28.67</td>
+<td>19.00</td>
 </tr>
 
 </tbody>

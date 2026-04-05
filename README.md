@@ -111,6 +111,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 </tbody>
 </table>
+
 ### PeMS-BAY → METR-LA
 
 <table>
@@ -156,10 +157,10 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 <tr>
 <td>DAGN</td>
-<td>3.04</td><td>5.57</td><td><u>7.24</u></td>
-<td>3.29</td><td><u>6.32</u></td><td><u>8.49</u></td>
-<td>3.93</td><td><u>7.41</u></td><td><u>10.78</u></td>
-<td>3.33</td><td><u>6.35</u></td><td><u>8.63</u></td>
+<td>3.04</td><td>5.57</td><td><ins>7.24</ins></td>
+<td>3.29</td><td><ins>6.32</ins></td><td><ins>8.49</ins></td>
+<td>3.93</td><td><ins>7.41</ins></td><td><ins>10.78</ins></td>
+<td>3.33</td><td><ins>6.35</ins></td><td><ins>8.63</ins></td>
 </tr>
 
 <tr><td>ST-DAAN</td><td>3.16</td><td>5.98</td><td>8.02</td><td>3.74</td><td>7.56</td><td>10.68</td><td>4.95</td><td>9.47</td><td>15.24</td><td>3.81</td><td>7.53</td><td>10.89</td></tr>
@@ -171,10 +172,10 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
 <tr>
 <td>CrossST</td>
-<td><u>2.85</u></td><td><u>5.55</u></td><td>7.58</td>
-<td><u>3.26</u></td><td>6.58</td><td>9.21</td>
-<td><u>3.72</u></td><td>7.58</td><td>10.93</td>
-<td><u>3.21</u></td><td>6.40</td><td>9.02</td>
+<td><ins>2.85</ins></td><td><ins>5.55</ins></td><td>7.58</td>
+<td><ins>3.26</ins></td><td>6.58</td><td>9.21</td>
+<td><ins>3.72</ins></td><td>7.58</td><td>10.93</td>
+<td><ins>3.21</ins></td><td>6.40</td><td>9.02</td>
 </tr>
 
 <tr><td>MTPB</td><td>3.14</td><td>5.68</td><td>7.59</td><td>3.70</td><td>7.10</td><td>10.00</td><td>4.68</td><td>8.57</td><td>13.17</td><td>3.75</td><td>7.00</td><td>10.08</td></tr>

@@ -68,8 +68,9 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <tr><td>STGCN</td><td>18.85</td><td>29.14</td><td>12.87</td><td>23.65</td><td>36.55</td><td>15.60</td><td>33.31</td><td>51.41</td><td>20.49</td><td>24.61</td><td>38.00</td><td>15.95</td></tr>
 <tr><td>STG-NCDE</td><td>16.94</td><td>25.59</td><td>13.34</td><td>18.02</td><td>28.71</td><td>14.32</td><td>22.31</td><td>35.11</td><td>17.02</td><td>18.62</td><td>29.41</td><td>14.72</td></tr>
 
-<tr><td colspan="13"><b>Alignment-Based Transfer (Paradigm 2)</b></td></tr>
+<tr><td colspan="13"><b>Alignment-Based Transfer</b></td></tr>
 <tr><td>DASTNet</td><td>17.79</td><td>26.65</td><td>13.03</td><td>20.64</td><td>31.09</td><td>14.56</td><td>27.14</td><td>40.02</td><td>18.80</td><td>21.15</td><td>31.98</td><td>15.47</td></tr>
+
 <tr>
 <td>D2MHyper</td>
 <td>15.34</td><td><u>23.49</u></td><td><u>12.01</u></td>
@@ -78,21 +79,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td>17.54</td><td><u>26.98</u></td><td><u>13.48</u></td>
 </tr>
 
-<tr><td>DAGN</td>
-<td>16.83</td><td>24.53</td><td>12.57</td>
-<td>17.73</td><td>26.86</td><td>14.03</td>
-<td>21.78</td><td>33.88</td><td>17.20</td>
-<td>18.36</td><td>27.95</td><td>14.56</td>
-</tr>
-
-<tr><td>ST-DAAN</td>
-<td>18.33</td><td>27.37</td><td>12.27</td>
-<td>21.98</td><td>32.99</td><td>15.19</td>
-<td>29.33</td><td>43.47</td><td>19.78</td>
-<td>22.44</td><td>33.63</td><td>15.23</td>
-</tr>
-
-<tr><td colspan="13"><b>Pre-Training-Based Transfer (Paradigm 4)</b></td></tr>
+<tr><td colspan="13"><b>Pre-Training-Based Transfer</b></td></tr>
 <tr>
 <td>CrossST</td>
 <td><b>13.68</b></td><td><b>21.79</b></td><td><b>8.81</b></td>
@@ -101,21 +88,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td><b>14.67</b></td><td><b>23.49</b></td><td><b>9.59</b></td>
 </tr>
 
-<tr><td>MTPB</td>
-<td>21.92</td><td>31.69</td><td>15.17</td>
-<td>24.21</td><td>34.71</td><td>15.50</td>
-<td>27.53</td><td>39.75</td><td>18.30</td>
-<td>24.47</td><td>35.39</td><td>16.14</td>
-</tr>
-
-<tr><td>STGCN-FT</td>
-<td>18.11</td><td>27.17</td><td>13.99</td>
-<td>20.94</td><td>31.39</td><td>16.83</td>
-<td>26.63</td><td>39.17</td><td>20.09</td>
-<td>21.92</td><td>32.72</td><td>16.77</td>
-</tr>
-
-<tr><td colspan="13"><b>Knowledge Distillation (Paradigm 5)</b></td></tr>
+<tr><td colspan="13"><b>Knowledge Distillation</b></td></tr>
 <tr>
 <td>FGITrans</td>
 <td><u>14.63</u></td><td>28.29</td><td>18.91</td>
@@ -126,8 +99,6 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 </tbody>
 </table>
-
-
 
 ## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
 

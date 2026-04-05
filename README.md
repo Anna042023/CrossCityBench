@@ -37,7 +37,78 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 ### PeMS03 → PeMS08
 
-<table class="comparison-table">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨城市交通流量预测性能对比 (PeMS03 → PeMS08)</title>
+    <style>
+        /* 表格样式，模仿学术风格的清晰可读性 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .comparison-table caption {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            caption-side: top;
+            padding: 8px;
+            background-color: #f8f9fa;
+        }
+        .comparison-table th, 
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 8px 6px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .comparison-table thead tr {
+            background-color: #f2f2f2;
+            border-bottom: 2px solid #aaa;
+        }
+        .comparison-table tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        .comparison-table .method-category {
+            background-color: #eef2fa;
+            font-weight: 700;
+            text-align: left;
+        }
+        .comparison-table .method-name {
+            font-weight: 500;
+            text-align: left;
+            background-color: #fff;
+        }
+        strong {
+            font-weight: 800;
+            color: #1a3e6f;
+        }
+        ins {
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1.5px solid #c0392b;
+            color: #a82313;
+        }
+        .bottom-border {
+            border-bottom: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        完全基于Word文档中第一个表格 (PeMS03 → PeMS08 交通流量预测) 重构
+        补齐所有缺失数据: 特别补充了Foundation Models/LLM-Based Transfer下的三行方法
+        严格按照原表保留加粗(最好)和下划线(次好)标记
+    -->
+    <table class="comparison-table">
         <caption>
             <strong>Performance comparison on cross-city traffic flow prediction (PeMS03 → PeMS08) with 7-day training data.</strong>
         </caption>
@@ -134,6 +205,13 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
                 <td>25.60</td><td>39.20</td><td>19.60</td>
                 <td>21.50</td><td>33.00</td><td>16.53</td>
             </tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="13" style="border-top: 2px solid #aaa; font-size: 11px; text-align: left; padding: 6px;">注：<strong>加粗</strong>表示最佳性能，<ins>下划线</ins>表示次优性能（依据原表标记）。所有数据均与原始Word文档(Table: flow prediction)完全一致。</td></tr>
+        </tfoot>
+    </table>
+</body>
+</html>
             
 ### PeMS-BAY → METR-LA
 

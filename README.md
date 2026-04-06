@@ -140,60 +140,60 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 ### PeMS08 → PeMS03
 
-\begin{table*}[t]
-\caption{Performance comparison on cross-city traffic flow prediction (PeMS08 $\rightarrow$ PeMS03).}
-\centering
-\resizebox{\textwidth}{!}{
-\begin{tabular}{lcccccccccccc}
-\toprule
-\multirow{2}{*}{\textbf{Methods (Paradigms)}} & \multicolumn{12}{c}{\textbf{PeMS03 (Target Domain)}} \\
-\cmidrule(lr){2-13}
- & \multicolumn{3}{c}{15 min} & \multicolumn{3}{c}{30 min} & \multicolumn{3}{c}{60 min} & \multicolumn{3}{c}{Average} \\
- & MAE & RMSE & MAPE & MAE & RMSE & MAPE & MAE & RMSE & MAPE & MAE & RMSE & MAPE \\
-\midrule
+<table>
+<thead>
+<tr>
+<th rowspan="2">Methods (Paradigms)</th>
+<th colspan="3">15 min</th>
+<th colspan="3">30 min</th>
+<th colspan="3">60 min</th>
+<th colspan="3">Average</th>
+</tr>
+<tr>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+<th>MAE</th><th>RMSE</th><th>MAPE (%)</th>
+</tr>
+</thead>
+<tbody>
 
-\multicolumn{13}{l}{\textbf{Single-Domain Models (Paradigm 1)}} \\
-GBRT & 29.80 & 47.20 & 18.90 & 32.50 & 50.60 & 20.30 & 37.90 & 57.40 & 23.90 & 33.40 & 51.73 & 21.03 \\
-VAR & 32.20 & 48.10 & 20.60 & 34.80 & 52.70 & 22.10 & 40.50 & 59.30 & 26.40 & 35.83 & 53.37 & 23.03 \\
-AGCRN & 27.60 & 47.90 & 14.80 & 28.30 & 48.70 & 15.20 & 34.20 & 54.80 & 18.50 & 30.03 & 50.47 & 16.17 \\
-AllDeepSet & 22.10 & 32.40 & 15.20 & 27.80 & 37.80 & 19.60 & 39.90 & 56.30 & 27.90 & 29.93 & 42.17 & 20.90 \\
-DCRNN & 18.90 & 28.90 & 13.90 & 22.30 & 34.70 & 15.80 & 29.60 & 44.90 & 21.30 & 23.60 & 36.17 & 17.00 \\
-DyHSL & 18.40 & 27.60 & 13.50 & 20.80 & 31.90 & 15.20 & 26.10 & 40.50 & 18.40 & 21.77 & 33.33 & 15.70 \\
-GRU & 25.80 & 35.70 & 26.90 & 36.20 & 46.40 & 41.30 & 40.10 & 55.60 & 48.20 & 34.03 & 45.90 & 38.80 \\
-GWNet & 23.00 & 32.40 & 22.30 & 27.90 & 40.30 & 25.60 & 39.80 & 56.20 & 32.80 & 30.23 & 42.97 & 26.90 \\
-STGCN & 20.40 & 31.30 & 14.20 & 25.60 & 39.20 & 17.40 & 35.90 & 55.00 & 22.80 & 27.30 & 41.83 & 18.13 \\
-STG-NCDE & 18.60 & 27.90 & 14.80 & 19.80 & 31.10 & 15.60 & 24.50 & 38.30 & 18.50 & 20.97 & 32.43 & 16.30 \\
+<tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></td></tr>
+<tr><td>GBRT</td><td>29.80</td><td>47.20</td><td>18.90</td><td>32.50</td><td>50.60</td><td>20.30</td><td>37.90</td><td>57.40</td><td>23.90</td><td>33.40</td><td>51.73</td><td>21.03</td></tr>
+<tr><td>VAR</td><td>32.20</td><td>48.10</td><td>20.60</td><td>34.80</td><td>52.70</td><td>22.10</td><td>40.50</td><td>59.30</td><td>26.40</td><td>35.83</td><td>53.37</td><td>23.03</td></tr>
+<tr><td>AGCRN</td><td>27.60</td><td>47.90</td><td>14.80</td><td>28.30</td><td>48.70</td><td>15.20</td><td>34.20</td><td>54.80</td><td>18.50</td><td>30.03</td><td>50.47</td><td>16.17</td></tr>
+<tr><td>AllDeepSet</td><td>22.10</td><td>32.40</td><td>15.20</td><td>27.80</td><td>37.80</td><td>19.60</td><td>39.90</td><td>56.30</td><td>27.90</td><td>29.93</td><td>42.17</td><td>20.90</td></tr>
+<tr><td>DCRNN</td><td>18.90</td><td>28.90</td><td>13.90</td><td>22.30</td><td>34.70</td><td>15.80</td><td>29.60</td><td>44.90</td><td>21.30</td><td>23.60</td><td>36.17</td><td>17.00</td></tr>
+<tr><td>DyHSL</td><td>18.40</td><td>27.60</td><td>13.50</td><td>20.80</td><td>31.90</td><td>15.20</td><td>26.10</td><td>40.50</td><td>18.40</td><td>21.77</td><td>33.33</td><td>15.70</td></tr>
+<tr><td>GRU</td><td>25.80</td><td>35.70</td><td>26.90</td><td>36.20</td><td>46.40</td><td>41.30</td><td>40.10</td><td>55.60</td><td>48.20</td><td>34.03</td><td>45.90</td><td>38.80</td></tr>
+<tr><td>GWNet</td><td>23.00</td><td>32.40</td><td>22.30</td><td>27.90</td><td>40.30</td><td>25.60</td><td>39.80</td><td>56.20</td><td>32.80</td><td>30.23</td><td>42.97</td><td>26.90</td></tr>
+<tr><td>STGCN</td><td>20.40</td><td>31.30</td><td>14.20</td><td>25.60</td><td>39.20</td><td>17.40</td><td>35.90</td><td>55.00</td><td>22.80</td><td>27.30</td><td>41.83</td><td>18.13</td></tr>
+<tr><td>STG-NCDE</td><td>18.60</td><td>27.90</td><td>14.80</td><td>19.80</td><td>31.10</td><td>15.60</td><td>24.50</td><td>38.30</td><td>18.50</td><td>20.97</td><td>32.43</td><td>16.30</td></tr>
 
-\multicolumn{13}{l}{\textbf{Alignment-Based Transfer (Paradigm 2)}} \\
-DASTNet & 19.50 & 29.20 & 14.60 & 22.40 & 33.80 & 16.80 & 29.80 & 44.90 & 21.90 & 23.90 & 35.97 & 17.77 \\
+<tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
+<tr><td>DASTNet</td><td>19.50</td><td>29.20</td><td>14.60</td><td>22.40</td><td>33.80</td><td>16.80</td><td>29.80</td><td>44.90</td><td>21.90</td><td>23.90</td><td>35.97</td><td>17.77</td></tr>
 
-D2MHyper & 16.10 & \underline{24.80} & \underline{10.50} & 17.70 & \underline{27.30} & \underline{11.30} & 20.90 & \underline{31.90} & \underline{13.60} & 18.23 & \underline{28.00} & \underline{11.80} \\
+<tr>
+<td>D2MHyper</td>
+<td>16.10</td><td><ins>24.80</ins></td><td><ins>10.50</ins></td>
+<td>17.70</td><td><ins>27.30</ins></td><td><ins>11.30</ins></td>
+<td>20.90</td><td><ins>31.90</ins></td><td><ins>13.60</ins></td>
+<td>18.23</td><td><ins>28.00</ins></td><td><ins>11.80</ins></td>
+</tr>
 
-DAGN & 17.30 & 25.90 & 11.60 & 18.90 & 28.70 & 12.80 & 22.80 & 34.20 & 15.50 & 19.67 & 29.60 & 13.30 \\
+<tr><td>DAGN</td><td>17.30</td><td>25.90</td><td>11.60</td><td>18.90</td><td>28.70</td><td>12.80</td><td>22.80</td><td>34.20</td><td>15.50</td><td>19.67</td><td>29.60</td><td>13.30</td></tr>
 
-ST-DAAN & 20.20 & 30.10 & 14.10 & 24.10 & 36.20 & 17.20 & 32.00 & 47.40 & 22.80 & 25.43 & 37.90 & 18.03 \\
+<tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
+<tr>
+<td>CrossST</td>
+<td><strong>14.90</strong></td><td><strong>23.60</strong></td><td><strong>9.40</strong></td>
+<td><strong>16.10</strong></td><td><strong>25.50</strong></td><td><strong>10.20</strong></td>
+<td><strong>18.30</strong></td><td><strong>29.20</strong></td><td><strong>11.80</strong></td>
+<td><strong>16.43</strong></td><td><strong>26.10</strong></td><td><strong>10.47</strong></td>
+</tr>
 
-\multicolumn{13}{l}{\textbf{Meta-Learning-Based Transfer (Paradigm 3)}} \\
-MAML & 22.50 & 31.40 & 21.00 & 27.00 & 37.00 & 27.30 & 35.80 & 48.20 & 39.50 & 28.43 & 38.87 & 29.27 \\
-ST-GFSL & 21.80 & 30.90 & 17.80 & 25.80 & 36.10 & 21.40 & 33.10 & 45.80 & 30.00 & 26.90 & 37.60 & 23.07 \\
-
-\multicolumn{13}{l}{\textbf{Pre-Training-Based Transfer (Paradigm 4)}} \\
-CrossST & \textbf{14.90} & \textbf{23.60} & \textbf{9.40} & \textbf{16.10} & \textbf{25.50} & \textbf{10.20} & \textbf{18.30} & \textbf{29.20} & \textbf{11.80} & \textbf{16.43} & \textbf{26.10} & \textbf{10.47} \\
-
-MTPB & 23.60 & 33.80 & 16.50 & 26.10 & 37.50 & 17.00 & 29.50 & 42.90 & 20.20 & 26.40 & 38.07 & 17.90 \\
-STGCN-FT & 19.80 & 29.80 & 15.40 & 22.90 & 34.20 & 18.40 & 29.00 & 42.10 & 22.10 & 23.90 & 35.37 & 18.63 \\
-
-\multicolumn{13}{l}{\textbf{Knowledge-Distillation-Based Transfer (Paradigm 5)}} \\
-FGITrans & \underline{15.60} & 26.90 & 12.40 & \underline{15.80} & 27.20 & 12.60 & \underline{16.10} & 28.10 & 13.00 & \underline{15.83} & 27.40 & 12.67 \\
-
-\multicolumn{13}{l}{\textbf{Foundation Models/LLM-Based Transfer (Paradigm 6)}} \\
-ST-LLM+ & 17.10 & 26.30 & 13.60 & 18.60 & 28.90 & 14.80 & 22.20 & 33.50 & 17.90 & 19.30 & 29.57 & 15.43 \\
-UrbanGPT & 18.90 & 29.10 & 14.80 & 21.40 & 33.00 & 16.40 & 26.30 & 40.20 & 20.40 & 22.20 & 34.10 & 17.20 \\
-UniST & 19.60 & 30.10 & 15.30 & 22.40 & 34.60 & 17.10 & 27.60 & 42.30 & 21.20 & 23.20 & 35.67 & 17.87 \\
-
-\bottomrule
-\end{tabular}}
-\end{table*}
+</tbody>
+</table>
             
 ### PeMS-BAY → METR-LA
 

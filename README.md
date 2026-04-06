@@ -175,13 +175,26 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 
 <tr>
 <td>D2MHyper</td>
-<td>16.10</td><td><ins>24.80</ins></td><td><ins>10.50</ins></td>
-<td>17.70</td><td><ins>27.30</ins></td><td><ins>11.30</ins></td>
-<td>20.90</td><td><ins>31.90</ins></td><td><ins>13.60</ins></td>
-<td>18.23</td><td><ins>28.00</ins></td><td><ins>11.80</ins></td>
+<td>16.10</td>
+<td><ins>24.80</ins></td>
+<td><ins>10.50</ins></td>
+<td>17.70</td>
+<td><ins>27.30</ins></td>
+<td><ins>11.30</ins></td>
+<td>20.90</td>
+<td><ins>31.90</ins></td>
+<td><ins>13.60</ins></td>
+<td>18.23</td>
+<td><ins>28.00</ins></td>
+<td><ins>11.80</ins></td>
 </tr>
 
 <tr><td>DAGN</td><td>17.30</td><td>25.90</td><td>11.60</td><td>18.90</td><td>28.70</td><td>12.80</td><td>22.80</td><td>34.20</td><td>15.50</td><td>19.67</td><td>29.60</td><td>13.30</td></tr>
+<tr><td>ST-DAAN</td><td>20.20</td><td>30.10</td><td>14.10</td><td>24.10</td><td>36.20</td><td>17.20</td><td>32.00</td><td>47.40</td><td>22.80</td><td>25.43</td><td>37.90</td><td>18.03</td></tr>
+
+<tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr>
+<tr><td>MAML</td><td>22.50</td><td>31.40</td><td>21.00</td><td>27.00</td><td>37.00</td><td>27.30</td><td>35.80</td><td>48.20</td><td>39.50</td><td>28.43</td><td>38.87</td><td>29.27</td></tr>
+<tr><td>ST-GFSL</td><td>21.80</td><td>30.90</td><td>17.80</td><td>25.80</td><td>36.10</td><td>21.40</td><td>33.10</td><td>45.80</td><td>30.00</td><td>26.90</td><td>37.60</td><td>23.07</td></tr>
 
 <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
 <tr>
@@ -191,6 +204,23 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
 <td><strong>18.30</strong></td><td><strong>29.20</strong></td><td><strong>11.80</strong></td>
 <td><strong>16.43</strong></td><td><strong>26.10</strong></td><td><strong>10.47</strong></td>
 </tr>
+
+<tr><td>MTPB</td><td>23.60</td><td>33.80</td><td>16.50</td><td>26.10</td><td>37.50</td><td>17.00</td><td>29.50</td><td>42.90</td><td>20.20</td><td>26.40</td><td>38.07</td><td>17.90</td></tr>
+<tr><td>STGCN-FT</td><td>19.80</td><td>29.80</td><td>15.40</td><td>22.90</td><td>34.20</td><td>18.40</td><td>29.00</td><td>42.10</td><td>22.10</td><td>23.90</td><td>35.37</td><td>18.63</td></tr>
+
+<tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></td></tr>
+<tr>
+<td>FGITrans</td>
+<td><ins>15.60</ins></td><td>26.90</td><td>12.40</td>
+<td><ins>15.80</ins></td><td>27.20</td><td>12.60</td>
+<td><strong>16.10</strong></td><td><ins>28.10</ins></td><td>13.00</td>
+<td><ins>15.83</ins></td><td>27.40</td><td>12.67</td>
+</tr>
+
+<tr><td colspan="13"><strong>Foundation Models/LLM-Based Transfer (Paradigm 6)</strong></td></tr>
+<tr><td>ST-LLM+</td><td>17.10</td><td>26.30</td><td>13.60</td><td>18.60</td><td>28.90</td><td>14.80</td><td>22.20</td><td>33.50</td><td>17.90</td><td>19.30</td><td>29.57</td><td>15.43</td></tr>
+<tr><td>UrbanGPT</td><td>18.90</td><td>29.10</td><td>14.80</td><td>21.40</td><td>33.00</td><td>16.40</td><td>26.30</td><td>40.20</td><td>20.40</td><td>22.20</td><td>34.10</td><td>17.20</td></tr>
+<tr><td>UniST</td><td>19.60</td><td>30.10</td><td>15.30</td><td>22.40</td><td>34.60</td><td>17.10</td><td>27.60</td><td>42.30</td><td>21.20</td><td>23.20</td><td>35.67</td><td>17.87</td></tr>
 
 </tbody>
 </table>

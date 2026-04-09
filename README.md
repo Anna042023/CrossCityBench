@@ -183,7 +183,7 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
     <tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></td></tr>
     <tr><td>FGITrans</td><td>15.35</td><td>29.20</td><td>19.85</td><td>15.45</td><td>29.50</td><td>19.90</td><td>15.65</td><td>30.05</td><td>20.05</td><td>15.48</td><td>29.58</td><td>19.93</td></tr>
     <tr><td colspan="13"><strong>Foundation Models/LLM-Based Transfer (Paradigm 6)</strong></td></tr>
-    <tr><td>ST-LLM+</td><td>16.60</td><td>25.60</td><td>13.20</td><td>18.05</td><td>28.05</td><td>14.45</td><td>21.60</td><td>32.80</td><td>17.60</td><td>18.75</td><td>28.82</td><td>15.08</td></tr>
+    <tr><td>ST-LLM+</td><td>16.60</td><td>25.60</td><td>13.20</td><td>18.05</td><td>28.05</td><td>14.45</td><td>21.60</td><td><ins>32.80</ins></td><td>17.60</td><td>18.75</td><td>28.82</td><td>15.08</td></tr>
     <tr><td>UrbanGPT</td><td>18.35</td><td>27.85</td><td>14.45</td><td>20.75</td><td>31.45</td><td>15.90</td><td>25.70</td><td>38.95</td><td>19.80</td><td>21.60</td><td>32.75</td><td>16.72</td></tr>
     <tr><td>UniST</td><td>19.10</td><td>28.85</td><td>14.90</td><td>21.70</td><td>32.80</td><td>16.55</td><td>26.85</td><td>40.40</td><td>20.55</td><td>22.55</td><td>34.02</td><td>17.33</td></tr>
   </tbody>

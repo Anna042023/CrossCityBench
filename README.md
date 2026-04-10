@@ -52,6 +52,15 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 - **Fuzhou:** The Fuzhou dataset is collected from Fuzhou, the capital city of Fujian Province in southeastern China. Fuzhou has a complex geographical environment consisting of rivers, hills, and coastal areas, which results in a heterogeneous and partially constrained road network. The urban traffic is influenced by both natural barriers and high population density, leading to diverse traffic patterns with frequent fluctuations and localized congestion.
 
+The above datasets are obtained from real-world urban traffic monitoring systems, where sensor locations correspond to major intersections and arterial roads. The geographical coordinates of sensors are derived from map services, and the pairwise distances between connected nodes are computed based on road network proximity. Traffic flow data are collected at a 5-minute interval from traffic sensing devices, such as loop detectors or camera-based monitoring systems, and further processed to ensure temporal consistency and data quality.
+
+<div align="center">
+  <img src="Urban Structure.png" alt="Urban Structures" width="80%">
+  <br>
+  <small>Urban Structures</small>
+</div>
+<br>
+
 The above three constructed datasets can be found in:
 [All Revisions/Newly Constructed Datasets](./All%20Revisions/Newly%20Constructed%20Datasets/)
 

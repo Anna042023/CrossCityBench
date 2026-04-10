@@ -5,7 +5,7 @@
 <div align="center">
   <img src="images/crosscitybench.jpg" alt="The CrossCityBench architecture" width="90%">
   <br>
-  <small>The CrossCityBench architecture</small>
+  <strong>The CrossCityBench architecture</strong>
 </div>
 <br>
 
@@ -57,7 +57,7 @@ The above datasets are obtained from real-world urban traffic monitoring systems
 <div align="center">
   <img src="Urban Structure.png" alt="Urban Structures" width="80%">
   <br>
-  <small>Urban Structures</small>
+  <strong>Urban Structures</strong>
 </div>
 <br>
 

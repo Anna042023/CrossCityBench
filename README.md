@@ -170,20 +170,20 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
     <tr><td>STG-NCDE</td><td>17.85</td><td>26.50</td><td>14.00</td><td>18.95</td><td>29.65</td><td>15.05</td><td>23.20</td><td>36.30</td><td>17.80</td><td>19.67</td><td>30.48</td><td>15.42</td></tr>
     <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
     <tr><td>DASTNet</td><td>18.66</td><td>27.55</td><td>13.68</td><td>21.55</td><td>32.05</td><td>15.25</td><td>28.20</td><td>41.30</td><td>19.65</td><td>22.14</td><td>33.00</td><td>16.20</td></tr>
-    <tr><td>D2MHyper</td><td>16.10</td><td><ins>24.20</ins></td><td><ins>12.60</ins></td><td><ins>17.85</ins></td><td><ins>27.05</ins></td><td><ins>13.35</ins></td><td><ins>22.70</ins></td><td>34.50</td><td><ins>17.55</ins></td><td><ins>18.42</ins></td><td><ins>27.90</ins></td><td><ins>14.12</ins></td></tr>
+    <tr><td>D2MHyper</td><td>16.10</td><td><ins>24.20</ins></td><td><ins>12.60</ins></td><td>17.85</td><td><ins>27.05</ins></td><td><ins>13.35</ins></td><td>22.70</td><td>34.50</td><td><ins>17.55</ins></td><td>18.42</td><td><ins>27.90</ins></td><td><ins>14.12</ins></td></tr>
     <tr><td>DAGN</td><td>17.68</td><td>25.30</td><td>13.20</td><td>18.60</td><td>27.70</td><td>14.70</td><td>22.85</td><td>35.05</td><td>18.05</td><td>19.28</td><td>28.85</td><td>15.28</td></tr>
     <tr><td>ST-DAAN</td><td>19.25</td><td>28.20</td><td>12.90</td><td>23.05</td><td>34.05</td><td>15.90</td><td>30.55</td><td>44.80</td><td>20.65</td><td>23.55</td><td>34.68</td><td>15.98</td></tr>
     <tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr>
     <tr><td>MAML</td><td>21.15</td><td>29.50</td><td>20.30</td><td>25.40</td><td>34.70</td><td>26.20</td><td>34.00</td><td>45.60</td><td>38.10</td><td>26.05</td><td>35.60</td><td>27.40</td></tr>
     <tr><td>ST-GFSL</td><td>20.65</td><td>29.20</td><td>16.80</td><td>24.50</td><td>34.15</td><td>20.50</td><td>31.60</td><td>43.80</td><td>28.80</td><td>24.85</td><td>34.72</td><td>21.20</td></tr>
     <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
-    <tr><td>CrossST</td><td><strong>14.38</strong></td><td><strong>22.50</strong></td><td><strong>9.25</strong></td><td><strong>15.40</strong></td><td><strong>24.35</strong></td><td><strong>10.10</strong></td><td><strong>17.05</strong></td><td><strong>26.80</strong></td><td><strong>11.10</strong></td><td><strong>15.42</strong></td><td><strong>24.22</strong></td><td><strong>10.05</strong></td></tr>
+    <tr><td>CrossST</td><td><strong>14.38</strong></td><td><strong>22.50</strong></td><td><strong>9.25</strong></td><td><strong>15.40</strong></td><td><strong>24.35</strong></td><td><strong>10.10</strong></td><td><ins>17.05</ins></td><td><strong>26.80</strong></td><td><strong>11.10</strong></td><td><strong>15.42</strong></td><td><strong>24.22</strong></td><td><strong>10.05</strong></td></tr>
     <tr><td>MTPB</td><td>23.00</td><td>32.70</td><td>15.90</td><td>25.35</td><td>35.80</td><td>16.25</td><td>28.85</td><td>41.00</td><td>19.20</td><td>25.65</td><td>36.50</td><td>16.93</td></tr>
     <tr><td>STGCN-FT</td><td>19.00</td><td>28.05</td><td>14.68</td><td>21.95</td><td>32.35</td><td>17.65</td><td>27.90</td><td>40.40</td><td>21.05</td><td>22.95</td><td>33.75</td><td>17.59</td></tr>
     <tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></td></tr>
-    <tr><td>FGITrans</td><td><ins>15.35</ins></td><td>29.20</td><td>19.85</td><td>15.45</td><td>29.50</td><td>19.90</td><td>15.65</td><td>30.05</td><td>20.05</td><td>15.48</td><td>29.58</td><td>19.93</td></tr>
+    <tr><td>FGITrans</td><td><ins>15.35</ins></td><td>29.20</td><td>19.85</td><td><ins>15.45</ins></td><td>29.50</td><td>19.90</td><td><strong>15.65</strong></td><td><ins>30.05</ins></td><td>20.05</td><td><ins>15.48</ins></td><td>29.58</td><td>19.93</td></tr>
     <tr><td colspan="13"><strong>Foundation Models/LLM-Based Transfer (Paradigm 6)</strong></td></tr>
-    <tr><td>ST-LLM+</td><td>16.60</td><td>25.60</td><td>13.20</td><td>18.05</td><td>28.05</td><td>14.45</td><td>21.60</td><td><ins>32.80</ins></td><td>17.60</td><td>18.75</td><td>28.82</td><td>15.08</td></tr>
+    <tr><td>ST-LLM+</td><td>16.60</td><td>25.60</td><td>13.20</td><td>18.05</td><td>28.05</td><td>14.45</td><td>21.60</td><td>32.80</td><td>17.60</td><td>18.75</td><td>28.82</td><td>15.08</td></tr>
     <tr><td>UrbanGPT</td><td>18.35</td><td>27.85</td><td>14.45</td><td>20.75</td><td>31.45</td><td>15.90</td><td>25.70</td><td>38.95</td><td>19.80</td><td>21.60</td><td>32.75</td><td>16.72</td></tr>
     <tr><td>UniST</td><td>19.10</td><td>28.85</td><td>14.90</td><td>21.70</td><td>32.80</td><td>16.55</td><td>26.85</td><td>40.40</td><td>20.55</td><td>22.55</td><td>34.02</td><td>17.33</td></tr>
   </tbody>

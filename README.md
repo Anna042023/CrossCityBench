@@ -19,7 +19,9 @@ This paper proposes CrossCityBench, a benchmark framework for cross-city traffic
   
 All analyses are supported by a complete set of supplementary materials (including experimental details, extended datasets, evaluation metrics, baseline methods, case studies, etc.), ensuring the reproducibility of the research and the comprehensiveness of the conclusions. Through systematic evaluation, diagnosis, and decision support, this framework promotes the practical adoption and paradigm evolution of cross-city prediction models.
 
-## 💾 Core Datasets
+## 💾 Datasets
+
+### Core Datasets
 <div align="center">
 
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
@@ -31,7 +33,27 @@ All analyses are supported by a complete set of supplementary materials (includi
 
 </div>
 
-All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Drive](https://drive.google.com/file/d/1oPLRyEN32peSLWLVNVcropHt5iBNUQxo).
+Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Drive](https://drive.google.com/file/d/1oPLRyEN32peSLWLVNVcropHt5iBNUQxo).
+
+### Constructed Datasets
+<div align="center">
+
+|  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
+|:---------:|:-------------:|:--------:|:-------------:|:--------:|
+| Datong    | Traffic Flow  | 125      | 5 min| 12,000    |
+| Taiyuan    | Traffic Flow  | 280      | 5 min| 30,000    |
+| Fuzhou  | Traffic Flow | 360      | 5 min| 40,000    |
+
+</div>
+
+- **Datong:** The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
+
+- **Taiyuan:** The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Province, China. Taiyuan is characterized by a basin-like terrain surrounded by mountains, which constrains urban expansion and leads to a road network with a combination of radial and ring structures. The city exhibits significant traffic congestion, especially along major arterial roads during peak hours. Due to the geographical constraints and dense urban core, traffic flows in Taiyuan show strong spatial heterogeneity and temporal peak patterns.
+
+- **Fuzhou:** The Fuzhou dataset is collected from Fuzhou, the capital city of Fujian Province in southeastern China. Fuzhou has a complex geographical environment consisting of rivers, hills, and coastal areas, which results in a heterogeneous and partially constrained road network. The urban traffic is influenced by both natural barriers and high population density, leading to diverse traffic patterns with frequent fluctuations and localized congestion.
+
+The above three constructed datasets can be found in:
+[All Revisions/Newly Constructed Datasets](./All%20Revisions/Newly%20Constructed%20Datasets/)
 
 ## 📊 Overall Performance Comparison
 

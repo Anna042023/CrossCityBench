@@ -353,13 +353,13 @@ All datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Dr
     <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
     <tr><td>DASTNet</td><td>2.92</td><td>5.78</td><td>7.65</td><td>3.55</td><td>7.32</td><td>9.95</td><td>4.68</td><td>8.90</td><td>13.35</td><td>3.58</td><td>6.98</td><td>9.94</td></tr>
     <tr><td>D2MHyper</td><td><strong>1.82</strong></td><td><strong>3.36</strong></td><td><strong>5.02</strong></td><td><strong>2.09</strong></td><td><strong>3.85</strong></td><td><strong>5.78</strong></td><td><strong>2.78</strong></td><td><strong>5.52</strong></td><td><strong>8.62</strong></td><td><strong>2.16</strong></td><td><strong>4.07</strong></td><td><strong>6.17</strong></td></tr>
-    <tr><td>DAGN</td><td><ins>2.40</ins></td><td><ins>4.30</ins></td><td><ins>5.98</ins></td><td><ins>2.60</ins></td><td><ins>4.88</ins></td><td><ins>7.02</ins></td><td><ins>3.10</ins></td><td><ins>5.72</ins></td><td><ins>8.90</ins></td><td><ins>2.64</ins></td><td><ins>4.91</ins></td><td><ins>7.15</ins></td></tr>
+    <tr><td>DAGN</td><td>2.40</td><td>4.30</td><td><ins>5.98</ins></td><td>2.60</td><td><ins>4.88</ins></td><td><ins>7.02</ins></td><td>3.10</td><td><ins>5.72</ins></td><td><ins>8.90</ins></td><td>2.64</td><td><ins>4.91</ins></td><td><ins>7.15</ins></td></tr>
     <tr><td>ST-DAAN</td><td>2.48</td><td>4.62</td><td>6.62</td><td>2.94</td><td>5.84</td><td>8.82</td><td>3.88</td><td>7.30</td><td>12.55</td><td>3.00</td><td>5.80</td><td>8.98</td></tr>
     <tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr>
     <tr><td>MAML</td><td>3.18</td><td>5.85</td><td>9.75</td><td>3.82</td><td>7.10</td><td>12.25</td><td>4.92</td><td>8.36</td><td>15.80</td><td>3.86</td><td>6.98</td><td>12.28</td></tr>
     <tr><td>ST-GFSL</td><td>3.16</td><td>5.80</td><td>9.55</td><td>3.80</td><td>7.20</td><td>11.85</td><td>5.05</td><td>8.80</td><td>15.25</td><td>3.86</td><td>7.12</td><td>11.92</td></tr>
     <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr>
-    <tr><td>CrossST</td><td>2.24</td><td>4.28</td><td>6.25</td><td>2.56</td><td>5.08</td><td>7.60</td><td>2.93</td><td>5.85</td><td>9.02</td><td>2.53</td><td>4.94</td><td>7.45</td></tr>
+    <tr><td>CrossST</td><td><ins>2.24</ins></td><td><ins>4.28</ins></td><td>6.25</td><td><ins>2.56</ins></td><td>5.08</td><td>7.60</td><td><ins>2.93</ins></td><td>5.85</td><td>9.02</td><td><ins>2.53</ins></td><td>4.94</td><td>7.45</td></tr>
     <tr><td>MTPB</td><td>2.47</td><td>4.38</td><td>6.27</td><td>2.91</td><td>5.48</td><td>8.25</td><td>3.68</td><td>6.62</td><td>10.85</td><td>2.95</td><td>5.40</td><td>8.32</td></tr>
     <tr><td>STGCN-FT</td><td>2.68</td><td>5.08</td><td>7.36</td><td>3.07</td><td>6.00</td><td>9.33</td><td>3.85</td><td>7.35</td><td>12.40</td><td>3.10</td><td>6.03</td><td>9.50</td></tr>
     <tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></td></tr>

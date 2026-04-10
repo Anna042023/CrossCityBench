@@ -665,6 +665,90 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
+## ⚙️ Computational Cost and Reproducibility Support
+
+Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic forecasting datasets can be computationally expensive, especially for small-scale systems.  
+To reduce the reproduction burden, we provide the following resources whenever applicable:
+
+- **Pre-trained weights**
+- **Pre-processed train/validation/test splits**
+- **Lightweight evaluation mode**
+- **Selective benchmarking**, so users only need to reproduce methods relevant to their own setting
+
+> **Notes**
+> - **Pre-trained weights**: users can directly load released checkpoints instead of retraining from scratch.  
+> - **Pre-processed splits**: users can reuse the same standardized train/validation/test partitions as in our benchmark.  
+> - **Lightweight evaluation mode**: users can evaluate a trained model on a single GPU without running the full training pipeline.  
+> - The computational cost below refers to the **cost of full retraining**, while the **actual reproduction burden is substantially reduced** by the provided resources.
+
+---
+
+## 📊 Method-Level Computational Cost and Reproducibility Table
+
+| Paradigm | Method | Full Retraining Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Reproduction Burden | Remarks |
+|---|---|---|---|---|---|---|---|
+| **Single-Domain Models (Paradigm 1)** | GBRT | Low | ✅ | ✅ | ✅ | Very Low | Classical machine learning baseline, fast to verify |
+|  | VAR | Low | ✅ | ✅ | ✅ | Very Low | Statistical baseline with minimal computational overhead |
+|  | AGCRN | Medium | ✅ | ✅ | ✅ | Low | Adaptive graph learning adds moderate training cost |
+|  | AllDeepSet | Medium | ✅ | ✅ | ✅ | Low | Standard deep model with manageable runtime |
+|  | DCRNN | Medium | ✅ | ✅ | ✅ | Low | Recurrent diffusion structure increases training time |
+|  | DyHSL | Medium | ✅ | ✅ | ✅ | Low | Hidden structure learning adds moderate overhead |
+|  | GRU | Low | ✅ | ✅ | ✅ | Very Low | Simple recurrent baseline, efficient to reproduce |
+|  | GWNet | Medium | ✅ | ✅ | ✅ | Low | Widely used spatio-temporal baseline |
+|  | STGCN | Medium | ✅ | ✅ | ✅ | Low | Stable and relatively efficient graph baseline |
+|  | STG-NCDE | High | ✅ | ✅ | ✅ | Medium | Differential-equation-based optimization is heavier |
+| **Alignment-Based Transfer (Paradigm 2)** | DASTNet | Medium | ✅ | ✅ | ✅ | Low | Transfer alignment introduces moderate additional cost |
+|  | D2MHyper | High | ✅ | ✅ | ✅ | Medium | Hyper-network/domain alignment makes retraining heavier |
+|  | DAGN | Medium | ✅ | ✅ | ✅ | Low | Transfer-aware graph modeling with manageable evaluation |
+|  | ST-DAAN | High | ✅ | ✅ | ✅ | Medium | Adversarial adaptation is more expensive to retrain |
+| **Meta-Learning-Based Transfer (Paradigm 3)** | MAML | Very High | ✅ | ✅ | ✅ | Medium | Meta-train/meta-test loops are costly, but evaluation is lightweight |
+|  | ST-GFSL | Very High | ✅ | ✅ | ✅ | Medium | Few-shot/meta-learning pipeline is expensive to retrain |
+| **Pre-Training-Based Transfer (Paradigm 4)** | CrossST | High | ✅ | ✅ | ✅ | Low | Pre-training is expensive, but fine-tuning/evaluation is much easier |
+|  | MTPB | High | ✅ | ✅ | ✅ | Medium | Multi-stage transfer training increases total runtime |
+|  | STGCN-FT | Medium | ✅ | ✅ | ✅ | Low | Fine-tuning from a pre-trained backbone is relatively efficient |
+| **Knowledge-Distillation-Based Transfer (Paradigm 5)** | FGITrans | High | ✅ | ✅ | ✅ | Medium | Teacher-student training is expensive, but released checkpoints reduce burden |
+| **Foundation Models / LLM-Based Transfer (Paradigm 6)** | ST-LLM+ | Very High | ✅ | ✅ | ✅ | Medium | LLM-based transfer is expensive to train, but evaluation is feasible on a single GPU |
+|  | UrbanGPT | Very High | ✅ | ✅ | ✅ | High | Foundation-model adaptation has the highest overall retraining cost |
+|  | UniST | High | ✅ | ✅ | ✅ | Medium | Unified large-scale transfer framework with relatively heavy optimization |
+
+---
+
+## 📈 Paradigm-Level Summary
+
+| Paradigm | Representative Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Recommendation |
+|---|---|---|---|---|---|
+| Single-Domain Models (Paradigm 1) | Low to Medium | ✅ | ✅ | ✅ | Suitable for quick verification and small systems |
+| Alignment-Based Transfer (Paradigm 2) | Medium to High | ✅ | ✅ | ✅ | Good trade-off between transfer ability and reproduction burden |
+| Meta-Learning-Based Transfer (Paradigm 3) | Very High | ✅ | ✅ | ✅ | Expensive to retrain from scratch; recommended to use released checkpoints |
+| Pre-Training-Based Transfer (Paradigm 4) | Medium to High | ✅ | ✅ | ✅ | Pre-training is costly, but downstream evaluation is efficient |
+| Knowledge-Distillation-Based Transfer (Paradigm 5) | High | ✅ | ✅ | ✅ | Distillation adds training cost; checkpoints substantially reduce reproduction burden |
+| Foundation Models / LLM-Based Transfer (Paradigm 6) | High to Very High | ✅ | ✅ | ✅ | Most resource-demanding in full training, but still evaluable in lightweight mode |
+
+---
+
+## 🧭 Recommended Usage Under Limited Resources
+
+| Scenario | Recommended Strategy |
+|---|---|
+| Very limited compute budget | Directly run **lightweight evaluation** using released checkpoints |
+| Limited GPU memory / training time | Use **pre-trained weights + pre-processed splits** and reproduce only selected methods |
+| Need representative baselines | Start from **GRU, STGCN, DCRNN, GWNet, DASTNet, CrossST** |
+| Need full benchmark comparison | Reuse our released artifacts instead of retraining all methods from scratch |
+
+---
+
+## 🔓 Released Resources
+
+To make the benchmark reproducible without requiring full retraining of all 23 methods, we release:
+
+- **Pre-trained weights** for all benchmarked methods
+- **Pre-processed train/validation/test splits**
+- **Lightweight evaluation scripts** for quick verification
+- **Standardized benchmark pipeline** for selective reproduction
+
+Therefore, users do **not** need to retrain every method from scratch.  
+Instead, they can **directly evaluate relevant methods on a single GPU within hours** in most cases.
+
 ## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
 <table align="center">

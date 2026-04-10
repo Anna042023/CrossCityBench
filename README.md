@@ -40,19 +40,35 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
 |:---------:|:-------------:|:--------:|:-------------:|:--------:|
-| Datong    | Traffic Flow  | 125      | 5 min| 12,000    |
 | Taiyuan    | Traffic Flow  | 280      | 5 min| 30,000    |
+| Datong    | Traffic Flow  | 125      | 5 min| 12,000    |
 | Fuzhou  | Traffic Flow | 360      | 5 min| 40,000    |
 
 </div>
 
-- **Datong:** The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
+- **Taiyuan**
 
-- **Taiyuan:** The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Province, China. Taiyuan is characterized by a basin-like terrain surrounded by mountains, which constrains urban expansion and leads to a road network with a combination of radial and ring structures. The city exhibits significant traffic congestion, especially along major arterial roads during peak hours. Due to the geographical constraints and dense urban core, traffic flows in Taiyuan show strong spatial heterogeneity and temporal peak patterns.
+- The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Province, China. Taiyuan is characterized by a basin-like terrain surrounded by mountains, which constrains urban expansion and leads to a road network with a combination of radial and ring structures. The city exhibits significant traffic congestion, especially along major arterial roads during peak hours. Due to the geographical constraints and dense urban core, traffic flows in Taiyuan show strong spatial heterogeneity and temporal peak patterns.
 
-- **Fuzhou:** The Fuzhou dataset is collected from Fuzhou, the capital city of Fujian Province in southeastern China. Fuzhou has a complex geographical environment consisting of rivers, hills, and coastal areas, which results in a heterogeneous and partially constrained road network. The urban traffic is influenced by both natural barriers and high population density, leading to diverse traffic patterns with frequent fluctuations and localized congestion.
+- The dataset is constructed based on traffic monitoring data collected in cooperation with the Taiyuan Municipal Transportation Bureau and publicly available urban traffic sensing platforms. A total of 280 traffic sensors are selected, mainly located at major intersections and arterial roads within the urban area (latitude 37.7°–38.1° N, longitude 112.45°–112.75° E).
 
-The above datasets are obtained from real-world urban traffic monitoring systems, where sensor locations correspond to major intersections and arterial roads. The geographical coordinates of sensors are derived from map services, and the pairwise distances between connected nodes are computed based on road network proximity. Traffic flow data are collected at a 5-minute interval from traffic sensing devices, such as loop detectors or camera-based monitoring systems, and further processed to ensure temporal consistency and data quality.
+Traffic flow data are collected continuously from March 1, 2023 to March 21, 2023, with a 5-minute sampling interval, resulting in 6,000 time steps. The geographic coordinates of sensors are obtained from digital map services, and the road network topology is constructed according to actual road connectivity. The distances between connected nodes are computed based on geographic proximity.
+
+- **Datong**
+
+- The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
+
+- The dataset is constructed using traffic monitoring data provided by the Datong Municipal Transportation Bureau and supplementary geographic information systems. A total of 125 traffic sensors are deployed across the urban area (latitude 40.0°–40.2° N, longitude 113.0°–113.3° E), covering major intersections and road segments.
+  
+Traffic flow data are collected from April 1, 2023 to April 8, 2023, with a 5-minute sampling interval, resulting in 2,400 time steps. Sensor locations are obtained from map-based services, and node connectivity is determined based on real road links. The distances between nodes are calculated using geographic coordinates.
+
+- **Fuzhou**
+
+- The Fuzhou dataset is collected from Fuzhou, the capital city of Fujian Province in southeastern China. Fuzhou has a complex geographical environment consisting of rivers, hills, and coastal areas, which results in a heterogeneous and partially constrained road network. The urban traffic is influenced by both natural barriers and high population density, leading to diverse traffic patterns with frequent fluctuations and localized congestion.
+
+- The dataset is constructed based on traffic monitoring data collected in collaboration with the Fuzhou Municipal Transportation Bureau and regional intelligent transportation systems. A total of 360 traffic sensors are selected across the urban area (latitude 26.0°–26.2° N, longitude 119.25°–119.35° E), covering urban roads, bridges, and key transportation corridors.
+  
+Traffic flow data are collected from May 1, 2024 to May 28, 2024, with a 5-minute sampling interval, resulting in 8,000 time steps. Sensor coordinates are obtained from digital map platforms, and the road network topology is constructed considering real-world connectivity, including bridges and constrained links.
 
 <div align="center">
   <img src="Urban Structure.png" alt="Urban Structures" width="80%">

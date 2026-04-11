@@ -867,7 +867,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="center">Teacher-student capability gap; distillation loss</td>
     </tr>
      <tr>
-      <td align="center"><em>Foundation models/LLM-Based transfer</em></td>
+      <td align="center"><em>Foundation models/LLM-based transfer</em></td>
       <td align="center">Leverage large pre-trained foundation models to capture general spatio-temporal patterns and enhance cross-city transferability</td>
       <td align="center">ST-LLM+, UrbanGPT, UniST</td>
       <td align="center">Strong representation capacity; better generalization and transferability across cities</td>
@@ -1066,3 +1066,5 @@ Therefore, users do **not** need to retrain every method from scratch.
 Instead, they can **directly evaluate relevant methods on a single GPU within hours** in most cases.
 
 ### Revision 6: Robustness Stress Testing
+
+### Revision 7: Interpretability

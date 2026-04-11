@@ -873,17 +873,17 @@ Below, we briefly summarize the three representative LLM-based methods included 
 
 **References**
 
-- [ST-LLM+](https://ieeexplore.ieee.org/abstract/document/11005661/) 
+- **ST-LLM+**
 
-Chenxi Liu, Kethmi Hirushini Hettige, Qianxiong Xu, Cheng Long, Shili Xiang, Gao Cong, Ziyue Li, and Rui Zhao. 2025. ST-LLM+: Graph enhanced spatio-temporal large language models for traffic prediction. IEEE Transactions on Knowledge and Data Engineering 37, 8 (2025), 4846-4859.
+[Chenxi Liu, Kethmi Hirushini Hettige, Qianxiong Xu, Cheng Long, Shili Xiang, Gao Cong, Ziyue Li, and Rui Zhao. 2025. ST-LLM+: Graph enhanced spatio-temporal large language models for traffic prediction. IEEE Transactions on Knowledge and Data Engineering 37, 8 (2025), 4846-4859.](https://ieeexplore.ieee.org/abstract/document/11005661/)
 
-- [UrbanGPT](https://dl.acm.org/doi/abs/10.1145/3637528.3671578)
+- **UrbanGPT**
 
-Zhonghang Li, Lianghao Xia, Jiabin Tang, Yong Xu, Lei Shi, Long Xia, Dawei Yin, and Chao Huang. 2024. UrbanGPT: Spatio-temporal large language models. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 5351-5362.
+[Zhonghang Li, Lianghao Xia, Jiabin Tang, Yong Xu, Lei Shi, Long Xia, Dawei Yin, and Chao Huang. 2024. UrbanGPT: Spatio-temporal large language models. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 5351-5362.](https://dl.acm.org/doi/abs/10.1145/3637528.3671578)
 
-- [UniST](https://dl.acm.org/doi/abs/10.1145/3637528.3671662)
+- **UniST**
 
-Yuan Yuan, Jingtao Ding, Jie Feng, Depeng Jin, and Yong Li. 2024. UniST: A prompt-empowered universal model for urban spatio-temporal prediction. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 4095-4106.
+[Yuan Yuan, Jingtao Ding, Jie Feng, Depeng Jin, and Yong Li. 2024. UniST: A prompt-empowered universal model for urban spatio-temporal prediction. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 4095-4106.](https://dl.acm.org/doi/abs/10.1145/3637528.3671662)
 
 **Brief Introduction**
 

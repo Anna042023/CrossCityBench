@@ -925,11 +925,97 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 
 ## 🧩 The technical pathway decision matrix for cross-city traffic prediction
 
-| Constraints | Primary Goals | Paradigms | Example Models | Key Limitations | Quantitative References |
-|:---|:---|:---|:---|:---|:---|
-| Large distribution shift (<img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_\text{shift} > 25\%" alt="Delta M_shift > 25%">) | Optimal accuracy | Alignment | D2MHyper | Needs source data; Unstable training | High <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_\text{shift}" alt="Delta M_shift"> (Figure~\ref{robustness}(b)) |
-| Extreme data scarcity (target training days &lt; 3) | Fast adaptation | Meta-learning | ST-GFSL | High meta-training cost; Task-sensitive | High latency (Figure~\ref{pareto}); Robustness (Section~\ref{subsubsec:robustness_test}) |
-| Multi-source data available | Zero-shot robustness | Pre-training | CrossST | High pre-training resource cost | High memory use (Figure~\ref{pareto}); Robustness (Section~\ref{subsubsec:robustness_test}) |
-| Deployment efficiency critical (latency &lt; 0.5s) | Efficient inference | Distillation | FGITrans | Teacher-dependent | Low latency, small size (Figure~\ref{pareto}) |
-| Privacy constraints (no data sharing) | Privacy-preserving performance | Federated learning | FedCTPM | Communication cost; Utility gap | Communication overhead and <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_\text{util}" alt="G_util"> (Section~\ref{subsubsec:federated_analysis}) |
-| Ample resources (high compute budget) | Competitive zero-shot accuracy | Foundation model (zero-shot/fine-tune) | UniST, UrbanGPT, ST-LLM+ | 5–10× higher latency; 10–20× larger GPU memory | MAE 16.71–17.89 vs. CrossST 16.25 (PeMS03→08) |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Constraints</th>
+      <th align="center">Primary Goals</th>
+      <th align="center">Paradigms</th>
+      <th align="center">Example Models</th>
+      <th align="center">Key Limitations</th>
+      <th align="center">Quantitative References</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">
+        Large distribution shift
+        (<img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}%20%3E%2025\%" alt="Delta M shift > 25%">
+      </td>
+      <td align="left">Optimal accuracy</td>
+      <td align="left">Alignment</td>
+      <td align="left">D2MHyper</td>
+      <td align="left">Needs source data; Unstable training</td>
+      <td align="left">
+        High
+        <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}" alt="Delta M shift">
+        (Figure 4(b))
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        Extreme data scarcity<br>
+        (target training days &lt; 3)
+      </td>
+      <td align="left">Fast adaptation</td>
+      <td align="left">Meta-learning</td>
+      <td align="left">ST-GFSL</td>
+      <td align="left">High meta-training cost; Task-sensitive</td>
+      <td align="left">
+        High latency (Figure 3);<br>
+        Robustness (Section 4.2.2)
+      </td>
+    </tr>
+    <tr>
+      <td align="left">Multi-source data available</td>
+      <td align="left">Zero-shot robustness</td>
+      <td align="left">Pre-training</td>
+      <td align="left">CrossST</td>
+      <td align="left">High pre-training resource cost</td>
+      <td align="left">
+        High memory use (Figure 3);<br>
+        Robustness (Section 4.2.2)
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        Deployment efficiency critical<br>
+        (latency &lt; 0.5s)
+      </td>
+      <td align="left">Efficient inference</td>
+      <td align="left">Distillation</td>
+      <td align="left">FGITrans</td>
+      <td align="left">Teacher-dependent</td>
+      <td align="left">Low latency, small size (Figure 3)</td>
+    </tr>
+    <tr>
+      <td align="left">
+        Privacy constraints<br>
+        (no data sharing)
+      </td>
+      <td align="left">Privacy-preserving performance</td>
+      <td align="left">Federated learning</td>
+      <td align="left">FedCTPM</td>
+      <td align="left">Communication cost; Utility gap</td>
+      <td align="left">
+        Communication overhead and
+        <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_{\text{util}}" alt="G_util">
+        (Section 4.2.4)
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        Ample resources<br>
+        (high compute budget)
+      </td>
+      <td align="left">Competitive zero-shot accuracy</td>
+      <td align="left">Foundation model<br>(zero-shot/fine-tune)</td>
+      <td align="left">UniST, UrbanGPT, ST-LLM+</td>
+      <td align="left">5–10× higher latency;<br>10–20× larger GPU memory</td>
+      <td align="left">
+        MAE 16.71–17.89 vs. CrossST 16.25<br>
+        (PeMS03→08)
+      </td>
+    </tr>
+  </tbody>
+</table>

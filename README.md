@@ -180,9 +180,9 @@ The above three constructed datasets can be found in:
 
 ## Revison 2: Overall Performance Comparison
 
- **Revisions:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
+**Note:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
 
-### **Table 2A: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data.**
+**<p align="center"><b>Table 2A: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data.</b></p>**
 
 <table>
 <thead>
@@ -285,7 +285,7 @@ The above three constructed datasets can be found in:
 </tbody>
 </table> 
 
-### Performance Comparison on Cross-City Traffic Flow Prediction (PeMS08 → PeMS03) with 7-Day Training Data
+**<p align="center"><b>Table 2B: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS08 → PeMS03) with 7-Day Training Data.</b></p>**
 
 <table>
   <thead>
@@ -336,7 +336,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
             
-### Performance Comparison on Cross-City Traffic Speed Prediction (PeMS-BAY → METR-LA) with 7-Day Training Data
+**<p align="center"><b>Table 2C: Performance Comparison on Cross-City Traffic Speed Prediction (PeMS-BAY → METR-LA) with 7-Day Training Data.</b></p>**
 
 <table>
 <thead>
@@ -416,7 +416,7 @@ The above three constructed datasets can be found in:
 </tbody>
 </table>
 
-### Performance Comparison on Cross-City Traffic Speed Prediction (METR-LA → PeMS-BAY) with 7-Day Training Data
+**<p align="center"><b>Table 2D: Performance Comparison on Cross-City Traffic Speed Prediction (METR-LA → PeMS-BAY) with 7-Day Training Data.</b></p>**
 
 <table>
   <thead>

@@ -82,7 +82,7 @@ The above three constructed datasets can be found in:
 
 ## 📊 Overall Performance Comparison
 
- **Note:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
+ **Revisions:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
 
 ### Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data
 

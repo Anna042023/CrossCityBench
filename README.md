@@ -867,6 +867,32 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 
 ### Revision 8: Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
+To further broaden the benchmark coverage, we additionally introduce **Foundation Models / LLM-Based Transfer (Paradigm 6)** into our benchmark. Notably, existing mainstream LLM-based traffic forecasting methods were originally designed for single-city prediction rather than cross-city transfer. To bridge this gap, we have added and adapted three representative LLM-based methods, namely UniST, UrbanGPT, and ST-LLM+, to the cross-city prediction setting via city-specific prompts and domain adaptation layers, thereby establishing new cross-city LLM baselines for a more comprehensive benchmark evaluation.
+
+Below, we briefly summarize the three representative LLM-based methods included in this paradigm, together with their original references and core methodological ideas.
+
+**References**
+
+- [ST-LLM+](https://ieeexplore.ieee.org/abstract/document/11005661/) 
+
+Chenxi Liu, Kethmi Hirushini Hettige, Qianxiong Xu, Cheng Long, Shili Xiang, Gao Cong, Ziyue Li, and Rui Zhao. 2025. ST-LLM+: Graph enhanced spatio-temporal large language models for traffic prediction. IEEE Transactions on Knowledge and Data Engineering 37, 8 (2025), 4846-4859.
+
+- [UrbanGPT](https://dl.acm.org/doi/abs/10.1145/3637528.3671578)
+
+Zhonghang Li, Lianghao Xia, Jiabin Tang, Yong Xu, Lei Shi, Long Xia, Dawei Yin, and Chao Huang. 2024. UrbanGPT: Spatio-temporal large language models. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 5351-5362.
+
+- [UniST](https://dl.acm.org/doi/abs/10.1145/3637528.3671662)
+
+Yuan Yuan, Jingtao Ding, Jie Feng, Depeng Jin, and Yong Li. 2024. UniST: A prompt-empowered universal model for urban spatio-temporal prediction. In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining. 4095-4106.
+
+**Brief Introduction**
+
+- **ST-LLM+** introduces graph-enhanced LLMs for traffic prediction, integrating structured spatial information into pretrained transformers.
+
+- **UrbanGPT** combines a spatio-temporal dependency encoder with a recent LLM, specifically Vicuna-7b, which is based on instruction tuning.
+
+- **UniST** integrates a large-scale spatio-temporal pre-trained module, designed for capturing complex spatio-temporal relationships, with a spatio-temporal prompt learning module that aligns underlying cross-scenario spatio-temporal data.
+
 **<p align="center"><b>Table 8A: Taxonomy of Learning Paradigms and Benchmark Model Zoo.</b></p>**
 
 <table align="center">
@@ -926,6 +952,14 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
       <td align="center">Addresses scarcity and privacy jointly</td>
       <td align="center">Communication overhead; client heterogeneity</td>
     </tr>
+    <tr>
+  <td align="center" rowspan="1"><strong>Foundation Models/LLM-Based Transfer</strong></td>
+  <td align="center"></td>
+  <td align="center">Leverage large pre-trained foundation models to capture general spatio-temporal patterns and enhance cross-city transferability</td>
+  <td align="center">ST-LLM+, UrbanGPT, UniST</td>
+  <td align="center">Strong representation capacity; better generalization and transferability across cities</td>
+  <td align="center">High computational cost; complex adaptation pipeline; limited interpretability</td>
+</tr>
   </tbody>
 </table>
 

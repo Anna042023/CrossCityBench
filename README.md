@@ -1073,5 +1073,29 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 
 ### Revision 9: Citation Integrity and Reference Corrections
 
+We have carefully re-checked the references and corrected the citation errors. The correct references and method descriptions are as follows:
+
+**References**
+
+- **MAML [[27]](https://dl.acm.org/doi/10.5555/3305381.3305498#purchase-access)**
+
+Chelsea Finn, Pieter Abbeel, and Sergey Levine. 2017. Model-agnostic meta-learning for fast adaptation of deep networks. In Proceedings of the 34th International Conference on Machine Learning, Vol. 39. 1126-1135.
+
+- **DCRNN [[72]](https://arxiv.org/pdf/1707.01926)**
+
+Yaguang Li, Rose Yu, Cyrus Shahabi, and Yan Liu. 2018. Diffusion convolutional recurrent neural network: Data-driven traffic forecasting. In Proceedings of the International Conference on Learning Representations. 
+
+- **GWNet [[6]](https://www.ijcai.org/Proceedings/2019/264)**
+
+Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph WaveNet for deep spatial-temporal graph modeling. In Proceedings of the 28th International Joint Conference on Artificial Intelligence. 1907-1913.
+  
+**Brief Introduction**
+
+- **MAML** learns a model initialization that enables fast adaptation to new cities using only a few gradient update steps.
+
+- **DCRNN** captures spatial dependencies via bidirectional graph diffusion processes within a sequence-to-sequence predictive framework.
+
+- **GWNet** employs a dynamic fusion of self-adaptive graph structures and dilated temporal convolutions. This method captures long-range dependencies independently of any predefined spatial graph.
+  
 ### Revision 10: Performance Comparison on Traffic Prediction: Centralized Learning vs. Federated Learning
 

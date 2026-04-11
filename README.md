@@ -1129,7 +1129,7 @@ We construct and validate STPB in three steps:
 |:---------------------------:|:-------:|
 | Pearson $r$                | **0.79**|
 | p-value                      | **0.008**|
-| Spearman $rho$            | **0.74**|
+| Spearman $/rho$            | **0.74**|
 | p-value                      | **0.014**|
 | Inter-rater agreement (ICC)  | **0.81**|
 

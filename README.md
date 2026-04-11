@@ -993,7 +993,6 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">
         High
         <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}" alt="Delta M shift">
-        (Figure 4(b))
       </td>
     </tr>
     <tr>
@@ -1006,8 +1005,8 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">ST-GFSL</td>
       <td align="left">High meta-training cost; Task-sensitive</td>
       <td align="left">
-        High latency (Figure 3);<br>
-        Robustness (Section 4.2.2)
+        High latency;<br>
+        Robustness
       </td>
     </tr>
     <tr>
@@ -1017,8 +1016,8 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">CrossST</td>
       <td align="left">High pre-training resource cost</td>
       <td align="left">
-        High memory use (Figure 3);<br>
-        Robustness (Section 4.2.2)
+        High memory use;<br>
+        Robustness
       </td>
     </tr>
     <tr>
@@ -1030,7 +1029,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">Distillation</td>
       <td align="left">FGITrans</td>
       <td align="left">Teacher-dependent</td>
-      <td align="left">Low latency, small size (Figure 3)</td>
+      <td align="left">Low latency, small size</td>
     </tr>
     <tr>
       <td align="left">
@@ -1044,7 +1043,6 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">
         Communication overhead and
         <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_{\text{util}}" alt="G_util">
-        (Section 4.2.4)
       </td>
     </tr>
     <tr>

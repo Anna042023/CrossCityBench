@@ -1072,3 +1072,6 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 ### Revision 8: Evaluation of Privacy Protection
 
 ### Revision 9: Citation Integrity and Reference Corrections
+
+### Revision 10: Performance Comparison on Traffic Prediction: Centralized Learning vs. Federated Learning
+

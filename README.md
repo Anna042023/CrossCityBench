@@ -45,7 +45,7 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
 |:---------:|:-------------:|:--------:|:-------------:|:--------:|
 | Taiyuan    | Traffic Flow  | 280      | 5 min| 30,240    |
-| Datong    | Traffic Flow  | 125      | 5 min| 11,520    |
+| Datong    | Traffic Flow  | 125      | 5 min| 30,240   |
 | Fuzhou  | Traffic Flow | 360      | 5 min| 40,320    |
 
 </div>

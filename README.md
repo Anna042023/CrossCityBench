@@ -48,11 +48,11 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 #### **Taiyuan**
 
-- **City Description**  
+**City Description**  
 
 The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Province, China. Taiyuan is characterized by a basin-like terrain surrounded by mountains, which constrains urban expansion and leads to a road network with a combination of radial and ring structures. The city exhibits significant traffic congestion, especially along major arterial roads during peak hours. Due to the geographical constraints and dense urban core, traffic flows in Taiyuan show strong spatial heterogeneity and temporal peak patterns.
 
-- **Data Sources and Coverage**
+**Data Sources and Coverage**
 
 Collected in collaboration with the **Taiyuan Municipal Transportation Bureau**, covering:
 - Urban expressways  
@@ -63,18 +63,19 @@ A total of **280 traffic sensors** are deployed within:
 - Latitude: `37.7°–38.1° N`  
 - Longitude: `112.45°–112.75° E`
 
-- **Data Collection Protocol**  
+**Data Collection Protocol**  
+
 - Time period: **March 1, 2023 – March 21, 2023 (21 days)**  
 - Sampling interval: **5 minutes**
-- Time step: T = 21 × 24 × 12 = 6000
+- Time step: **T = 21 × 24 × 12 = 6000**
 
-- **Data Format**
+**Data Format**
 
 - `Taiyuan_nodes.csv` # sensor_id, latitude, longitude
 - `Taiyuan_dist.csv` # from, to, distance (sparse graph)
 - `Taiyuan.npz` # traffic data
 
-- **Data shape**
+**Data shape**
 
 (6000, 280, 1)
 

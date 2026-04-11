@@ -93,7 +93,7 @@ Each sensor records:
 
 **City Description**  
 
-The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
+The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province, China. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
 
 **Data Sources and Coverage**
 
@@ -105,7 +105,8 @@ A total of **125 traffic sensors** are deployed within:
 - Latitude: `40.0°–40.2° N`  
 - Longitude: `113.0°–113.3° E`
 
-- **Data Collection Protocol**
+**Data Collection Protocol**
+
 - Time period: **March 1, 2026 – March 8, 2026 (8 days)**  
 - Sampling interval: **5 minutes**
 - Time step: **T = 8 × 24 × 12 = 2304**
@@ -142,7 +143,8 @@ A total of **360 traffic sensors** are deployed within:
 - Latitude: `26.0°–26.2° N`  
 - Longitude: `119.25°–119.35° E`
 
-- **Data Collection Protocol**
+**Data Collection Protocol**
+
 - Time period: **February 1, 2026 – February 28, 2026 (28 days)**  
 - Sampling interval: **5 minutes**
 - Time step: **T = 28 × 24 × 12 = 8064**

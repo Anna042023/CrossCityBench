@@ -1005,8 +1005,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">ST-GFSL</td>
       <td align="left">High meta-training cost; Task-sensitive</td>
       <td align="left">
-        High latency;<br>
-        Robustness
+        High latency; Robustness
       </td>
     </tr>
     <tr>
@@ -1016,8 +1015,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">CrossST</td>
       <td align="left">High pre-training resource cost</td>
       <td align="left">
-        High memory use;<br>
-        Robustness
+        High memory use; Robustness
       </td>
     </tr>
     <tr>

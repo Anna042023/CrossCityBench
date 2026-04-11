@@ -1089,7 +1089,9 @@ We construct and validate STPB in three steps:
   
 - Compute correlation between STPB similarity and human ratings.
 
-**<p align="center"><b>Table 6A: Formal Specification of STPB Prototypes.</b></p>**
+<p align="center"><b>Table 6A: Formal Specification of STPB Prototypes.</b></p>
+
+<div align="center">
 
 | Item                     | Setting                                                                 |
 |:------------------------:|:-----------------------------------------------------------------------:|
@@ -1097,12 +1099,16 @@ We construct and validate STPB in three steps:
 | Candidate pattern pool   | Trend, periodicity, peak-shift, burstiness, local fluctuation segments |
 | Prototype construction   | **K-means clustering** on normalized pattern embeddings                |
 | Number of clusters \(K\) | **8**                                                                   |
-| \K\ selection criterion  | **Elbow method** on within-cluster SSE                                 |
+| K selection criterion    | **Elbow method** on within-cluster SSE                                 |
 | Prototype retention rule | Retain prototypes appearing in **>70%** of cities                       |
 | Final prototype bank size| **8 prototypes**                                                        |
 | Similarity metric        | Average cosine similarity between model representation and prototype vectors |
 
-**<p align="center"><b>Table 6B: STPB vs Human Interpretability.</b></p>**
+</div>
+
+<p align="center"><b>Table 6B: STPB vs Human Interpretability.</b></p>
+
+<div align="center">
 
 | Model      | STPB Similarity | Expert Rating (1–5) | Rank by STPB | Rank by Experts |
 |:----------:|:--------------:|:-------------------:|:------------:|:---------------:|
@@ -1113,15 +1119,21 @@ We construct and validate STPB in three steps:
 | ST-GFSL    | -0.0368         | 2.6 ± 0.4           | 5            | 5               |
 | DyHSL      | -0.0473         | 2.5 ± 0.5           | 6            | 6               |
 
-**<p align="center"><b>Table 6C: Statistical Validity of STPB.</b></p>**
+</div>
+
+<p align="center"><b>Table 6C: Statistical Validity of STPB.</b></p>
+
+<div align="center">
 
 | Metric                       | Value   |
 |:---------------------------:|:-------:|
-| Pearson \(r\)                | **0.79**|
+| Pearson $r$                | **0.79**|
 | p-value                      | **0.008**|
-| Spearman \(\rho\)            | **0.74**|
+| Spearman $rho$            | **0.74**|
 | p-value                      | **0.014**|
 | Inter-rater agreement (ICC)  | **0.81**|
+
+</div>
 
 **Results Analysis**
 

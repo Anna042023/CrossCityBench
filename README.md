@@ -36,15 +36,20 @@ All analyses are supported by a complete set of supplementary materials (includi
 Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Drive](https://drive.google.com/file/d/1oPLRyEN32peSLWLVNVcropHt5iBNUQxo).
 
 ### Constructed Datasets
+
 <div align="center">
 
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
 |:---------:|:-------------:|:--------:|:-------------:|:--------:|
-| Taiyuan    | Traffic Flow  | 280      | 5 min| 30,000    |
-| Datong    | Traffic Flow  | 125      | 5 min| 12,000    |
-| Fuzhou  | Traffic Flow | 360      | 5 min| 40,000    |
+| Taiyuan    | Traffic Flow  | 280      | 5 min| 30,240    |
+| Datong    | Traffic Flow  | 125      | 5 min| 11,520    |
+| Fuzhou  | Traffic Flow | 360      | 5 min| 40,320    |
 
 </div>
+
+The three datasets described above, namely the Taiyuan, Datong, and Fuzhou datasets, are independently constructed by the authors based on traffic data collected from the cities where the authors are currently located. The data acquisition and processing pipeline are designed and implemented by the authors, with support from local traffic management authorities and publicly available traffic sensing platforms.
+
+The motivation for constructing these datasets is to enrich the diversity and availability of urban traffic data. Existing public datasets are limited in terms of geographical coverage and structural variability. In contrast, the constructed datasets include cities with distinct road network topologies and traffic patterns, which provide a more comprehensive benchmark for evaluating the robustness and generalization ability of traffic forecasting models under heterogeneous urban scenarios.
 
 #### **Taiyuan**
 
@@ -54,7 +59,7 @@ The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Provin
 
 **Data Sources and Coverage**
 
-Collected in collaboration with the **Taiyuan Municipal Transportation Bureau**, covering:
+Collected in collaboration with the **Shanxi Transportation Holdings Group Co., Ltd.**, covering:
 - Urban expressways  
 - Ring roads  
 - Major arterial roads
@@ -65,9 +70,9 @@ A total of **280 traffic sensors** are deployed within:
 
 **Data Collection Protocol**  
 
-- Time period: **March 1, 2023 – March 21, 2023 (21 days)**  
+- Time period: **February 15, 2026 – March 7, 2026 (21 days)**  
 - Sampling interval: **5 minutes**
-- Time step: **T = 21 × 24 × 12 = 6000**
+- Time step: **T = 21 × 24 × 12 = 6048**
 
 **Data Format**
 
@@ -75,25 +80,84 @@ A total of **280 traffic sensors** are deployed within:
 - `Taiyuan_dist.csv` # from, to, distance (sparse graph)
 - `Taiyuan.npz` # traffic data
 
-**Data shape**
+- **Features**
+Each sensor records:
+- Traffic flow  
 
-(6000, 280, 1)
+**Data Shape**
+
+(6048, 280, 1)
 
 #### **Datong**
 
-- The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
+**City Description**  
 
-- The dataset is constructed using traffic monitoring data provided by the Datong Municipal Transportation Bureau and supplementary geographic information systems. A total of 125 traffic sensors are deployed across the urban area (latitude 40.0°–40.2° N, longitude 113.0°–113.3° E), covering major intersections and road segments.
-  
-- Traffic flow data are collected from April 1, 2023 to April 8, 2023, with a 5-minute sampling interval, resulting in 2,400 time steps. Sensor locations are obtained from map-based services, and node connectivity is determined based on real road links. The distances between nodes are calculated using geographic coordinates.
+The Datong dataset is collected from Datong, a medium-sized city located in northern Shanxi Province. Unlike Taiyuan, Datong features a relatively flat terrain and a well-planned urban layout with a grid-like road network. The traffic demand is comparatively moderate, and congestion is less severe. As a result, the traffic flow patterns in Datong tend to be more regular and stable, making it suitable for analyzing structured urban traffic dynamics.
+
+**Data Sources and Coverage**
+
+Provided by the **Shanxi Transportation Holdings Group Co., Ltd.**, covering:
+- Urban main roads  
+- Secondary roads
+
+A total of **125 traffic sensors** are deployed within:
+- Latitude: `40.0°–40.2° N`  
+- Longitude: `113.0°–113.3° E`
+
+- **Data Collection Protocol**
+- Time period: **March 1, 2026 – March 8, 2026 (8 days)**  
+- Sampling interval: **5 minutes**
+- Time step: **T = 8 × 24 × 12 = 2304**
+
+**Data Format**
+
+- `Datong_nodes.csv` # sensor_id, latitude, longitude
+- `Datong_dist.csv` # from, to, distance (sparse graph)
+- `Datong.npz` # traffic data
+
+- **Features**
+Each sensor records:
+- Traffic flow
+
+**Data Shape**
+
+(2304, 125, 1)
 
 #### **Fuzhou**
 
-- The Fuzhou dataset is collected from Fuzhou, the capital city of Fujian Province in southeastern China. Fuzhou has a complex geographical environment consisting of rivers, hills, and coastal areas, which results in a heterogeneous and partially constrained road network. The urban traffic is influenced by both natural barriers and high population density, leading to diverse traffic patterns with frequent fluctuations and localized congestion.
+**City Description** 
 
-- The dataset is constructed based on traffic monitoring data collected in collaboration with the Fuzhou Municipal Transportation Bureau and regional intelligent transportation systems. A total of 360 traffic sensors are selected across the urban area (latitude 26.0°–26.2° N, longitude 119.25°–119.35° E), covering urban roads, bridges, and key transportation corridors.
-  
-- Traffic flow data are collected from May 1, 2024 to May 28, 2024, with a 5-minute sampling interval, resulting in 8,000 time steps. Sensor coordinates are obtained from digital map platforms, and the road network topology is constructed considering real-world connectivity, including bridges and constrained links.
+The Fuzhou dataset is collected from Fuzhou, the capital city of Fujian Province in southeastern China. Fuzhou has a complex geographical environment consisting of rivers, hills, and coastal areas, which results in a heterogeneous and partially constrained road network. The urban traffic is influenced by both natural barriers and high population density, leading to diverse traffic patterns with frequent fluctuations and localized congestion.
+
+**Data Sources and Coverage**
+
+Constructed in collaboration with the **Fujian Provincial Communication Transportation Group Co.,Ltd.**, covering:
+- Urban trunk roads  
+- Bridges  
+- Cross-river corridors  
+
+A total of **360 traffic sensors** are deployed within:
+- Latitude: `26.0°–26.2° N`  
+- Longitude: `119.25°–119.35° E`
+
+- **Data Collection Protocol**
+- Time period: **May 1, 2024 – May 28, 2024 (28 days)**  
+- Sampling interval: **5 minutes**
+- Time Step: **T = 28 × 24 × 12 = 8064**
+
+**Data Format**
+
+- `Fuzhou_nodes.csv` # sensor_id, latitude, longitude
+- `Fuzhou_dist.csv` # from, to, distance (sparse graph)
+- `Fuzhou.npz` # traffic data
+
+- **Features**
+Each sensor records:
+- Traffic flow
+
+**Data Shape**
+
+(8064, 360, 1)
 
 <div align="center">
   <img src="Urban Structure.png" alt="Urban Structures" width="80%">

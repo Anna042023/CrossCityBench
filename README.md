@@ -38,7 +38,7 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 ### Revision 1: Constructed Datasets
 
-**Table 1A: Statistics of the newly constructed datasets.**
+**<p align="center"><b>Table 1A: Statistics of the Newly Constructed Datasets.**
 
 <div align="center">
 
@@ -170,9 +170,10 @@ Each sensor records:
 <div align="center">
   <img src="Urban Structure.png" alt="Urban Structures" width="80%">
   <br>
-  <strong>Urban Structures</strong>
 </div>
 <br>
+
+**<p align="center"><b>Figure 1A: The Urban Structure of Newly Constructed Datasets.**
 
 The above three constructed datasets can be found in:
 [All Revisions/Newly Constructed Datasets](./All%20Revisions/Newly%20Constructed%20Datasets/)

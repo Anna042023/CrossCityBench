@@ -942,7 +942,7 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
     <tr>
       <td align="left">
         Large distribution shift
-        (<img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}%20%3E%2025\%" alt="Delta M shift > 25%">)
+       <img src="https://latex.codecogs.com/svg.latex?(\Delta\mathcal{M}_{\text{shift}}%20%3E%2025\%)" alt="(Delta M shift > 25%)">
       </td>
       <td align="left">Optimal accuracy</td>
       <td align="left">Alignment</td>

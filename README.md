@@ -112,9 +112,9 @@ A total of **125 traffic sensors** are deployed within:
 
 **Data Collection Protocol**
 
-- Time period: **March 1, 2026 – March 8, 2026 (8 days)**  
+- Time period: **March 1, 2026 – March 21, 2026 (21 days)**  
 - Sampling interval: **5 minutes**
-- Time step: **T = 8 × 24 × 12 = 2304**
+- Time step: **T = 21 × 24 × 12 = 6048**
 
 **Data Format**
 
@@ -129,7 +129,7 @@ Each sensor records:
 
 **Data Shape**
 
-(2304, 125, 1)
+(6048, 125, 1)
 
 ---
 
@@ -982,7 +982,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
   </tbody>
 </table>
 
-#### Computational Cost and Reproducibility Support
+### Revision 5: Computational Cost and Reproducibility Support
 
 Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic prediction datasets can be computationally expensive, especially for small-scale systems.  
 To reduce the reproduction burden, we provide the following resources whenever applicable:
@@ -1066,3 +1066,4 @@ To make the benchmark reproducible without requiring full retraining of all 23 m
 Therefore, users do **not** need to retrain every method from scratch.  
 Instead, they can **directly evaluate relevant methods on a single GPU within hours** in most cases.
 
+### Revision 6: Robustness Stress Testing

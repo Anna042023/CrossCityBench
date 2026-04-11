@@ -82,7 +82,7 @@ The above three constructed datasets can be found in:
 
 ## 📊 Overall Performance Comparison
 
-### Performance comparison on cross-city traffic speed prediction (PeMS03 → PeMS08) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data
 
 <table>
 <thead>
@@ -185,7 +185,7 @@ The above three constructed datasets can be found in:
 </tbody>
 </table> 
 
-### Performance comparison on cross-city traffic speed prediction (PeMS08 → PeMS03) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (PeMS08 → PeMS03) with 7-Day Training Data
 
 <table>
   <thead>
@@ -236,7 +236,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
             
-### Performance comparison on cross-city traffic speed prediction (PeMS-BAY → METR-LA) with 7-day training data
+### Performance Comparison on Cross-City Traffic Speed Prediction (PeMS-BAY → METR-LA) with 7-Day Training Data
 
 <table>
 <thead>
@@ -316,7 +316,7 @@ The above three constructed datasets can be found in:
 </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (METR-LA → PeMS-BAY) with 7-day training data
+### Performance Comparison on Cross-City Traffic Speed Prediction (METR-LA → PeMS-BAY) with 7-Day Training Data
 
 <table>
   <thead>
@@ -367,7 +367,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (Taiyuan → Fuzhou) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (Taiyuan → Fuzhou) with 7-Day Training Data
 
 <table>
   <thead>
@@ -418,7 +418,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (Fuzhou → Taiyuan) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (Fuzhou → Taiyuan) with 7-Day Training Data
 
 <table>
   <thead>
@@ -469,7 +469,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (NYCTaxi → CHIBike) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (NYCTaxi → CHIBike) with 7-Day Training Data
 
 <table>
   <thead>
@@ -520,15 +520,15 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (CHIBike → NYCTaxi) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (CHIBike → NYCTaxi) with 7-Day Training Data
 
 <table> <thead> <tr> <th rowspan="2">Methods (Paradigms)</th> <th colspan="3">15 min</th> <th colspan="3">30 min</th> <th colspan="3">60 min</th> <th colspan="3">Average</th> </tr> <tr> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> </tr> </thead> <tbody> <tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></strong></td></tr> <tr><td>GBRT</td><td>8.45</td><td>15.35</td><td>16.45</td><td>9.42</td><td>17.68</td><td>18.35</td><td>10.88</td><td>19.90</td><td>20.70</td><td>9.41</td><td>17.40</td><td>18.22</td></tr> <tr><td>VAR</td><td>8.05</td><td>14.68</td><td>15.05</td><td>9.10</td><td>16.22</td><td>16.80</td><td>10.62</td><td>18.45</td><td>20.02</td><td>9.09</td><td>16.38</td><td>17.08</td></tr> <tr><td>AGCRN</td><td>5.33</td><td>10.42</td><td>9.50</td><td>6.24</td><td>12.45</td><td>11.70</td><td>7.78</td><td>15.05</td><td>15.25</td><td>6.27</td><td>12.61</td><td>11.95</td></tr> <tr><td>AllDeepSet</td><td>3.31</td><td>6.35</td><td>9.32</td><td>3.98</td><td>7.80</td><td>11.30</td><td>4.97</td><td>10.02</td><td>14.98</td><td>3.96</td><td>7.77</td><td>11.40</td></tr> <tr><td>DCRNN</td><td>3.36</td><td>6.66</td><td>9.14</td><td>3.96</td><td>7.98</td><td>11.76</td><td>5.05</td><td>9.64</td><td>15.65</td><td>3.96</td><td>7.90</td><td>11.60</td></tr> <tr><td>DyHSL</td><td>3.15</td><td>6.13</td><td>8.46</td><td>3.65</td><td>7.60</td><td>10.88</td><td>4.60</td><td>9.30</td><td>14.13</td><td>3.71</td><td>7.62</td><td>10.85</td></tr> <tr><td>GRU</td><td>3.52</td><td>6.90</td><td>9.50</td><td>4.15</td><td>8.48</td><td>12.38</td><td>5.50</td><td>10.13</td><td>16.80</td><td>4.23</td><td>8.33</td><td>12.54</td></tr> <tr><td>GWNet</td><td>3.22</td><td>6.22</td><td>10.05</td><td>3.94</td><td>7.57</td><td>12.38</td><td>4.92</td><td>9.56</td><td>16.80</td><td>3.92</td><td>7.52</td><td>12.55</td></tr> <tr><td>STGCN</td><td>3.31</td><td>6.35</td><td>9.37</td><td>3.88</td><td>7.92</td><td>11.70</td><td>4.97</td><td>9.88</td><td>15.03</td><td>3.92</td><td>7.89</td><td>11.78</td></tr> <tr><td>STG-NCDE</td><td>3.60</td><td>6.66</td><td>7.58</td><td>4.72</td><td>9.90</td><td>10.56</td><td>6.62</td><td>13.59</td><td>14.98</td><td>4.59</td><td>9.78</td><td>10.33</td></tr> <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr> <tr><td>DASTNet</td><td>3.60</td><td>7.26</td><td>9.42</td><td>4.39</td><td>9.20</td><td>12.22</td><td>5.78</td><td>11.18</td><td>16.38</td><td>4.43</td><td>8.78</td><td>12.20</td></tr> <tr><td>D2MHyper</td><td><ins>2.77</ins></td><td><ins>5.38</ins></td><td>7.70</td><td><strong>2.58</strong></td><td><strong>4.84</strong></td><td><strong>7.13</strong></td><td><strong>3.43</strong></td><td><strong>6.94</strong></td><td><strong>10.62</strong></td><td><strong>2.67</strong></td><td><strong>5.12</strong></td><td><strong>7.60</strong></td></tr> <tr><td>DAGN</td><td>2.97</td><td>5.41</td><td><ins>7.37</ins></td><td>3.22</td><td><ins>6.14</ins></td><td><ins>8.66</ins></td><td><ins>3.62</ins></td><td>7.36</td><td>11.12</td><td>3.27</td><td><ins>6.19</ins></td><td><ins>8.82</ins></td></tr> <tr><td>ST-DAAN</td><td>3.06</td><td>5.81</td><td>8.17</td><td>3.62</td><td>7.34</td><td>10.85</td><td>4.79</td><td>9.18</td><td>15.45</td><td>3.71</td><td>7.30</td><td>11.06</td></tr> <tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr> <tr><td>MAML</td><td>3.92</td><td>7.35</td><td>12.02</td><td>4.72</td><td>8.92</td><td>15.07</td><td>6.08</td><td>10.50</td><td>19.40</td><td>4.77</td><td>8.78</td><td>15.11</td></tr> <tr><td>ST-GFSL</td><td>3.90</td><td>7.29</td><td>11.77</td><td>4.70</td><td>9.05</td><td>14.57</td><td>6.23</td><td>11.06</td><td>18.73</td><td>4.77</td><td>8.95</td><td>14.65</td></tr> <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr> <tr><td>CrossST</td><td><strong>2.25</strong></td><td><strong>4.22</strong></td><td><strong>6.19</strong></td><td><ins>3.17</ins></td><td>6.39</td><td>9.37</td><td>3.83</td><td><ins>7.19</ins></td><td><ins>10.98</ins></td><td><ins>3.13</ins></td><td>6.22</td><td>9.19</td></tr> <tr><td>MTPB</td><td>3.05</td><td>5.51</td><td>7.73</td><td>3.60</td><td>6.89</td><td>10.18</td><td>4.55</td><td>8.33</td><td>13.38</td><td>3.66</td><td>6.80</td><td>10.25</td></tr> <tr><td>STGCN-FT</td><td>3.31</td><td>6.38</td><td>9.09</td><td>3.80</td><td>7.55</td><td>11.50</td><td>4.77</td><td>9.25</td><td>15.28</td><td>3.84</td><td>7.59</td><td>11.72</td></tr> <tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></td></tr> <tr><td>FGITrans</td><td>3.19</td><td>6.20</td><td>12.28</td><td>3.77</td><td>7.14</td><td>13.79</td><td>4.62</td><td>8.30</td><td>15.32</td><td>3.86</td><td>7.21</td><td>13.79</td></tr> <tr><td colspan="13"><strong>Foundation Models/LLM-Based Transfer (Paradigm 6)</strong></td></tr> <tr><td>ST-LLM+</td><td>2.97</td><td>5.72</td><td>7.68</td><td>3.41</td><td>6.73</td><td>9.50</td><td>4.04</td><td>7.90</td><td>12.10</td><td>3.48</td><td>6.78</td><td>9.76</td></tr> <tr><td>UrbanGPT</td><td>3.14</td><td>6.01</td><td>8.22</td><td>3.64</td><td>7.07</td><td>10.10</td><td>4.43</td><td>8.53</td><td>13.12</td><td>3.74</td><td>7.21</td><td>10.46</td></tr> <tr><td>UniST</td><td>3.22</td><td>6.16</td><td>8.47</td><td>3.74</td><td>7.27</td><td>10.39</td><td>4.54</td><td>8.73</td><td>13.52</td><td>3.83</td><td>7.38</td><td>10.78</td></tr> </tbody> </table>
 
-### Performance comparison on cross-city traffic speed prediction (HZMetro → WHBT) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (HZMetro → WHBT) with 7-Day Training Data
 
 <table> <thead> <tr> <th rowspan="2">Methods (Paradigms)</th> <th colspan="3">15 min</th> <th colspan="3">30 min</th> <th colspan="3">60 min</th> <th colspan="3">Average</th> </tr> <tr> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> <th>MAE</th><th>RMSE</th><th>MAPE (%)</th> </tr> </thead> <tbody> <tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></td></tr> <tr><td>GBRT</td><td>9.25</td><td>17.20</td><td>18.30</td><td>10.32</td><td>19.78</td><td>20.45</td><td>11.92</td><td>22.25</td><td>23.05</td><td>10.30</td><td>19.45</td><td>20.30</td></tr> <tr><td>VAR</td><td>8.82</td><td>16.45</td><td>16.75</td><td>9.96</td><td>18.15</td><td>18.70</td><td>11.62</td><td>20.65</td><td>22.30</td><td>9.96</td><td>18.34</td><td>19.03</td></tr> <tr><td>AGCRN</td><td>5.82</td><td>11.65</td><td>10.55</td><td>6.82</td><td>13.95</td><td>13.00</td><td>8.50</td><td>16.85</td><td>16.95</td><td>6.85</td><td>14.12</td><td>13.28</td></tr> <tr><td>AllDeepSet</td><td>3.62</td><td>7.10</td><td>10.35</td><td>4.35</td><td>8.73</td><td>12.55</td><td>5.45</td><td>11.20</td><td>16.65</td><td>4.33</td><td>8.68</td><td>12.67</td></tr> <tr><td>DCRNN</td><td>3.68</td><td>7.45</td><td>10.15</td><td>4.33</td><td>8.93</td><td>13.05</td><td>5.52</td><td>10.78</td><td>17.40</td><td>4.33</td><td>8.83</td><td>13.00</td></tr> <tr><td>DyHSL</td><td>3.45</td><td>6.85</td><td>9.40</td><td>3.98</td><td>8.50</td><td>12.08</td><td>5.03</td><td>10.40</td><td>15.70</td><td>4.06</td><td>8.52</td><td>12.05</td></tr> <tr><td>GRU</td><td>3.85</td><td>7.72</td><td>10.55</td><td>4.53</td><td>9.48</td><td>13.75</td><td>6.02</td><td>11.33</td><td>18.68</td><td>4.63</td><td>9.33</td><td>13.95</td></tr> <tr><td>GWNet</td><td>3.52</td><td>6.95</td><td>11.15</td><td>4.30</td><td>8.45</td><td>13.75</td><td>5.38</td><td>10.68</td><td>18.68</td><td>4.29</td><td>8.40</td><td>13.95</td></tr> <tr><td>STGCN</td><td>3.62</td><td>7.10</td><td>10.40</td><td>4.23</td><td>8.85</td><td>13.00</td><td>5.45</td><td>11.05</td><td>16.70</td><td>4.29</td><td>8.82</td><td>13.08</td></tr> <tr><td>STG-NCDE</td><td>3.95</td><td>7.45</td><td>8.42</td><td>5.18</td><td>11.08</td><td>11.73</td><td>7.25</td><td>15.20</td><td>16.65</td><td>5.03</td><td>10.93</td><td>11.45</td></tr> <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr> <tr><td>DASTNet</td><td>3.95</td><td>8.12</td><td>10.45</td><td>4.82</td><td>10.30</td><td>13.58</td><td>6.35</td><td>12.50</td><td>18.20</td><td>4.87</td><td>9.82</td><td>13.55</td></tr> <tr><td>D2MHyper</td><td>3.25</td><td>6.05</td><td><ins>8.20</ins></td><td>3.52</td><td><ins>6.87</ins></td><td><ins>9.63</ins></td><td>4.20</td><td><ins>8.05</ins></td><td><ins>12.20</ins></td><td>3.58</td><td><ins>6.92</ins></td><td><ins>9.80</ins></td></tr> <tr><td>DAGN</td><td><ins>3.03</ins></td><td><ins>6.02</ins></td><td>8.55</td><td><ins>3.47</ins></td><td>7.15</td><td>10.40</td><td><ins>3.97</ins></td><td>8.23</td><td>12.35</td><td><ins>3.42</ins></td><td>6.95</td><td>10.20</td></tr> <tr><td>ST-DAAN</td><td>3.35</td><td>6.50</td><td>9.08</td><td>3.97</td><td>8.22</td><td>12.05</td><td>5.25</td><td>10.27</td><td>17.15</td><td>4.07</td><td>8.17</td><td>12.30</td></tr> <tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr> <tr><td>MAML</td><td>4.30</td><td>8.22</td><td>13.35</td><td>5.17</td><td>9.98</td><td>16.75</td><td>6.67</td><td>11.75</td><td>21.58</td><td>5.23</td><td>9.82</td><td>16.80</td></tr> <tr><td>ST-GFSL</td><td>4.28</td><td>8.15</td><td>13.07</td><td>5.15</td><td>10.12</td><td>16.20</td><td>6.85</td><td>12.37</td><td>20.83</td><td>5.23</td><td>10.02</td><td>16.30</td></tr> <tr><td colspan="13"><strong>Pre-Training-Based Transfer (Paradigm 4)</strong></td></tr> <tr><td>CrossST</td><td><strong>2.46</strong></td><td><strong>4.72</strong></td><td><strong>6.88</strong></td><td><strong>2.83</strong></td><td><strong>5.42</strong></td><td><strong>7.92</strong></td><td><strong>3.77</strong></td><td><strong>7.76</strong></td><td><strong>11.80</strong></td><td><strong>2.93</strong></td><td><strong>5.73</strong></td><td><strong>8.45</strong></td></tr> <tr><td>MTPB</td><td>3.34</td><td>6.16</td><td>8.58</td><td>3.94</td><td>7.70</td><td>11.30</td><td>4.98</td><td>9.32</td><td>14.85</td><td>4.02</td><td>7.60</td><td>11.40</td></tr> <tr><td>STGCN-FT</td><td>3.62</td><td>7.14</td><td>10.08</td><td>4.16</td><td>8.45</td><td>12.77</td><td>5.22</td><td>10.35</td><td>16.98</td><td>4.21</td><td>8.50</td><td>13.00</td></tr> <tr><td colspan="13"><strong>Knowledge-Distillation-Based Transfer (Paradigm 5)</strong></strong></td></tr> <tr><td>FGITrans</td><td>3.48</td><td>6.93</td><td>13.65</td><td>4.12</td><td>7.98</td><td>15.32</td><td>5.06</td><td>9.28</td><td>17.03</td><td>4.22</td><td>8.06</td><td>15.33</td></tr> <tr><td colspan="13"><strong>Foundation Models/LLM-Based Transfer (Paradigm 6)</strong></strong></td></tr> <tr><td>ST-LLM+</td><td>3.25</span></td><td>6.40</span></td><td>8.52</span></td><td>3.74</span></td><td>7.53</span></td><td>10.55</span></td><td>4.43</span></td><td>8.83</span><td>13.45</span></td><td>3.82</span></td><td>7.58</span></td><td>10.85</span></td></tr> <tr><td>UrbanGPT</span></td><td>3.44</span></td><td>6.72</span></td><td>9.12</span></td><td>3.99</span></td><td>7.92</span></td><td>11.20</span></td><td>4.85</span></td><td>9.53</span></td><td>14.58</span></td><td>4.10</span></td><td>8.05</span></td><td>11.62</span></td></tr> <tr><td>UniST</span></td><td>3.52</span></td><td>6.88</span></td><td>9.38</span></td><td>4.10</span></td><td>8.13</span></td><td>11.53</span></td><td>4.98</span></td><td>9.75</span></td><td>15.03</span></td><td>4.20</span></td><td>8.25</span></td><td>11.98</span></td></tr> </tbody> </table>
 
-### Performance comparison on cross-city traffic speed prediction (WHBT → HZMetro) with 7-day training data
+### Performance Comparison on Cross-City Traffic Flow Prediction (WHBT → HZMetro) with 7-Day Training Data
 
 <table>
   <thead>
@@ -579,7 +579,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (Didi-Chengdu → Didi-Shenzhen) with 7-day training data
+### Performance Comparison on Cross-City Traffic Index Prediction (Didi-Chengdu → Didi-Shenzhen) with 7-Day Training Data
 
 <table>
   <thead>
@@ -630,7 +630,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-### Performance comparison on cross-city traffic speed prediction (Didi-Shenzhen → Didi-Chengdu) with 7-day training data
+### Performance Comparison on Cross-City Traffic Index Prediction (Didi-Shenzhen → Didi-Chengdu) with 7-Day Training Data
 
 <table>
   <thead>

@@ -925,6 +925,8 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 
 ## 🧩 The technical pathway decision matrix for cross-city traffic prediction
 
+**Note：** Empirical thresholds are derived from systematic experiments. Leave-one-city-out validation on 6 unseen pairs shows the recommended paradigm achieves top-2 accuracy in 83% of cases.
+
 <table>
   <thead>
     <tr>
@@ -940,7 +942,7 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
     <tr>
       <td align="left">
         Large distribution shift
-        (<img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}%20%3E%2025\%" alt="Delta M shift > 25%">
+        (<img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}%20%3E%2025\%" alt="Delta M shift > 25%">)
       </td>
       <td align="left">Optimal accuracy</td>
       <td align="left">Alignment</td>
@@ -1014,7 +1016,7 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
       <td align="left">5–10× higher latency;<br>10–20× larger GPU memory</td>
       <td align="left">
         MAE 16.71–17.89 vs. CrossST 16.25<br>
-        (PeMS03→08)
+        (PeMS03→PeMS08)
       </td>
     </tr>
   </tbody>

@@ -143,7 +143,7 @@ A total of **360 traffic sensors** are deployed within:
 - **Data Collection Protocol**
 - Time period: **February 1, 2026 – February 28, 2026 (28 days)**  
 - Sampling interval: **5 minutes**
-- Time Step: **T = 28 × 24 × 12 = 8064**
+- Time step: **T = 28 × 24 × 12 = 8064**
 
 **Data Format**
 

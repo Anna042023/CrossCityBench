@@ -1067,6 +1067,42 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 
 ### Revision 6: Interpretability
 
+We construct and validate STPB in three steps:
+
+**Prototype Construction**
+
+- Extract pattern segments from PeMS03 and PeMS-BAY datasets.
+  
+- Perform K-means clustering on normalized pattern embeddings.
+  
+**Prototype Selection**
+
+- Determine the number of clusters using the elbow method.
+  
+- Retain only prototypes that appear in more than 70% of cities, ensuring generality.
+  
+**Interpretability Validation**
+
+- Conduct a user study with 5 domain experts.
+  
+- Each expert rates interpretability (scale 1–5) based on model outputs.
+  
+- Compute correlation between STPB similarity and human ratings.
+
+**<p align="center"><b>Table 6A: Formal Specification of STPB.</b></p>**
+
+| Item                     | Setting                                                                 |
+|--------------------------|-------------------------------------------------------------------------|
+| Prototype source data    | Pattern segments extracted from **PeMS03 + PeMS-BAY**                   |
+| Candidate pattern pool   | Trend, periodicity, peak-shift, burstiness, local fluctuation segments |
+| Prototype construction   | **K-means clustering** on normalized pattern embeddings                |
+| Number of clusters \(K\) | **8**                                                                   |
+| \(K\) selection criterion| **Elbow method** on within-cluster SSE                                 |
+| Prototype retention rule | Retain prototypes appearing in **>70%** of cities                       |
+| Final prototype bank size| **8 prototypes**                                                        |
+| Similarity metric        | Average cosine similarity between model representation and prototype vectors |
+
+
 ### Revision 7: Robustness Stress Testing
 
 ### Revision 8: Evaluation of Privacy Protection

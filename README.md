@@ -867,8 +867,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="center">Teacher-student capability gap; distillation loss</td>
     </tr>
      <tr>
-      <td align="center"><em>Foundation Models/LLM-Based Transfer</em></td>
-      <td align="center">Adapt mainstream LLMs for cross-city prediction</td>
+      <td align="center"><em>Foundation models/LLM-Based transfer</em></td>
       <td align="center">Leverage large pre-trained foundation models to capture general spatio-temporal patterns and enhance cross-city transferability</td>
       <td align="center">ST-LLM+, UrbanGPT, UniST</td>
       <td align="center">Strong representation capacity; better generalization and transferability across cities</td>

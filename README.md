@@ -925,65 +925,11 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
 
 ## 🧩 The technical pathway decision matrix for cross-city traffic prediction
 
-<table align="center" border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; margin: 20px 0;">
-  <thead>
-    <tr>
-      <th align="center"><strong>Constraints</strong></th>
-      <th align="center"><strong>Primary Goals</strong></th>
-      <th align="center"><strong>Paradigms</strong></th>
-      <th align="center"><strong>Example Models</strong></th>
-      <th align="center"><strong>Key Limitations</strong></th>
-      <th align="center"><strong>Quantitative References</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">Large distribution shift</td>
-      <td align="center">Optimal accuracy</td>
-      <td align="center">Alignment</td>
-      <td align="center">D2MHyper</td>
-      <td align="center">Needs source data; Unstable training</td>
-      <td align="center">High <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_\text{shift}" alt="ΔM_shift"></td>
-    </tr>
-    <tr>
-      <td align="center">Extreme data scarcity</td>
-      <td align="center">Fast adaptation</td>
-      <td align="center">Meta-learning</td>
-      <td align="center">ST-GFSL</td>
-      <td align="center">High meta-training cost; Task-sensitive</td>
-      <td align="center">High latency; Robustness</td>
-    </tr>
-    <tr>
-      <td align="center">Multi-source data available</td>
-      <td align="center">Zero-shot robustness</td>
-      <td align="center">Pre-training</td>
-      <td align="center">CrossST</td>
-      <td align="center">High pre-training resource cost</td>
-      <td align="center">High memory use; Robustness</td>
-    </tr>
-    <tr>
-      <td align="center">Deployment efficiency critical</td>
-      <td align="center">Efficient inference</td>
-      <td align="center">Distillation</td>
-      <td align="center">FGITrans</td>
-      <td align="center">Teacher-dependent</td>
-      <td align="center">Low latency, small size</td>
-    </tr>
-    <tr>
-      <td align="center">Privacy constraints</td>
-      <td align="center">Privacy-preserving performance</td>
-      <td align="center">Federated learning</td>
-      <td align="center">FedCTPM</td>
-      <td align="center">Communication cost; Utility gap</td>
-      <td align="center">Communication overhead and <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_\text{util}" alt="G_util"></td>
-    </tr>
-    <tr>
-      <td align="center">Ample resources</td>
-      <td align="center">Generalization</td>
-      <td align="center">Foundation model</td>
-      <td align="center">Exploring</td>
-      <td align="center">Very high cost</td>
-      <td align="center">To be explored</td>
-    </tr>
-  </tbody>
-</table>
+| Constraints | Primary Goals | Paradigms | Example Models | Key Limitations | Quantitative References |
+|:---|:---|:---|:---|:---|:---|
+| Large distribution shift (<img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_\text{shift} > 25\%" alt="Delta M_shift > 25%">) | Optimal accuracy | Alignment | D2MHyper | Needs source data; Unstable training | High <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_\text{shift}" alt="Delta M_shift"> (Figure~\ref{robustness}(b)) |
+| Extreme data scarcity (target training days &lt; 3) | Fast adaptation | Meta-learning | ST-GFSL | High meta-training cost; Task-sensitive | High latency (Figure~\ref{pareto}); Robustness (Section~\ref{subsubsec:robustness_test}) |
+| Multi-source data available | Zero-shot robustness | Pre-training | CrossST | High pre-training resource cost | High memory use (Figure~\ref{pareto}); Robustness (Section~\ref{subsubsec:robustness_test}) |
+| Deployment efficiency critical (latency &lt; 0.5s) | Efficient inference | Distillation | FGITrans | Teacher-dependent | Low latency, small size (Figure~\ref{pareto}) |
+| Privacy constraints (no data sharing) | Privacy-preserving performance | Federated learning | FedCTPM | Communication cost; Utility gap | Communication overhead and <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_\text{util}" alt="G_util"> (Section~\ref{subsubsec:federated_analysis}) |
+| Ample resources (high compute budget) | Competitive zero-shot accuracy | Foundation model (zero-shot/fine-tune) | UniST, UrbanGPT, ST-LLM+ | 5–10× higher latency; 10–20× larger GPU memory | MAE 16.71–17.89 vs. CrossST 16.25 (PeMS03→08) |

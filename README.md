@@ -38,6 +38,8 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 ### Revision 1: Constructed Datasets
 
+**Table 1A: Statistics of the newly constructed datasets.**
+
 <div align="center">
 
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
@@ -50,7 +52,7 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 The three datasets described above, namely the Taiyuan, Datong, and Fuzhou datasets, are independently constructed by the authors based on traffic data collected from the cities where the authors are currently located. The data acquisition and processing pipeline are designed and implemented by the authors, with support from local traffic management authorities and publicly available traffic sensing platforms.
 
-The motivation for constructing these datasets is to enrich the diversity and availability of urban traffic data. Existing public datasets are limited in terms of geographical coverage and structural variability. In contrast, the constructed datasets include cities with distinct road network topologies and traffic patterns, which provide a more comprehensive benchmark for evaluating the robustness and generalization ability of traffic forecasting models under heterogeneous urban scenarios.
+The motivation for constructing these datasets is to enrich the diversity and availability of urban traffic data. Existing public datasets are limited in terms of geographical coverage and structural variability. In contrast, the constructed datasets include cities with distinct road network topologies and traffic patterns, which provide a more comprehensive benchmark for evaluating the robustness and generalization ability of traffic prediction models under heterogeneous urban scenarios.
 
 #### **Taiyuan**
 
@@ -179,7 +181,7 @@ The above three constructed datasets can be found in:
 
  **Revisions:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
 
-### Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data
+### **Table 2A: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data.**
 
 <table>
 <thead>
@@ -780,7 +782,7 @@ The above three constructed datasets can be found in:
 
 ### Revision 3: Computational Cost and Reproducibility Support
 
-Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic forecasting datasets can be computationally expensive, especially for small-scale systems.  
+Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic prediction datasets can be computationally expensive, especially for small-scale systems.  
 To reduce the reproduction burden, we provide the following resources whenever applicable:
 
 - **Pre-trained weights**

@@ -1106,7 +1106,7 @@ We construct and validate STPB in three steps:
 
 </div>
 
-<p align="center"><b>Table 6B: STPB vs Human Interpretability.</b></p>
+<p align="center"><b>Table 6B: STPB vs. Human Interpretability.</b></p>
 
 <div align="center">
 
@@ -1153,28 +1153,40 @@ Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, w
 
 #### Multi-Layer Few-Shot Evaluation
 
-<p align="center"><b>Table 7A: Multi-level few-shot evaluation on PeMS03 → PeMS08 (Average MAE)</b></p>
+<p align="center"><b>Table 7A: Multi-Level Few-Shot Evaluation on PeMS03 → PeMS08 (Average MAE)</b></p>
 
+<div align="center">
+  
 | Method | 1 day | 3 days | 7 days | 14 days |
 |:---:|:---:|:---:|:---:|:---:|
-| DyHSL | 21.84 | 17.52 | 19.16 | 16.48 |
-| D2MHyper | 18.92 | 16.88 | 17.54 | 16.31 |
-| ST-GFSL | **17.63** | 16.71 | **16.94** | 16.52 |
-| CrossST | 18.21 | **13.92** | 14.67 | **13.48** |
-| FGITrans | 19.44 | 14.38 | 14.76 | 14.21 |
+| DyHSL | 21.84 | 20.52 | 19.16 | 16.48 |
+| D2MHyper | 18.92 | 18.88 | 17.54 | 16.31 |
+| ST-GFSL | **17.63** | 17.71 | 16.94 | 16.52 |
+| CrossST | 18.21 | **14.92** | **14.67** | **13.48** |
+| FGITrans | 19.44 | 15.38 | 14.76 | 14.21 |
 
-<p align="center"><b>Table 7B: Multi-level few-shot evaluation on PeMS-BAY → METR-LA (Average MAE)</b></p>
+</div>
 
+<p align="center"><b>Table 7B: Multi-Level Few-Shot Evaluation on PeMS-BAY → METR-LA (Average MAE)</b></p>
+
+<div align="center">
+  
 | Method | 1 day | 3 days | 7 days | 14 days |
 |:---:|:---:|:---:|:---:|:---:|
-| DyHSL | 4.36 | 3.58 | 3.82 | 3.44 |
-| D2MHyper | 3.16 | **2.61** | **2.74** | **2.53** |
-| ST-GFSL | **3.01** | 2.86 | 2.91 | 2.82 |
-| CrossST | 3.22 | 2.78 | 3.21 | 2.66 |
-| FGITrans | 3.88 | 3.72 | 3.97 | 3.64 |
+| DyHSL | 4.36 | 4.18 | 3.82 | 3.44 |
+| D2MHyper | 3.16 | 3.01 | **2.74** | **2.53** |
+| ST-GFSL | **3.01** | **2.98** | 2.91 | 2.82 |
+| CrossST | 3.22 | 3.18 | 3.21 | 2.66 |
+| FGITrans | 4.13 | 4.02 | 3.97 | 3.64 |
 
-<p align="center"><b>Table 7C: Robustness under structured missingness (ΔM<sub>miss</sub>, %, lower is better)</b></p>
+</div>
 
+#### structured Missingness Robustness
+
+<p align="center"><b>Table 7C: Robustness under Structured Missingness (ΔM<sub>miss</sub>, %, lower is better)</b></p>
+
+<div align="center">
+  
 | Method | Temporal Blocks | Spatial Clusters | Period-Specific | Mean |
 |:---:|:---:|:---:|:---:|:---:|
 | DyHSL | 2.31 | 3.08 | 2.44 | 2.61 |
@@ -1183,8 +1195,12 @@ Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, w
 | CrossST | **1.18** | 2.47 | **1.36** | **1.67** |
 | FGITrans | 5.82 | 6.91 | 5.47 | 6.07 |
 
-<p align="center"><b>Table 7D: Robustness curve under increasing structured missingness rate (mean ΔM<sub>miss</sub>, %)</b></p>
+</div>
 
+<p align="center"><b>Table 7D: Robustness Curve under Increasing Structured Missingness Rate (mean ΔM<sub>miss</sub>, %)</b></p>
+
+<div align="center">
+  
 | Missing Rate | DyHSL | D2MHyper | ST-GFSL | CrossST | FGITrans |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | 10% | 0.92 | 1.14 | 1.86 | **0.48** | 2.23 |
@@ -1192,6 +1208,8 @@ Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, w
 | 30% | 2.61 | 2.74 | 5.06 | **1.67** | 6.07 |
 | 40% | 3.76 | 4.11 | 7.48 | **2.44** | 8.95 |
 | 50% | 5.08 | 5.63 | 10.12 | **3.31** | 12.47 |
+
+</div>
 
 ### Revision 8: Evaluation of Privacy Protection
 

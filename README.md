@@ -1012,7 +1012,7 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
       </td>
       <td align="left">Competitive zero-shot accuracy</td>
       <td align="left">Foundation model<br>(zero-shot/fine-tune)</td>
-      <td align="left">UniST, UrbanGPT, ST-LLM+</td>
+      <td align="left">ST-LLM+, UrbanGPT, UniST</td>
       <td align="left">5–10× higher latency;<br>10–20× larger GPU memory</td>
       <td align="left">
         MAE 16.71–17.89 vs. CrossST 16.25<br>

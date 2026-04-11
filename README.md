@@ -36,7 +36,7 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 ## 📌 All Revisions
 
-### Revision 1: Constructed Datasets
+### Revision 1: Constructed New Datasets
 
 **<p align="center"><b>Table 1A: Statistics of the Newly Constructed Datasets.</b></p>**
 
@@ -92,6 +92,8 @@ Each sensor records:
 
 (6048, 280, 1)
 
+---
+
 #### **Datong**
 
 **City Description**  
@@ -128,6 +130,8 @@ Each sensor records:
 **Data Shape**
 
 (2304, 125, 1)
+
+---
 
 #### **Fuzhou**
 
@@ -166,6 +170,8 @@ Each sensor records:
 **Data Shape**
 
 (8064, 360, 1)
+
+---
 
 <div align="center">
   <img src="Urban Structure.png" alt="Urban Structures" width="80%">
@@ -832,7 +838,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="center">Performance degrades under data scarcity</td>
     </tr>
     <tr>
-      <td align="center" rowspan="4"><strong>Cross-City Transfer Models</strong></td>
+      <td align="center" rowspan="5"><strong>Cross-City Transfer Models</strong></td>
       <td align="center"><em>Alignment-based transfer</em></td>
       <td align="center">Explicitly align source-target distributions</td>
       <td align="center">DASTNet, D2MHyper, DAGN, ST-DAAN</td>
@@ -860,6 +866,14 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="center">Efficient deployment</td>
       <td align="center">Teacher-student capability gap; distillation loss</td>
     </tr>
+     <tr>
+      <td align="center"><em>Foundation Models/LLM-Based Transfer</em></td>
+      <td align="center">Adapt mainstream LLMs for cross-city prediction</td>
+      <td align="center">Leverage large pre-trained foundation models to capture general spatio-temporal patterns and enhance cross-city transferability</td>
+      <td align="center">ST-LLM+, UrbanGPT, UniST</td>
+      <td align="center">Strong representation capacity; better generalization and transferability across cities</td>
+      <td align="center">High computational cost; complex adaptation pipeline; limited interpretability</td>
+    </tr>
     <tr>
       <td align="center" rowspan="1"><strong>Privacy-Preserving Collaborative Models</strong></td>
       <td align="center"></td>
@@ -868,14 +882,6 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="center">Addresses scarcity and privacy jointly</td>
       <td align="center">Communication overhead; client heterogeneity</td>
     </tr>
-    <tr>
-  <td align="center" rowspan="1"><strong>Foundation Models/LLM-Based Transfer</strong></td>
-  <td align="center"></td>
-  <td align="center">Leverage large pre-trained foundation models to capture general spatio-temporal patterns and enhance cross-city transferability</td>
-  <td align="center">ST-LLM+, UrbanGPT, UniST</td>
-  <td align="center">Strong representation capacity; better generalization and transferability across cities</td>
-  <td align="center">High computational cost; complex adaptation pipeline; limited interpretability</td>
-</tr>
   </tbody>
 </table>
 
@@ -976,7 +982,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
   </tbody>
 </table>
 
-### Revision 5: Computational Cost and Reproducibility Support
+#### Computational Cost and Reproducibility Support
 
 Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic prediction datasets can be computationally expensive, especially for small-scale systems.  
 To reduce the reproduction burden, we provide the following resources whenever applicable:
@@ -994,7 +1000,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-### Revision 6: Method-Level Computational Cost and Reproducibility Table
+#### Method-Level Computational Cost and Reproducibility Table
 
 | Paradigm | Method | Full Retraining Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Reproduction Burden | Remarks |
 |---|---|---|---|---|---|---|---|
@@ -1024,7 +1030,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-### Revision 7: Paradigm-Level Summary
+#### Paradigm-Level Summary
 
 | Paradigm | Representative Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Recommendation |
 |---|---|---|---|---|---|
@@ -1037,7 +1043,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-### Revision 8: Recommended Usage Under Limited Resources
+#### Recommended Usage Under Limited Resources
 
 | Scenario | Recommended Strategy |
 |---|---|
@@ -1048,7 +1054,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-### Revision 9: Released Resources
+#### Released Resources
 
 To make the benchmark reproducible without requiring full retraining of all 23 methods, we release:
 

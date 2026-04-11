@@ -80,7 +80,8 @@ A total of **280 traffic sensors** are deployed within:
 - `Taiyuan_dist.csv` # from, to, distance (sparse graph)
 - `Taiyuan.npz` # traffic data
 
-- **Features**
+**Features**
+
 Each sensor records:
 - Traffic flow  
 
@@ -115,7 +116,8 @@ A total of **125 traffic sensors** are deployed within:
 - `Datong_dist.csv` # from, to, distance (sparse graph)
 - `Datong.npz` # traffic data
 
-- **Features**
+**Features**
+
 Each sensor records:
 - Traffic flow
 
@@ -151,7 +153,8 @@ A total of **360 traffic sensors** are deployed within:
 - `Fuzhou_dist.csv` # from, to, distance (sparse graph)
 - `Fuzhou.npz` # traffic data
 
-- **Features**
+**Features**
+
 Each sensor records:
 - Traffic flow
 

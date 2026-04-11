@@ -1065,6 +1065,8 @@ To make the benchmark reproducible without requiring full retraining of all 23 m
 Therefore, users do **not** need to retrain every method from scratch.  
 Instead, they can **directly evaluate relevant methods on a single GPU within hours** in most cases.
 
-### Revision 6: Robustness Stress Testing
+### Revision 6: Interpretability
 
-### Revision 7: Interpretability
+### Revision 7: Robustness Stress Testing
+
+### Revision 8: Evaluation of Privacy Protection

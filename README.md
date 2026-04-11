@@ -19,9 +19,8 @@ This paper proposes CrossCityBench, a benchmark framework for cross-city traffic
   
 All analyses are supported by a complete set of supplementary materials (including experimental details, extended datasets, evaluation metrics, baseline methods, case studies, etc.), ensuring the reproducibility of the research and the comprehensiveness of the conclusions. Through systematic evaluation, diagnosis, and decision support, this framework promotes the practical adoption and paradigm evolution of cross-city prediction models.
 
-## 💾 Datasets
+## 💾 Core Datasets
 
-### Core Datasets
 <div align="center">
 
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
@@ -35,7 +34,9 @@ All analyses are supported by a complete set of supplementary materials (includi
 
 Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Drive](https://drive.google.com/file/d/1oPLRyEN32peSLWLVNVcropHt5iBNUQxo).
 
-### Constructed Datasets
+## 📌 All Revisions
+
+### Revision 1: Constructed Datasets
 
 <div align="center">
 
@@ -174,7 +175,7 @@ Each sensor records:
 The above three constructed datasets can be found in:
 [All Revisions/Newly Constructed Datasets](./All%20Revisions/Newly%20Constructed%20Datasets/)
 
-## 📊 Overall Performance Comparison
+## Revison 2: Overall Performance Comparison
 
  **Revisions:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
 
@@ -777,7 +778,7 @@ The above three constructed datasets can be found in:
   </tbody>
 </table>
 
-## ⚙️ Computational Cost and Reproducibility Support
+### Revision 3: Computational Cost and Reproducibility Support
 
 Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic forecasting datasets can be computationally expensive, especially for small-scale systems.  
 To reduce the reproduction burden, we provide the following resources whenever applicable:
@@ -795,7 +796,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-## 📊 Method-Level Computational Cost and Reproducibility Table
+### Revision 4: Method-Level Computational Cost and Reproducibility Table
 
 | Paradigm | Method | Full Retraining Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Reproduction Burden | Remarks |
 |---|---|---|---|---|---|---|---|
@@ -825,7 +826,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-## 📈 Paradigm-Level Summary
+### Revision 5: Paradigm-Level Summary
 
 | Paradigm | Representative Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Recommendation |
 |---|---|---|---|---|---|
@@ -838,7 +839,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-## 🧭 Recommended Usage Under Limited Resources
+### Revision 6: Recommended Usage Under Limited Resources
 
 | Scenario | Recommended Strategy |
 |---|---|
@@ -849,7 +850,7 @@ To reduce the reproduction burden, we provide the following resources whenever a
 
 ---
 
-## 🔓 Released Resources
+### Revision 7: Released Resources
 
 To make the benchmark reproducible without requiring full retraining of all 23 methods, we release:
 
@@ -861,7 +862,7 @@ To make the benchmark reproducible without requiring full retraining of all 23 m
 Therefore, users do **not** need to retrain every method from scratch.  
 Instead, they can **directly evaluate relevant methods on a single GPU within hours** in most cases.
 
-## 🏷️ Taxonomy of Learning Paradigms and Benchmark Model Zoo
+### Revision 8: Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
 <table align="center">
   <thead>
@@ -923,7 +924,7 @@ Instead, they can **directly evaluate relevant methods on a single GPU within ho
   </tbody>
 </table>
 
-## 🧩 The technical pathway decision matrix for cross-city traffic prediction
+### Revision 9: The technical pathway decision matrix for cross-city traffic prediction
 
 **Note：** Empirical thresholds are derived from systematic experiments. Leave-one-city-out validation on 6 unseen pairs shows the recommended paradigm achieves top-2 accuracy in 83% of cases.
 

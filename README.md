@@ -48,11 +48,35 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 #### **Taiyuan**
 
-- The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Province, China. Taiyuan is characterized by a basin-like terrain surrounded by mountains, which constrains urban expansion and leads to a road network with a combination of radial and ring structures. The city exhibits significant traffic congestion, especially along major arterial roads during peak hours. Due to the geographical constraints and dense urban core, traffic flows in Taiyuan show strong spatial heterogeneity and temporal peak patterns.
+- **City Description**  
 
-- The dataset is constructed based on traffic monitoring data collected in cooperation with the Taiyuan Municipal Transportation Bureau and publicly available urban traffic sensing platforms. A total of 280 traffic sensors are selected, mainly located at major intersections and arterial roads within the urban area (latitude 37.7°–38.1° N, longitude 112.45°–112.75° E).
+The Taiyuan dataset is collected from Taiyuan, the capital city of Shanxi Province, China. Taiyuan is characterized by a basin-like terrain surrounded by mountains, which constrains urban expansion and leads to a road network with a combination of radial and ring structures. The city exhibits significant traffic congestion, especially along major arterial roads during peak hours. Due to the geographical constraints and dense urban core, traffic flows in Taiyuan show strong spatial heterogeneity and temporal peak patterns.
 
-- Traffic flow data are collected continuously from March 1, 2023 to March 21, 2023, with a 5-minute sampling interval, resulting in 6,000 time steps. The geographic coordinates of sensors are obtained from digital map services, and the road network topology is constructed according to actual road connectivity. The distances between connected nodes are computed based on geographic proximity.
+- **Data Sources and Coverage**
+
+Collected in collaboration with the **Taiyuan Municipal Transportation Bureau**, covering:
+- Urban expressways  
+- Ring roads  
+- Major arterial roads
+
+A total of **280 traffic sensors** are deployed within:
+- Latitude: `37.7°–38.1° N`  
+- Longitude: `112.45°–112.75° E`
+
+- **Data Collection Protocol**  
+- Time period: **March 1, 2023 – March 21, 2023 (21 days)**  
+- Sampling interval: **5 minutes**
+- Time step: T = 21 × 24 × 12 = 6000
+
+- **Data Format**
+
+- `Taiyuan_nodes.csv` # sensor_id, latitude, longitude
+- `Taiyuan_dist.csv` # from, to, distance (sparse graph)
+- `Taiyuan.npz` # traffic data
+
+- **Data shape**
+
+(6000, 280, 1)
 
 #### **Datong**
 

@@ -1151,65 +1151,52 @@ Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, w
 
 ### Revision 7: Robustness Stress Testing
 
-#### Multi-Layer Few-Shot Evaluation
+To address the reviewer’s concerns on robustness evaluation and few-shot settings, we design additional experiments including:
 
-<p align="center"><b>Table 7A: Multi-Level Few-Shot Evaluation on PeMS03 → PeMS08 (Average MAE)</b></p>
+- Robustness beyond MAE (new metrics)
+- Multi-level few-shot evaluation (1/3/7/14 days)
+- Structured missingness robustness
 
-<div align="center">
+#### **Robustness Beyond MAE**
+
+**Metrics Definition**
+
+- Horizon-wise Failure Rate (HFR)
   
-| Method | 1 day | 3 days | 7 days | 14 days |
-|:---:|:---:|:---:|:---:|:---:|
-| DyHSL | 21.84 | 20.52 | 19.16 | 16.48 |
-| D2MHyper | 18.92 | 18.88 | 17.54 | 16.31 |
-| ST-GFSL | **17.63** | 17.71 | 16.94 | 16.52 |
-| CrossST | 18.21 | **14.92** | **14.67** | **13.48** |
-| FGITrans | 19.44 | 15.38 | 14.76 | 14.21 |
+\begin{equation}
+\text{HFR}@h = \frac{1}{N}\sum_{i=1}^{N}\mathbf{1}\left(
+\frac{\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|}{\left|y_i^{(h)}\right| + \epsilon} > \tau
+\right)
+\end{equation}
 
-</div>
+🔍 Symbol Definitions
 
-<p align="center"><b>Table 7B: Multi-Level Few-Shot Evaluation on PeMS-BAY → METR-LA (Average MAE)</b></p>
+\begin{itemize}
+\item $N$: total number of test samples
+\item $i$: index of the sample, $i = 1,2,\dots,N$
+\item $h$: prediction horizon (e.g., $h = 60$ minutes)
+\item $y_i^{(h)}$: ground-truth value of the $i$-th sample at horizon $h$
+\item $\hat{y}_i^{(h)}$: predicted value of the $i$-th sample at horizon $h$
+\item $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error
+\item $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero
+\item $\tau$: failure threshold (e.g., $\tau = 0.2$)
+\item $\mathbf{1}(\cdot)$: indicator function defined as
+\[
+\mathbf{1}(x) =
+\begin{cases}
+1, & \text{if } x \text{ is true} \\
+0, & \text{otherwise}
+\end{cases}
+\]
+\end{itemize}
 
-<div align="center">
-  
-| Method | 1 day | 3 days | 7 days | 14 days |
-|:---:|:---:|:---:|:---:|:---:|
-| DyHSL | 4.36 | 4.18 | 3.82 | 3.44 |
-| D2MHyper | 3.16 | 3.01 | **2.74** | **2.53** |
-| ST-GFSL | **3.01** | **2.98** | 2.91 | 2.82 |
-| CrossST | 3.22 | 3.18 | 3.21 | 2.66 |
-| FGITrans | 4.13 | 4.02 | 3.97 | 3.64 |
+📌 Interpretation
 
-</div>
+- Measures the proportion of predictions whose relative error exceeds a threshold
 
-#### structured Missingness Robustness
+- Focuses on catastrophic failures at long horizons
 
-<p align="center"><b>Table 7C: Robustness under Structured Missingness (ΔM<sub>miss</sub>, %, lower is better)</b></p>
-
-<div align="center">
-  
-| Method | Temporal Blocks | Spatial Clusters | Period-Specific | Mean |
-|:---:|:---:|:---:|:---:|:---:|
-| DyHSL | 2.31 | 3.08 | 2.44 | 2.61 |
-| D2MHyper | 2.84 | **2.12** | 3.26 | 2.74 |
-| ST-GFSL | 4.96 | 5.73 | 4.48 | 5.06 |
-| CrossST | **1.18** | 2.47 | **1.36** | **1.67** |
-| FGITrans | 5.82 | 6.91 | 5.47 | 6.07 |
-
-</div>
-
-<p align="center"><b>Table 7D: Robustness Curve under Increasing Structured Missingness Rate (mean ΔM<sub>miss</sub>, %)</b></p>
-
-<div align="center">
-  
-| Missing Rate | DyHSL | D2MHyper | ST-GFSL | CrossST | FGITrans |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| 10% | 0.92 | 1.14 | 1.86 | **0.48** | 2.23 |
-| 20% | 1.61 | 1.93 | 3.44 | **0.96** | 3.87 |
-| 30% | 2.61 | 2.74 | 5.06 | **1.67** | 6.07 |
-| 40% | 3.76 | 4.11 | 7.48 | **2.44** | 8.95 |
-| 50% | 5.08 | 5.63 | 10.12 | **3.31** | 12.47 |
-
-</div>
+- Lower values indicate better robustness
 
 ### Revision 8: Evaluation of Privacy Protection
 

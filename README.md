@@ -186,7 +186,7 @@ The above three constructed datasets can be found in:
 
 ## Revison 2: Overall Performance Comparison
 
-**Note:** The original two cross-city transfer experiments have been extended to **12** experiment groups, as detailed below.
+In the comparative experimental section, we further introduce three LLM-based methods (ST-LLM+, UrbanGPT, and UniST). It is worth noting that these three LLM-based methods are originally designed as single-domain models; we adapt them to cross-city transfer tasks through source-domain fine-tuning followed by target-domain zero-shot evaluation. With this adaptation strategy, we are able to fairly compare the performance of these large models with methods under other paradigms in cross-city transfer scenarios. Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. The code for the three newly introduced large model methods can be obtained via the following link: [All Revisions/LLM-Based Transfer](./All%20Revisions/LLM-Based Transfer).
 
 **<p align="center"><b>Table 2A: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data.</b></p>**
 

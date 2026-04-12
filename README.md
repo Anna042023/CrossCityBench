@@ -1176,15 +1176,15 @@ $$
 
 🔍 Symbol Definitions
 
-- \\( N \\): total number of test samples  
-- \\( i \\): index of the sample, \\( i = 1,2,\dots,N \\)  
-- \\( h \\): prediction horizon (e.g., \\( h = 60 \\) minutes)  
-- \\( y_i^{(h)} \\): ground-truth value of the \\( i \\)-th sample at horizon \\( h \\)  
-- \\( \hat{y}_i^{(h)} \\): predicted value of the \\( i \)-th sample at horizon \\( h \\)  
-- \\( \left| y_i^{(h)} - \hat{y}_i^{(h)} \right| \\): absolute prediction error  
-- \\( \epsilon \\): a small constant (e.g., \\( 10^{-5} \\)) to avoid division by zero  
-- \\( \tau \\): failure threshold (e.g., \\( \tau = 0.2 \\))  
-- \\( \mathbf{I}(\cdot) \\): indicator function defined as 
+- $`N`$: total number of test samples  
+- $`i`$: index of the sample, $`i = 1,2,\dots,N`$  
+- $`h`$: prediction horizon (e.g., $`h = 60`$ minutes)  
+- $`y_i^{(h)}`$: ground-truth value of the $`i`$-th sample at horizon $`h`$  
+- $`\hat{y}_i^{(h)}`$: predicted value of the $`i`$-th sample at horizon $`h`$  
+- $`\left| y_i^{(h)} - \hat{y}_i^{(h)} \right|`$: absolute prediction error  
+- $`\epsilon`$: a small constant (e.g., $`10^{-5}`$) to avoid division by zero  
+- $`\tau`$: failure threshold (e.g., $`\tau = 0.2`$)  
+- $`\mathbf{I}(\cdot)`$: indicator function defined as
 
 $$
 \mathbf{I}(x) =
@@ -1480,7 +1480,7 @@ This experiment evaluates whether federated learning methods provide stronger pr
 
 **Privacy Metrics & Interpretation**
 
-(1) Gradient Inversion Leakage Rate (\\(\mathrm{GILR}\\))
+(1) Gradient Inversion Leakage Rate ($`\mathrm{GILR}`$)
 
 - Measures the extent to which raw input information can be reconstructed from shared gradients or model updates.
   
@@ -1509,7 +1509,7 @@ $$\mathrm{PrivacyScore}_{\mathrm{inv}} = \mathrm{GILR}$$
 
 Higher is better.
 
-(2) Membership Inference Attack Advantage (\\(\mathrm{MIA}\\))
+(2) Membership Inference Attack Advantage ($`\mathrm{MIA}`$)
 
 - Measures whether an attacker can determine if a sample participated in local training.
 
@@ -1528,7 +1528,7 @@ Interpretation:
 
 If attack accuracy is close to random guessing, the model leaks less membership information.
 
-(3) Privacy-Utility Trade-off Score (\\(\mathrm{PUTS}\\))
+(3) Privacy-Utility Trade-off Score ($`\mathrm{PUTS}`$)
 
 To jointly measure privacy strength and predictive utility, we define:
 

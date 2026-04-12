@@ -192,7 +192,7 @@ Furthermore, to more comprehensively evaluate the transfer robustness of differe
 
 The code for the three newly introduced LLM-based methods can be obtained via the following link: [All Revisions/LLM-Based Transfer](./All%20Revisions/LLM-Based%20Transfer).
 
-Details of the three LLM-based methods can be found in [Revision 3](### Revision 3: Taxonomy of Learning Paradigms and Benchmark Model Zoo).
+Details of the three LLM-based methods can be found in [Revision 3](#revision-3-taxonomy-of-learning-paradigms-and-benchmark-model-zoo).
 
 **<p align="center"><b>Table 2A: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data.</b></p>**
 

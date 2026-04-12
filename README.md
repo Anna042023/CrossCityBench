@@ -190,24 +190,22 @@ In the comparative experimental section, we further introduce three LLM-based me
 
 #### Algorithm: Adapting Single-Domain LLMs for Cross-City Transfer
 
-```plaintext
-Input:
-    Source-city dataset $$D_s$$
-    Target-city dataset $$D_t$$
-    Single-domain LLM-based model $$M$$ in {ST-LLM+, UrbanGPT, UniST}
+<p><strong>Input:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Source-city dataset D<sub>s</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Target-city dataset D<sub>t</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model M ∈ {ST-LLM+, UrbanGPT, UniST}</p>
 
-Output:
-    Cross-city prediction results on $$D_t$$
+<p><strong>Output:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Cross-city prediction results on D<sub>t</sub></p>
 
-Algorithm:
-    1. Initialize model $$M$$ with its original single-domain architecture
-    2. Train/fine-tune $$M$$ on the source-city dataset $$D_s$$
-    3. Obtain the source-trained model $$M_s$$
-    4. Transfer $$M_s$$ directly to the target-city task
-    5. Evaluate $$M_s$$ on the target-city dataset $$D_t$$ in a zero-shot manner
-    6. Compute MAE, RMSE, and MAPE on $$D_t$$
-    7. Return the evaluation results
-```
+<p><strong>Algorithm:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;1. Initialize model M with its original single-domain architecture<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. Train/fine-tune M on the source-city dataset D<sub>s</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. Obtain the source-trained model M<sub>s</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;4. Transfer M<sub>s</sub> directly to the target-city task<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5. Evaluate M<sub>s</sub> on the target-city dataset D<sub>t</sub> in a zero-shot manner<br>
+&nbsp;&nbsp;&nbsp;&nbsp;6. Compute MAE, RMSE, and MAPE on D<sub>t</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;7. Return the evaluation results</p>
 
 Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. 
 

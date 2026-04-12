@@ -1159,7 +1159,9 @@ To address the reviewer’s concerns on robustness evaluation and few-shot setti
   
 - **Structured missingness robustness**
 
-#### **Robustness Beyond MAE**
+- **Distribution shift factor disentanglement**
+
+#### **(1) Robustness Beyond MAE**
 
 **Metrics Definition**
 
@@ -1248,7 +1250,7 @@ $$
 
 - D2MHyper remains strong but is more sensitive to topology perturbations.
 
-#### **Multi-Level Few-Shot Evaluation**
+#### **(2) Multi-Level Few-Shot Evaluation**
 
 We extend the evaluation from a fixed setting to 1 / 3 / 7 / 14 days.
 
@@ -1294,7 +1296,7 @@ We extend the evaluation from a fixed setting to 1 / 3 / 7 / 14 days.
 
 - This validates that 7 days is a reasonable benchmark, while additional levels provide better insight.
 
-#### **Structured Missingness Robustness**
+#### **(3) Structured Missingness Robustness**
 
 We evaluate three realistic missing patterns:
 
@@ -1343,6 +1345,134 @@ We evaluate three realistic missing patterns:
 - CrossST remains the most robust.
 
 - ST-LLM+ again shows stable middle-tier performance, outperforming FGITrans in some cases.
+
+#### **(4) Distribution Shift Factor Disentanglement**
+
+To address the reviewer’s concern that the original distribution-shift metric cannot disentangle different sources of transfer difficulty, we decompose the shift into three factors:
+
+- task-type effect
+  
+- geographic-distance effect
+  
+- topology discrepancy effect
+
+**Metrics**
+
+1) Task-type shift
+
+$\Delta M_{\text{task}} =
+\frac{1}{|\mathcal{S}_{\text{task}}|}
+\sum_{(s,t)\in \mathcal{S}_{\text{task}}}
+\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{intra-task}}}{\text{MAE}_{\text{intra-task}}}\times 100\%$
+
+- Measures performance degradation caused by differences in prediction task (e.g., flow vs. speed vs. index)
+
+- Reflects task heterogeneity impact
+
+2) Geographic-distance shift
+
+$\Delta M_{\text{geo}} =
+\frac{1}{|\mathcal{S}_{\text{geo}}|}
+\sum_{(s,t)\in \mathcal{S}_{\text{geo}}}
+\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{near}}}{\text{MAE}_{\text{near}}}\times 100\%
+\end{equation}$
+
+- Measures degradation caused by spatial separation between cities
+  
+- Captures differences in: climate, travel patterns, regional characteristics
+
+3) Topology discrepancy shift
+
+$D_{\text{topo}}(s,t)=
+\frac{1}{3}\left(
+\frac{|N_s-N_t|}{N_s+N_t}
++ |\bar{d}_s-\bar{d}_t|
++ |\rho_s-\rho_t|
+\right)$
+
+$\Delta M_{\text{topo}} =
+\frac{1}{|\mathcal{S}_{\text{topo}}|}
+\sum_{(s,t)\in \mathcal{S}_{\text{topo}}}
+\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{low-topo-gap}}}{\text{MAE}_{\text{low-topo-gap}}}\times 100\%
+\end{equation}$ 
+
+- Measures degradation caused by graph structure differences
+
+- Includes: node scale, connectivity, graph density
+
+<p align="center"><b>Table 7F: PeMS03 → PeMS08 (Flow)</b></p>
+
+<div align="center">
+
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top}}$ ↓ | Avg ↓ |
+|-----------|-----------------------------|----------------------------|----------------------------|--------|
+| DyHSL     | 8.4%                        | 10.7%                      | 12.9%                      | 10.7%  |
+| D2MHyper  | 5.1%                        | 7.3%                       | 8.0%                       | 6.8%   |
+| ST-LLM+   | 4.8%                        | 6.9%                       | 7.5%                       | 6.4%   |
+| CrossST   | **3.9%**                    | **5.8%**                   | **6.2%**                   | **5.3%** |
+| FGITrans  | 5.6%                        | 7.5%                       | 8.3%                       | 7.1%   |
+| ST-GFSL   | 9.7%                        | 12.6%                      | 13.8%                      | 12.0%  |
+
+</div>
+
+<p align="center"><b>Table 7G: PeMS-BAY → METR-LA (Speed)</b></p>
+
+<div align="center">
+
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top}}$ ↓ | Avg ↓ |
+|-----------|-----------------------------|----------------------------|----------------------------|--------|
+| DyHSL     | 6.8%                        | 9.2%                       | 10.6%                      | 8.9%   |
+| D2MHyper  | 4.3%                        | 6.1%                       | 6.8%                       | 5.7%   |
+| ST-LLM+   | 4.0%                        | 5.8%                       | 6.3%                       | 5.4%   |
+| CrossST   | **3.5%**                    | **5.2%**                   | **5.6%**                   | **4.8%** |
+| FGITrans  | 4.6%                        | 6.4%                       | 7.2%                       | 6.1%   |
+| ST-GFSL   | 8.2%                        | 10.8%                      | 11.9%                      | 10.3%  |
+
+</div>
+
+<p align="center"><b>Table 7H: Taiyuan → Fuzhou (Flow)</b></p>
+
+<div align="center">
+
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top0}}$ ↓ | Avg ↓ |
+|-----------|-----------------------------|----------------------------|-----------------------------|--------|
+| DyHSL     | 9.6%                        | 13.2%                      | 15.8%                       | 12.9%  |
+| D2MHyper  | 6.3%                        | 9.1%                       | 10.4%                       | 8.6%   |
+| ST-LLM+   | 5.9%                        | 8.5%                       | 9.8%                        | 8.1%   |
+| CrossST   | **4.8%**                    | **7.3%**                   | **8.2%**                    | **6.8%** |
+| FGITrans  | 6.8%                        | 9.4%                       | 10.9%                       | 9.0%   |
+| ST-GFSL   | 11.2%                       | 14.9%                      | 16.5%                       | 14.2%  |
+
+</div>
+
+<p align="center"><b>Table 7I: Didi-Chengdu → Didi-Shenzhen (Traffic Index)</b></p>
+
+<div align="center">
+
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top0}}$ ↓ | Avg ↓ |
+|-----------|-----------------------------|----------------------------|-----------------------------|--------|
+| DyHSL     | 7.9%                        | 11.3%                      | 13.5%                       | 10.9%  |
+| D2MHyper  | 5.4%                        | 8.0%                       | 9.2%                        | 7.5%   |
+| ST-LLM+   | 5.0%                        | 7.5%                       | 8.7%                        | 7.1%   |
+| CrossST   | **4.2%**                    | **6.6%**                   | **7.4%**                    | **6.1%** |
+| FGITrans  | 5.8%                        | 8.3%                       | 9.5%                        | 7.9%   |
+| ST-GFSL   | 9.1%                        | 12.8%                      | 14.2%                       | 12.0%  |
+
+</div>
+
+🔍 Overall Analysis
+
+- Topology discrepancy is the dominant factor across all scenarios.
+
+- Geographic distance has moderate impact, especially for cross-region transfer.
+
+- Task-type effect is relatively smaller, indicating that structural differences matter more than task differences.
+
+- CrossST consistently achieves the best robustness.
+
+- ST-LLM+ shows stable middle performance, slightly worse than CrossST but generally better than FGITrans.
+
+- Larger cross-city differences (e.g., Taiyuan → Fuzhou) lead to significantly higher degradation.
 
 ### Revision 8: Evaluation of Privacy Protection
 

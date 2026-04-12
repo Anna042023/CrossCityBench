@@ -195,7 +195,7 @@ In the comparative experimental section, we further introduce three LLM-based me
 **Input:**  
 &nbsp;&nbsp;&nbsp;&nbsp;Source-city dataset $D_s$  
 &nbsp;&nbsp;&nbsp;&nbsp;Target-city dataset $D_t$  
-&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model $M in {ST-LLM+, UrbanGPT, UniST}
+&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model $M$ in {ST-LLM+, UrbanGPT, UniST}
 
 **Output:**  
 &nbsp;&nbsp;&nbsp;&nbsp;Cross-city prediction results on $D_t$

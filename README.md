@@ -1128,7 +1128,7 @@ We construct and validate STPB in three steps:
 | p-value                      | **0.008**|
 | Spearman $\rho$            | **0.74**|
 | p-value                      | **0.014**|
-| Intraclass correlation coefficient (ICC)  | **0.81**|
+| Intraclass Correlation Coefficient (ICC)  | **0.81**|
 
 </div>
 
@@ -1140,7 +1140,7 @@ As shown in Table 6A, the prototype bank is constructed via K-means (K=8, elbow 
 
 (2) STPB correlates well with human interpretability.
 
-From Table 6B-6C, STPB similarity is strongly aligned with expert ratings (Pearson $`r = 0.79`$, $`p < 0.01`$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
+From Table 6B-6C, STPB similarity is strongly aligned with expert ratings (Pearson r = 0.79, p < 0.01), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
 
 (3) STPB captures meaningful differences across models.
 
@@ -1176,15 +1176,15 @@ $$
 
 🔍 Symbol Definitions
 
-- $`N`$: total number of test samples  
-- $`i`$: index of the sample, $`i = 1,2,\dots,N`$  
-- $`h`$: prediction horizon (e.g., $`h = 60`$ minutes)  
-- $`y_i^{(h)}`$: ground-truth value of the $`i`$-th sample at horizon $`h`$  
-- $`\hat{y}_i^{(h)}`$: predicted value of the $`i`$-th sample at horizon $`h`$  
-- $`\left| y_i^{(h)} - \hat{y}_i^{(h)} \right|`$: absolute prediction error  
-- $`\epsilon`$: a small constant (e.g., $`10^{-5}`$) to avoid division by zero  
-- $`\tau`$: failure threshold (e.g., $`\tau = 0.2`$)  
-- $`\mathbf{I}(\cdot)`$: indicator function defined as
+- $N$: total number of test samples  
+- $i$: index of the sample, $i = 1,2,\dots,N$  
+- $h$: prediction horizon (e.g., $h = 60$ minutes)  
+- $y_i^{(h)}$: ground-truth value of the i-th sample at horizon $h$  
+- $\hat{y}_i^{(h)}$: predicted value of the i-th sample at horizon $h$  
+- $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error  
+- $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero  
+- $\tau$: failure threshold (e.g., $\tau = 0.2$)  
+- $\mathbf{I}(\cdot)$: indicator function defined as
 
 $$
 \mathbf{I}(x) =
@@ -1217,7 +1217,7 @@ $$
     - False neighbor connections  
 - $|\mathcal{P}|$: Number of perturbation types  
 - $p$: A specific topology perturbation  
-- $\text{MAE}_{\text{clean}}^{\text{clean}}$: MAE under the original (unperturbed) graph  
+- $\text{MAE}_{p}^{\text{clean}}$: MAE under the original (unperturbed) graph  
 - $\text{MAE}_p^{\text{topo}}$: MAE under perturbation $p$
 
 📌 Interpretation
@@ -1398,7 +1398,7 @@ $$
   
 - Includes: node scale, connectivity, graph density
 
-<p align="center"><b>Table 7F: PeMS03 → PeMS08 (Flow)</b></p>
+<p align="center"><b>Table 7F: Distribution Shift Analysis on PeMS03 → PeMS08 (Flow)</b></p>
 
 <div align="center">
 
@@ -1413,7 +1413,7 @@ $$
 
 </div>
 
-<p align="center"><b>Table 7G: PeMS-BAY → METR-LA (Speed)</b></p>
+<p align="center"><b>Table 7G: Distribution Shift Analysis on PeMS-BAY → METR-LA (Speed)</b></p>
 
 <div align="center">
 
@@ -1428,7 +1428,7 @@ $$
 
 </div>
 
-<p align="center"><b>Table 7H: Taiyuan → Fuzhou (Flow)</b></p>
+<p align="center"><b>Table 7H: Distribution Shift Analysis on Taiyuan → Fuzhou (Flow)</b></p>
 
 <div align="center">
 
@@ -1443,7 +1443,7 @@ $$
 
 </div>
 
-<p align="center"><b>Table 7I: Didi-Chengdu → Didi-Shenzhen (Traffic Index)</b></p>
+<p align="center"><b>Table 7I: Distribution Shift Analysis on Didi-Chengdu → Didi-Shenzhen (Traffic Index)</b></p>
 
 <div align="center">
 
@@ -1480,7 +1480,7 @@ This experiment evaluates whether federated learning methods provide stronger pr
 
 **Privacy Metrics & Interpretation**
 
-(1) Gradient Inversion Leakage Rate ($`\mathrm{GILR}`$)
+(1) Gradient Inversion Leakage Rate ($GILR$)
 
 - Measures the extent to which raw input information can be reconstructed from shared gradients or model updates.
   
@@ -1509,7 +1509,7 @@ $$\mathrm{PrivacyScore}_{\mathrm{inv}} = \mathrm{GILR}$$
 
 Higher is better.
 
-(2) Membership Inference Attack Advantage ($`\mathrm{MIA}`$)
+(2) Membership Inference Attack Advantage ($MIA$)
 
 - Measures whether an attacker can determine if a sample participated in local training.
 
@@ -1528,7 +1528,7 @@ Interpretation:
 
 If attack accuracy is close to random guessing, the model leaks less membership information.
 
-(3) Privacy-Utility Trade-off Score ($`\mathrm{PUTS}`$)
+(3) Privacy-Utility Trade-off Score ($PUTS$)
 
 To jointly measure privacy strength and predictive utility, we define:
 
@@ -1629,9 +1629,9 @@ Specifically, most existing cross-city transfer methods (e.g., alignment-based, 
 
 This difference leads to two key incompatibilities:
 
-1.Training protocol mismatch: FL methods assume that the target city participates in training as a client, while standard transfer methods treat the target city as an unseen domain (or with limited fine-tuning data). 
+(1) Training protocol mismatch: FL methods assume that the target city participates in training as a client, while standard transfer methods treat the target city as an unseen domain (or with limited fine-tuning data). 
 
-2.Data accessibility assumption: FL allows joint optimization across all cities (including the target), whereas transfer methods restrict knowledge flow from source to target without joint training. 
+(2) Data accessibility assumption: FL allows joint optimization across all cities (including the target), whereas transfer methods restrict knowledge flow from source to target without joint training. 
 
 As a result, directly placing FL methods into the same table as source-to-target transfer methods would lead to an unfair comparison, since FL methods benefit from additional collaborative information during training.
 To ensure a fair and meaningful evaluation, we therefore report FL-based methods under a separate setting, following the standard practice in prior work. 

@@ -190,7 +190,6 @@ In the comparative experimental section, we further introduce three LLM-based me
 
 #### Algorithm: Adapting Single-Domain LLMs for Cross-City Transfer
 
-```plaintext
 **Input:**  
 &nbsp;&nbsp;&nbsp;&nbsp;Source-city dataset $D_s$  
 &nbsp;&nbsp;&nbsp;&nbsp;Target-city dataset $D_t$  
@@ -207,7 +206,6 @@ In the comparative experimental section, we further introduce three LLM-based me
 &nbsp;&nbsp;&nbsp;&nbsp;5. Evaluate $M_s$ on the target-city dataset $D_t$ in a zero-shot manner  
 &nbsp;&nbsp;&nbsp;&nbsp;6. Compute $\text{MAE}$, $\text{RMSE}$, and $\text{MAPE}$ on $D_t$  
 &nbsp;&nbsp;&nbsp;&nbsp;7. Return the evaluation results
-```
 
 Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. 
 

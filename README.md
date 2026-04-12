@@ -1163,32 +1163,31 @@ To address the reviewer’s concerns on robustness evaluation and few-shot setti
 
 - Horizon-wise Failure Rate (HFR)
   
-\begin{equation}
-\text{HFR}@h = \frac{1}{N}\sum_{i=1}^{N}\mathbf{1}\left(
+$$
+\text{HFR}@h = \frac{1}{N}\sum_{i=1}^{N}\mathbf{I\left(
 \frac{\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|}{\left|y_i^{(h)}\right| + \epsilon} > \tau
 \right)
-\end{equation}
+$$
 
 🔍 Symbol Definitions
 
-\begin{itemize}
-\item $N$: total number of test samples
-\item $i$: index of the sample, $i = 1,2,\dots,N$
-\item $h$: prediction horizon (e.g., $h = 60$ minutes)
-\item $y_i^{(h)}$: ground-truth value of the $i$-th sample at horizon $h$
-\item $\hat{y}_i^{(h)}$: predicted value of the $i$-th sample at horizon $h$
-\item $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error
-\item $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero
-\item $\tau$: failure threshold (e.g., $\tau = 0.2$)
-\item $\mathbf{1}(\cdot)$: indicator function defined as
-\[
-\mathbf{1}(x) =
+- $N$: total number of test samples  
+- $i$: index of the sample, $i = 1,2,\dots,N$  
+- $h$: prediction horizon (e.g., $h = 60$ minutes)  
+- $y_i^{(h)}$: ground-truth value of the $i$-th sample at horizon $h$  
+- $\hat{y}_i^{(h)}$: predicted value of the $i$-th sample at horizon $h$  
+- $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error  
+- $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero  
+- $\tau$: failure threshold (e.g., $\tau = 0.2$)  
+- $\mathbf{1}(\cdot)$: indicator function defined as  
+
+$$
+\mathbf{I}(x) =
 \begin{cases}
 1, & \text{if } x \text{ is true} \\
 0, & \text{otherwise}
 \end{cases}
-\]
-\end{itemize}
+$$
 
 📌 Interpretation
 

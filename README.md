@@ -793,6 +793,8 @@ Details of the three LLM-based methods can be found in [Revision 3](#revision-3-
   </tbody>
 </table>
 
+Overall, the pre-training-based CrossST and the alignment-based D2MHyper deliver the most stable and strongest overall performance. In particular, CrossST often ranks first across multiple traffic flow prediction tasks, indicating that the pre-training paradigm has strong generalizability for cross-city transfer. In contrast, D2MHyper shows more pronounced advantages in traffic speed prediction and some more complex transfer scenarios, demonstrating a strong ability to handle distribution discrepancies. By comparison, single-domain methods and meta-learning methods are generally weaker overall, while the knowledge-distillation-based method FGITrans yields relatively stable results but is usually not the best performer. The newly introduced LLM-based methods (ST-LLM+, UrbanGPT, and UniST) achieve mid-to-upper-tier performance overall, with ST-LLM+ generally outperforming the other two large-model methods. This suggests that LLM-based transfer is promising, although at present it still slightly lags behind the strongest specialized transfer methods.
+
 ### Revision 3: Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
 To further broaden the benchmark coverage, we additionally introduce **Foundation Models / LLM-Based Transfer (Paradigm 6)** into our benchmark. Notably, existing mainstream LLM-based traffic forecasting methods were originally designed for single-city prediction rather than cross-city transfer. To bridge this gap, we have added and adapted three representative LLM-based methods, namely UniST, UrbanGPT, and ST-LLM+, to the cross-city prediction setting via city-specific prompts and domain adaptation layers, thereby establishing new cross-city LLM baselines for a more comprehensive benchmark evaluation.
@@ -978,7 +980,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">Competitive zero-shot accuracy</td>
       <td align="left">Foundation model<br>(zero-shot/fine-tune)</td>
       <td align="left">ST-LLM+, UrbanGPT, UniST</td>
-      <td align="left">5–10× higher latency;<br>10–20× larger GPU memory</td>
+      <td align="left">5-10× higher latency;<br>10-20× larger GPU memory</td>
       <td align="left">
         MAE 16.71–17.89 vs. CrossST 16.25<br>
         (PeMS03→PeMS08)
@@ -1618,8 +1620,8 @@ We will clarify this distinction explicitly in the revised version to avoid conf
       <th colspan="3">PeMS-BAY</th>
       <th colspan="3">Taiyuan</th>
       <th colspan="3">Fuzhou</th>
-      <th colspan="3">PEMS03</th>
-      <th colspan="3">PEMS08</th>
+      <th colspan="3">PeMS03</th>
+      <th colspan="3">PeMS08</th>
     </tr>
     <tr>
       <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>

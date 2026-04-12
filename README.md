@@ -983,7 +983,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
 
 ### Revision 5: Computational Cost and Reproducibility Support
 
-To reduce the reproduction cost, we provide an additional efficiency-oriented benchmark covering all 23 methods (Table 5A), reporting both accuracy and system-level metrics (latency, memory, model size, and evaluation time). We further release pre-trained weights, pre-processed splits, and a lightweight evaluation mode, all available in the anonymous repository. This enables checkpoint-based reproduction on a single GPU within hours, without retraining all models, and supports selective evaluation for resource-limited systems.
+To reduce the reproduction cost, we provide an additional efficiency-oriented benchmark covering all 23 methods (Table 5A), reporting both accuracy and system-level metrics (latency, memory, model size, and evaluation time). We further release pre-trained weights, pre-processed splits, and a lightweight evaluation mode, all available at [All Revisions/R5](./All%20Revisions/R5). This enables checkpoint-based reproduction on a single GPU within hours, without retraining all models, and supports selective evaluation for resource-limited systems.
 
 **<p align="center"><b>Table 5A: Reproducibility and efficiency supplement on PeMS03 → PeMS08.</b></p>**
   

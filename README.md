@@ -1164,7 +1164,7 @@ To address the reviewer’s concerns on robustness evaluation and few-shot setti
 - Horizon-wise Failure Rate (HFR)
   
 $$
-\text{HFR}@h = \frac{1}{N}\sum_{i=1}^{N}\mathbf{I\left(
+\text{HFR}@h = \frac{1}{N}\sum_{i=1}^{N}\mathbf{I}\left(
 \frac{\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|}{\left|y_i^{(h)}\right| + \epsilon} > \tau
 \right)
 $$
@@ -1179,7 +1179,7 @@ $$
 - $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error  
 - $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero  
 - $\tau$: failure threshold (e.g., $\tau = 0.2$)  
-- $\mathbf{1}(\cdot)$: indicator function defined as  
+- $\mathbf{I}(\cdot)$: indicator function defined as  
 
 $$
 \mathbf{I}(x) =

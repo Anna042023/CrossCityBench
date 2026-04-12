@@ -188,12 +188,14 @@ The above three constructed datasets can be found in:
 
 In the comparative experimental section, we further introduce three LLM-based methods (ST-LLM+, UrbanGPT, and UniST). It is worth noting that these three LLM-based methods are originally designed as single-domain models; we adapt them to cross-city transfer tasks through source-domain fine-tuning followed by target-domain zero-shot evaluation. With this adaptation strategy, we are able to fairly compare the performance of these LLMs with methods under other paradigms in cross-city transfer scenarios.
 
+---
+
 #### Algorithm: Adapting Single-Domain LLMs for Cross-City Transfer
 
 **Input:**  
 &nbsp;&nbsp;&nbsp;&nbsp;Source-city dataset $D_s$  
 &nbsp;&nbsp;&nbsp;&nbsp;Target-city dataset $D_t$  
-&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model $M \in \{\text{ST-LLM+}, \text{UrbanGPT}, \text{UniST}\}$
+&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model $M in {ST-LLM+, UrbanGPT, UniST}
 
 **Output:**  
 &nbsp;&nbsp;&nbsp;&nbsp;Cross-city prediction results on $D_t$
@@ -204,8 +206,10 @@ In the comparative experimental section, we further introduce three LLM-based me
 &nbsp;&nbsp;&nbsp;&nbsp;3. Obtain the source-trained model $M_s$  
 &nbsp;&nbsp;&nbsp;&nbsp;4. Transfer $M_s$ directly to the target-city task  
 &nbsp;&nbsp;&nbsp;&nbsp;5. Evaluate $M_s$ on the target-city dataset $D_t$ in a zero-shot manner  
-&nbsp;&nbsp;&nbsp;&nbsp;6. Compute $\text{MAE}$, $\text{RMSE}$, and $\text{MAPE}$ on $D_t$  
+&nbsp;&nbsp;&nbsp;&nbsp;6. Compute MAE, RMSE, and MAPE on $D_t$  
 &nbsp;&nbsp;&nbsp;&nbsp;7. Return the evaluation results
+
+---
 
 Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. 
 

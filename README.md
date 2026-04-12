@@ -1360,10 +1360,10 @@ To address the reviewer’s concern that the original distribution-shift metric 
 
 1) Task-type shift
 
-$\Delta M_{\text{task}} =
+$$\Delta M_{\text{task}} =
 \frac{1}{|\mathcal{S}_{\text{task}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{task}}}
-\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{intra-task}}}{\text{MAE}_{\text{intra-task}}}\times 100\%$
+\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{intra-task}}}{\text{MAE}_{\text{intra-task}}}\times 100\%$$
 
 - Measures performance degradation caused by differences in prediction task (e.g., flow vs. speed vs. index)
 
@@ -1371,11 +1371,11 @@ $\Delta M_{\text{task}} =
 
 2) Geographic-distance shift
 
-$\Delta M_{\text{geo}} =
+$$\Delta M_{\text{geo}} =
 \frac{1}{|\mathcal{S}_{\text{geo}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{geo}}}
 \frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{near}}}{\text{MAE}_{\text{near}}}\times 100\%
-\end{equation}$
+\end{equation}$$
 
 - Measures degradation caused by spatial separation between cities
   
@@ -1383,18 +1383,18 @@ $\Delta M_{\text{geo}} =
 
 3) Topology discrepancy shift
 
-$D_{\text{topo}}(s,t)=
+$$D_{\text{topo}}(s,t)=
 \frac{1}{3}\left(
 \frac{|N_s-N_t|}{N_s+N_t}
 + |\bar{d}_s-\bar{d}_t|
 + |\rho_s-\rho_t|
-\right)$
+\right)$$
 
-$\Delta M_{\text{topo}} =
+$$\Delta M_{\text{topo}} =
 \frac{1}{|\mathcal{S}_{\text{topo}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{topo}}}
 \frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{low-topo-gap}}}{\text{MAE}_{\text{low-topo-gap}}}\times 100\%
-\end{equation}$ 
+\end{equation}$$
 
 - Measures degradation caused by graph structure differences
 

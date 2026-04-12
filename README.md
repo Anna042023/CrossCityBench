@@ -1123,6 +1123,10 @@ Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, w
 
 ### Revision 7: Robustness Stress Testing
 
+We revise the robustness discussion to ensure consistency with the definition of $\Delta M_{\text{shift}}$, where smaller values indicate better robustness. Specifically, CrossST (0.28%) and FGITrans (0.55%) demonstrate strong robustness, while D2MHyper (32.52%) shows higher sensitivity to distribution shifts. The revised statement is as follows:
+
+Figure 4(b) offers a quantitative breakdown of model robustness under distribution shifts, measured by $\Delta M_{\text{shift}}$, where a smaller value indicates stronger robustness. The alignment-based method D2MHyper exhibits a relatively large shift (32.52%), suggesting that although it explicitly performs distribution matching, it remains sensitive to cross-city heterogeneity. In contrast, the single-domain model DyHSL shows a negative value (-5.24%), highlighting unstable behavior and limited transferability under cross-city scenarios. Meta-learning (ST-GFSL, 16.75%) demonstrates moderate robustness, while the pre-training method CrossST achieves a near-zero shift (0.28%), indicating strong robustness due to its ability to learn transferable representations. Knowledge distillation methods such as FGITrans maintain stable performance (0.55%), further illustrating their effectiveness in preserving model consistency under distribution shifts.
+
 To address the reviewer’s concerns on robustness evaluation and few-shot settings, we design additional experiments including:
 
 - **Robustness beyond MAE (new metrics)**

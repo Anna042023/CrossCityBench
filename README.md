@@ -1663,7 +1663,7 @@ We will clarify this distinction explicitly in the revised version to avoid conf
       <td>1.69</td><td>3.78</td><td>3.90</td>
       <td><ins>4.35</ins></td><td><ins>9.70</ins></td><td><ins>10.5</ins></td>
       <td><ins>4.72</ins></td><td><ins>10.45</ins></td><td><ins>11.3</ins></td>
-      <td><ins>16.6</ins></td><td><ins>27.4</ins></td><td><ins>14.6</ins></td>
+      <td>17.2</td><td>28.1</td><td>15.0</td>
       <td><ins>20.2</ins></td><td><ins>32.0</ins></td><td><ins>16.2</ins></td>
     </tr>
     <tr>
@@ -1697,7 +1697,7 @@ We will clarify this distinction explicitly in the revised version to avoid conf
       <!-- Fuzhou: all best (no ins) -->
       <td>4.95</td><td>10.95</td><td>11.5</td>
       <!-- PEMS03: all best (no ins) -->
-      <td>17.2</td><td>28.1</td><td>15.0</td>
+      <td><ins>16.6</ins></td><td><ins>27.4</ins></td><td><ins>14.6</ins></td>
       <!-- PEMS08: all best (no ins) -->
       <td>21.1</td><td>32.9</td><td>16.5</td>
     </tr>

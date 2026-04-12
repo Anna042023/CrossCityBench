@@ -207,6 +207,7 @@ Algorithm:
     5. Evaluate Ms on the target-city dataset Dt in a zero-shot manner
     6. Compute MAE, RMSE, and MAPE on Dt
     7. Return the evaluation results
+```
 
 Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. 
 

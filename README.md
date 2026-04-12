@@ -1371,11 +1371,12 @@ $$\Delta M_{\text{task}} =
 
 2) Geographic-distance shift
 
-$$\Delta M_{\text{geo}} =
+$$
+\Delta M_{\text{geo}} =
 \frac{1}{|\mathcal{S}_{\text{geo}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{geo}}}
 \frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{near}}}{\text{MAE}_{\text{near}}}\times 100\%
-\end{equation}$$
+$$
 
 - Measures degradation caused by spatial separation between cities
   
@@ -1383,21 +1384,24 @@ $$\Delta M_{\text{geo}} =
 
 3) Topology discrepancy shift
 
-$$D_{\text{topo}}(s,t)=
+$$
+D_{\text{topo}}(s,t)=
 \frac{1}{3}\left(
 \frac{|N_s-N_t|}{N_s+N_t}
 + |\bar{d}_s-\bar{d}_t|
 + |\rho_s-\rho_t|
-\right)$$
+\right)
+$$
 
-$$\Delta M_{\text{topo}} =
+$$
+\Delta M_{\text{topo}} =
 \frac{1}{|\mathcal{S}_{\text{topo}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{topo}}}
 \frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{low-topo-gap}}}{\text{MAE}_{\text{low-topo-gap}}}\times 100\%
-\end{equation}$$
+$$
 
 - Measures degradation caused by graph structure differences
-
+  
 - Includes: node scale, connectivity, graph density
 
 <p align="center"><b>Table 7F: PeMS03 → PeMS08 (Flow)</b></p>

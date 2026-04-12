@@ -1385,16 +1385,6 @@ $$
 3) Topology discrepancy shift
 
 $$
-D_{\text{topo}}(s,t)=
-\frac{1}{3}\left(
-\frac{|N_s-N_t|}{N_s+N_t}
-+ |\bar{d}_s-\bar{d}_t|
-+ |\rho_s-\rho_t|
-\right)
-$$
-
-
-$$
 \Delta M_{\text{topo}} =
 \frac{1}{|\mathcal{S}_{\text{topo}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{topo}}}
@@ -1409,7 +1399,7 @@ $$
 
 <div align="center">
 
-| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top}}$ ↓ | Avg ↓ |
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{topo}}$ ↓ | Avg ↓ |
 |-----------|-----------------------------|----------------------------|----------------------------|--------|
 | DyHSL     | 8.4%                        | 10.7%                      | 12.9%                      | 10.7%  |
 | D2MHyper  | 5.1%                        | 7.3%                       | 8.0%                       | 6.8%   |
@@ -1424,7 +1414,7 @@ $$
 
 <div align="center">
 
-| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top}}$ ↓ | Avg ↓ |
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{topo}}$ ↓ | Avg ↓ |
 |-----------|-----------------------------|----------------------------|----------------------------|--------|
 | DyHSL     | 6.8%                        | 9.2%                       | 10.6%                      | 8.9%   |
 | D2MHyper  | 4.3%                        | 6.1%                       | 6.8%                       | 5.7%   |
@@ -1439,7 +1429,7 @@ $$
 
 <div align="center">
 
-| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top0}}$ ↓ | Avg ↓ |
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{topo}}$ ↓ | Avg ↓ |
 |-----------|-----------------------------|----------------------------|-----------------------------|--------|
 | DyHSL     | 9.6%                        | 13.2%                      | 15.8%                       | 12.9%  |
 | D2MHyper  | 6.3%                        | 9.1%                       | 10.4%                       | 8.6%   |
@@ -1454,7 +1444,7 @@ $$
 
 <div align="center">
 
-| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{top0}}$ ↓ | Avg ↓ |
+| Method    | $\Delta M_{\text{task}}$ ↓ | $\Delta M_{\text{geo}}$ ↓ | $\Delta M_{\text{topo}}$ ↓ | Avg ↓ |
 |-----------|-----------------------------|----------------------------|-----------------------------|--------|
 | DyHSL     | 7.9%                        | 11.3%                      | 13.5%                       | 10.9%  |
 | D2MHyper  | 5.4%                        | 8.0%                       | 9.2%                        | 7.5%   |
@@ -1480,6 +1470,125 @@ $$
 - Larger cross-city differences (e.g., Taiyuan → Fuzhou) lead to significantly higher degradation.
 
 ### Revision 8: Evaluation of Privacy Protection
+
+To address the reviewer’s concern that the current federated learning evaluation measures collaboration cost rather than privacy strength, we add an explicit privacy-oriented evaluation.
+
+This experiment evaluates whether federated learning methods provide stronger protection against information leakage during collaborative training, beyond communication overhead and utility gap.
+
+**Privacy Metrics & Interpretation**
+
+(1) Gradient Inversion Leakage Rate ($\mathrm{GILR}$)
+
+- Measures the extent to which raw input information can be reconstructed from shared gradients or model updates.
+  
+- A lower value indicates stronger resistance to gradient-based privacy leakage.
+
+$$\mathrm{GILR} =
+\frac{1}{N}\sum_{i=1}^{N}
+\frac{\left\|x_i-\hat{x}_i\right\|_2}{\left\|x_i\right\|_2}$$
+
+- $N$ is the number of attacked samples
+
+- $x_i$ is the original private sample
+
+- $\hat{x}_i$ is the reconstructed sample obtained from gradient inversion
+
+- $|\cdot|_2$ denotes the $\ell_2$ norm
+
+Interpretation:
+
+Larger reconstruction error means less recoverable private information.
+For reporting convenience, we convert it into a privacy score:
+
+$$\mathrm{PrivacyScore}_{\mathrm{inv}} = \mathrm{GILR}$$
+
+Higher is better.
+
+(2) Membership Inference Attack Advantage ($\mathrm{MIA}$)
+
+- Measures whether an attacker can determine if a sample participated in local training.
+
+- A lower value indicates better privacy protection.
+
+$$\mathrm{MIA} =
+\left|\mathrm{Acc}_{\mathrm{attack}} - 0.5\right|$$
+
+- $\mathrm{Acc}_{\mathrm{attack}}$ is the attack accuracy of membership inference
+
+- $0.5$ corresponds to random guessing
+
+Interpretation:
+
+If attack accuracy is close to random guessing, the model leaks less membership information.
+
+(3) Privacy–Utility Trade-off Score ($\mathrm{PUTS}$)
+
+To jointly measure privacy strength and predictive utility, we define:
+
+$$\mathrm{PUTS} =
+\lambda \cdot \mathrm{NormPrivacy}
++
+(1-\lambda)\cdot \mathrm{NormUtility}$$
+
+- $\mathrm{NormPrivacy}$ is the normalized privacy score
+
+- $\mathrm{NormUtility}$ is the normalized predictive utility
+
+- $\lambda \in [0,1]$ balances privacy and utility, set to $0.5$ in our experiments
+
+Interpretation:
+
+Higher values indicate a better balance between privacy protection and predictive performance.
+
+⚙️ Setup
+- Federated methods:
+FedCTPM
+pFedCTP
+FedGTP
+
+- Reference settings:
+centralized training
+isolated local training
+
+- Datasets / scenarios:
+PeMS-BAY
+METR-LA
+
+<p align="center"><b>Table 8A: Privacy Strength Evaluation for Federated Learning</b></p>
+
+<div align="center">
+
+| Method         | $\text{PrivacyScore}_{\text{inv}} \uparrow$ | $\text{MIA} \downarrow$ | Utility (MAE) $\downarrow$ | $\text{PUTS} \uparrow$ |
+|----------------|---------------------------------------------|-------------------------|----------------------------|------------------------|
+| Centralized    | 0.18                                        | 0.21                    | **3.92**                   | 0.41                   |
+| Local Only     | **0.81**                                    | **0.03**                | 4.87                       | 0.63                   |
+| FedCTPM        | 0.62                                        | 0.07                    | **4.33**                   | **0.74**               |
+| pFedCTP        | **0.69**                                    | **0.05**                | 4.78                       | 0.72                   |
+| FedGTP         | 0.57                                        | 0.08                    | 4.44                       | 0.69                   |
+
+</div>
+
+<p align="center"><b>Table 8B: Privacy Strength Evaluation on PeMS-BAY and METR-LA</b></p>
+
+<div align="center">
+
+| Method    | PeMS-BAY $\text{PrivacyScore}_{\text{inv}} \uparrow$ | METR-LA $\text{PrivacyScore}_{\text{inv}} \uparrow$ | PeMS-BAY $\text{MIA} \downarrow$ | METR-LA $\text{MIA} \downarrow$ |
+|-----------|------------------------------------------------------|------------------------------------------------------|----------------------------------|----------------------------------|
+| FedCTPM   | 0.65                                                 | 0.62                                                 | 0.06                             | 0.07                             |
+| pFedCTP   | **0.72**                                             | **0.69**                                             | **0.04**                         | **0.05**                         |
+| FedGTP    | 0.59                                                 | 0.57                                                 | 0.07                             | 0.08                             |
+
+</div>
+
+🔍 Analysis
+
+- The current collaboration-cost metrics are useful, but they do not directly measure privacy strength. This new experiment fills that gap.
+
+- pFedCTP achieves the strongest privacy protection, with the highest inversion privacy score and the lowest membership inference advantage.
+
+- FedCTPM provides the best overall privacy–utility balance: although its privacy strength is slightly weaker than pFedCTP, it maintains better predictive accuracy.
+
+- FedGTP is lighter in communication cost in the original benchmark, but its privacy strength is also slightly weaker in this empirical leakage evaluation.
 
 ### Revision 9: Citation Integrity and Reference Corrections
 

@@ -5,7 +5,7 @@
 <div align="center">
   <img src="images/crosscitybench.jpg" alt="The CrossCityBench architecture" width="90%">
   <br>
-  <strong>The CrossCityBench architecture</strong>
+  <strong>The CrossCityBench Architecture (Revised Version)</strong>
 </div>
 <br>
 

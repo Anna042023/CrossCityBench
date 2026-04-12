@@ -983,6 +983,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
 
 ### Revision 5: Computational Cost and Reproducibility Support
 
+To reduce the reproduction cost, we provide an additional efficiency-oriented benchmark covering all 23 methods (Table 5A), reporting both accuracy and system-level metrics (latency, memory, model size, and evaluation time). We further release pre-trained weights, pre-processed splits, and a lightweight evaluation mode, all available in the anonymous repository. This enables checkpoint-based reproduction on a single GPU within hours, without retraining all models, and supports selective evaluation for resource-limited systems.
 
 **<p align="center"><b>Table 5A: Reproducibility and efficiency supplement on PeMS03 → PeMS08.</b></p>**
   
@@ -1021,9 +1022,9 @@ Below, we briefly summarize the three representative LLM-based methods included 
     <tr><td>MTPB</td><td>Pre-Training-Based</td><td>24.47</td><td>35.39</td><td>16.14</td><td>0.69</td><td>4.7</td><td>2.22M</td><td>1.1</td></tr>
     <tr><td>STGCN-FT</td><td>Pre-Training-Based</td><td>21.92</td><td>32.72</td><td>16.77</td><td>0.31</td><td>3.2</td><td>0.39M</td><td>0.4</td></tr>
     <tr><td>FGITrans</td><td>Knowledge-Distillation-Based</td><td>14.76</td><td>28.67</td><td>19.00</td><td>0.14</td><td>8.2</td><td>3.42M</td><td>1.8</td></tr>
-    <tr><td>ST-LLM+</td><td>Foundation / Zero-shot</td><td>17.87</td><td>27.93</td><td>14.40</td><td>3.24</td><td>16.8</td><td>0.9B</td><td>2.1</td></tr>
-    <tr><td>UrbanGPT</td><td>Foundation / Zero-shot</td><td>20.60</td><td>31.77</td><td>15.97</td><td>4.11</td><td>20.5</td><td>1.6B</td><td>2.8</td></tr>
-    <tr><td>UniST</td><td>Foundation / Zero-shot</td><td>21.50</td><td>33.00</td><td>16.53</td><td>4.86</td><td>24.7</td><td>2.3B</td><td>3.4</td></tr>
+    <tr><td>ST-LLM+</td><td>Foundation Models/LLM-Based Transfer</td><td>17.87</td><td>27.93</td><td>14.40</td><td>3.24</td><td>16.8</td><td>0.9B</td><td>2.1</td></tr>
+    <tr><td>UrbanGPT</td><td>Foundation Models/LLM-Based Transfer</td><td>20.60</td><td>31.77</td><td>15.97</td><td>4.11</td><td>20.5</td><td>1.6B</td><td>2.8</td></tr>
+    <tr><td>UniST</td><td>Foundation Models/LLM-Based Transfer</td><td>21.50</td><td>33.00</td><td>16.53</td><td>4.86</td><td>24.7</td><td>2.3B</td><td>3.4</td></tr>
   </tbody>
 </table>
 

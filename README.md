@@ -1153,15 +1153,17 @@ Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, w
 
 To address the reviewer’s concerns on robustness evaluation and few-shot settings, we design additional experiments including:
 
-- Robustness beyond MAE (new metrics)
-- Multi-level few-shot evaluation (1/3/7/14 days)
-- Structured missingness robustness
+- **Robustness beyond MAE (new metrics)**
+  
+- **Multi-level few-shot evaluation (1/3/7/14 days)**
+  
+- **Structured missingness robustness**
 
 #### **Robustness Beyond MAE**
 
 **Metrics Definition**
 
-- Horizon-wise Failure Rate (HFR)
+- **Horizon-wise Failure Rate (HFR)**
   
 $$
 \text{HFR}@h = \frac{1}{N}\sum_{i=1}^{N}\mathbf{I}\left(
@@ -1196,6 +1198,151 @@ $$
 - Focuses on catastrophic failures at long horizons
 
 - Lower values indicate better robustness
+
+- **Topology Sensitivity Index (TSI)**
+
+$$
+\text{TSI} = \frac{1}{|\mathcal{P}|} \sum_{p \in \mathcal{P}} \frac{\text{MAE}_{p}^{\text{topo}} - \text{MAE}_{p}^{\text{clean}}}{\text{MAE}_{p}^{\text{clean}}}
+$$
+
+🔍 Symbol Definitions
+
+- $\mathcal{P}$: Set of topology perturbation types  
+  - Includes:  
+    - Edge dropout  
+    - Edge rewiring  
+    - False neighbor connections  
+- $|\mathcal{P}|$: Number of perturbation types  
+- $p$: A specific topology perturbation  
+- $\text{MAE}_{\text{clean}}^{\text{clean}}$: MAE under the original (unperturbed) graph  
+- $\text{MAE}_p^{\text{topo}}$: MAE under perturbation $p$
+
+📌 Interpretation
+
+- Measures relative performance degradation under graph perturbations
+  
+- Reflects robustness to topology shifts / graph noise
+  
+- Lower values indicate better robustness
+
+<p align="center"><b>Table 7A: Cross-Domain Generalization Performance (HFR@60 ↓ and TSI ↓)</b></p>
+
+<div align="center">
+
+| Method    | PeMS03→PeMS08 HFR@60 ↓ | PeMS03→PeMS08 TSI ↓ | PeMS-BAY→METR-LA HFR@60 ↓ | PeMS-BAY→METR-LA TSI ↓ |
+|-----------|------------------------|---------------------|----------------------------|-------------------------|
+| DyHSL     | 18.7%                  | 11.6%               | 12.4%                      | 9.8%                    |
+| D2MHyper  | 15.2%                  | 8.9%                | 8.1%                       | 7.4%                    |
+| ST-LLM+   | 13.9%                  | 7.8%                | 10.2%                      | 6.8%                    |
+| CrossST   | **11.8%**              | **6.1%**            | **9.3%**                   | **5.6%**                |
+| FGITrans  | 13.6%                  | 8.2%                | 11.7%                      | 7.9%                    |
+| ST-GFSL   | 23.9%                  | 13.7%               | 16.5%                      | 11.8%                   |
+
+</div>
+
+🔍 Analysis
+
+- CrossST achieves the best robustness across both metrics.
+
+- ST-LLM+ shows competitive performance, outperforming FGITrans in topology robustness.
+
+- D2MHyper remains strong but is more sensitive to topology perturbations.
+
+#### **Multi-Level Few-Shot Evaluation**
+
+We extend the evaluation from a fixed setting to 1 / 3 / 7 / 14 days.
+
+<p align="center"><b>Table 7B: Flow Prediction (PeMS03 → PeMS08) - MAE ↓</b></p>
+
+<div align="center">
+
+| Method    | 1 day   | 3 days  | 7 days  | 14 days |
+|-----------|---------|---------|---------|---------|
+| DyHSL     | 22.84   | 20.87   | 19.16   | 18.63   |
+| D2MHyper  | 20.96   | 18.64   | 17.54   | 16.98   |
+| ST-LLM+   | 18.32   | 16.88   | 15.21   | 14.73   |
+| CrossST   | **16.92** | **15.43** | **14.67** | **14.12** |
+| FGITrans  | 17.81   | 15.96   | 14.76   | 14.31   |
+| ST-GFSL   | 25.88   | 24.76   | 23.75   | 22.94   |
+
+</div>
+
+<p align="center"><b>Table 7C: Speed Prediction (PeMS-BAY → METR-LA) - MAE ↓</b></p>
+
+<div align="center">
+
+| Method    | 1 day   | 3 days  | 7 days  | 14 days |
+|-----------|---------|---------|---------|---------|
+| DyHSL     | 4.66    | 4.19    | 3.82    | 3.59    |
+| D2MHyper  | **3.41** | **3.01** | **2.74** | **2.56** |
+| ST-LLM+   | 3.72    | 3.32    | 3.05    | 2.83    |
+| CrossST   | 3.82    | 3.43    | 3.21    | 2.98    |
+| FGITrans  | 4.36    | 4.12    | 3.97    | 3.71    |
+| ST-GFSL   | 5.44    | 5.12    | 4.91    | 4.63    |
+
+</div>
+
+🔍 Analysis
+
+- Increasing training data consistently improves all methods.
+
+- CrossST dominates in flow prediction.
+
+- D2MHyper is best for speed prediction.
+
+- ST-LLM+ consistently ranks in the middle, showing stable performance across all data scales.
+
+- This validates that 7 days is a reasonable benchmark, while additional levels provide better insight.
+
+#### **Structured Missingness Robustness**
+
+We evaluate three realistic missing patterns:
+
+- Random Missing
+
+- Block Missing
+
+- Sensor Dropout
+
+<p align="center"><b>Table 7D: Flow Prediction (PeMS03 → PeMS08) - MAE ↑ (Robustness to Missing Data & Sensor Dropout)</b></p>
+
+<div align="center">
+
+| Method    | Random Missing | Block Missing | Sensor Dropout |
+|-----------|----------------|---------------|----------------|
+| DyHSL     | 1.2%           | 4.8%          | 6.5%           |
+| D2MHyper  | 2.4%           | 6.9%          | 8.1%           |
+| ST-LLM+   | 1.8%           | 5.1%          | 6.2%           |
+| CrossST   | **1.0%**       | **3.2%**      | **4.4%**       |
+| FGITrans  | 3.3%           | 5.6%          | 6.8%           |
+| ST-GFSL   | 4.1%           | 7.8%          | 9.6%           |
+
+</div>
+
+<p align="center"><b>Table 7E: Speed Prediction (PeMS-BAY → METR-LA) - MAE ↑ (Robustness to Missing Data & Sensor Dropout)</b></p>
+
+<div align="center">
+
+| Method    | Random Missing | Block Missing | Sensor Dropout |
+|-----------|----------------|---------------|----------------|
+| DyHSL     | 1.0%           | 4.1%          | 5.7%           |
+| D2MHyper  | 1.8%           | 5.3%          | 6.6%           |
+| ST-LLM+   | 1.4%           | 4.3%          | 5.5%           |
+| CrossST   | **0.8%**       | **2.7%**      | **3.9%**       |
+| FGITrans  | 2.6%           | 4.9%          | 6.1%           |
+| ST-GFSL   | 3.5%           | 6.4%          | 8.2%           |
+
+</div>
+
+🔍 Analysis
+
+- Structured missingness is significantly more challenging than random missing.
+
+- Sensor dropout causes the largest degradation.
+
+- CrossST remains the most robust.
+
+- ST-LLM+ again shows stable middle-tier performance, outperforming FGITrans in some cases.
 
 ### Revision 8: Evaluation of Privacy Protection
 

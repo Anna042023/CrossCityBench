@@ -1614,3 +1614,80 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
   
 ### Revision 10: Performance Comparison on Traffic Prediction: Centralized Learning vs. Federated Learning
 
+<!-- 将此代码块直接放入 README.md 中，GitHub 会渲染为表格 -->
+<table>
+  <caption><strong>Performance comparison: Centralized Learning vs. Federated Learning (6 datasets)</strong><br>
+  Best results in centralized learning are <strong>bold</strong>; best federated results are <u>underlined</u>.</caption>
+  <thead>
+    <tr>
+      <th rowspan="2">Category</th>
+      <th rowspan="2">Model</th>
+      <th colspan="3">METR-LA</th>
+      <th colspan="3">PeMS-BAY</th>
+      <th colspan="3">Taiyuan</th>
+      <th colspan="3">Fuzhou</th>
+      <th colspan="3">PEMS03</th>
+      <th colspan="3">PEMS08</th>
+    </tr>
+    <tr>
+      <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>
+      <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>
+      <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>
+      <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>
+      <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>
+      <th>MAE</th><th>RMSE</th><th>MAPE(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Centralized Learning group -->
+    <tr><td rowspan="3"><strong>Centralized</strong></td><td>DCRNN</td>
+      <td>4.04</td><td>9.38</td><td>9.98</td>
+      <td>1.69</td><td>3.78</td><td>3.90</td>
+      <td>4.35</td><td>9.70</td><td>10.5</td>
+      <td>4.72</td><td>10.45</td><td>11.3</td>
+      <td>16.6</td><td>27.4</td><td>14.6</td>
+      <td>20.2</td><td>32.0</td><td>16.2</td>
+    </tr>
+    <tr><td>GWNet</td>
+      <td><strong>3.92</strong></td><td><strong>9.25</strong></td><td><strong>9.68</strong></td>
+      <td><strong>1.58</strong></td><td><strong>3.52</strong></td><td><strong>3.58</strong></td>
+      <td><strong>4.20</strong></td><td><strong>9.50</strong></td><td><strong>10.2</strong></td>
+      <td><strong>4.55</strong></td><td><strong>10.2</strong></td><td><strong>11.0</strong></td>
+      <td><strong>16.0</strong></td><td><strong>26.5</strong></td><td><strong>14.0</strong></td>
+      <td><strong>19.5</strong></td><td><strong>31.2</strong></td><td><strong>15.5</strong></td>
+    </tr>
+    <tr><td>STGCN</td>
+      <td>4.63</td><td>10.58</td><td>11.38</td>
+      <td>1.80</td><td>4.20</td><td>4.14</td>
+      <td>4.95</td><td>11.0</td><td>11.8</td>
+      <td>5.25</td><td>11.60</td><td>12.5</td>
+      <td>17.9</td><td>29.0</td><td>16.2</td>
+      <td>22.5</td><td>34.5</td><td>18.2</td>
+    </tr>
+    <!-- Federated Learning group -->
+    <tr><td rowspan="3"><strong>Federated</strong></td><td>FedCTPM</td>
+      <td><u>4.33</u></td><td>10.53</td><td><u>9.94</u></td>
+      <td><u>1.68</u></td><td><u>3.68</u></td><td><u>3.77</u></td>
+      <td><u>4.55</u></td><td><u>10.10</u></td><td><u>10.6</u></td>
+      <td><u>4.95</u></td><td><u>10.95</u></td><td><u>11.5</u></td>
+      <td><u>17.2</u></td><td><u>28.1</u></td><td><u>15.0</u></td>
+      <td><u>21.1</u></td><td><u>32.9</u></td><td><u>16.5</u></td>
+    </tr>
+    <tr><td>pFedCTP</td>
+      <td>4.78</td><td><u>10.23</u></td><td>12.10</td>
+      <td>2.04</td><td>4.46</td><td>4.91</td>
+      <td>5.02</td><td>10.65</td><td>12.8</td>
+      <td>5.52</td><td>11.85</td><td>13.6</td>
+      <td>18.8</td><td>30.2</td><td>17.5</td>
+      <td>23.0</td><td>35.8</td><td>19.2</td>
+    </tr>
+    <tr><td>FedGTP</td>
+      <td>4.44</td><td>10.86</td><td>10.41</td>
+      <td>1.75</td><td>3.83</td><td>3.85</td>
+      <td>4.70</td><td>10.45</td><td>11.1</td>
+      <td>5.10</td><td>11.25</td><td>12.0</td>
+      <td>18.2</td><td>29.5</td><td>16.1</td>
+      <td>22.0</td><td>34.2</td><td>17.8</td>
+    </tr>
+  </tbody>
+</table>

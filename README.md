@@ -184,7 +184,7 @@ Each sensor records:
 The above three constructed datasets can be found in:
 [All Revisions/Newly Constructed Datasets](./All%20Revisions/Newly%20Constructed%20Datasets/)
 
-### Revison 2: Overall Performance Comparison
+### Revision 2: Overall Performance Comparison
 
 In the comparative experimental section, we further introduce three foundation models/LLM-based transfer methods (ST-LLM+, UrbanGPT, and UniST). It is worth noting that these three foundation models/LLM-based transfer methods are originally designed as single-domain models; we adapt them to cross-city transfer tasks through source-domain fine-tuning followed by target-domain zero-shot evaluation. With this adaptation strategy, we are able to fairly compare the performance of these LLMs with methods under other paradigms in cross-city transfer scenarios.
 
@@ -341,7 +341,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
   <tbody>
     <tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></td></tr>
     <tr><td>GBRT</td><td>28.34</td><td>45.12</td><td>17.22</td><td>30.68</td><td>48.03</td><td>18.65</td><td>35.47</td><td>54.21</td><td>22.10</td><td>31.02</td><td>48.45</td><td>18.99</td></tr>
-    <tr><td>VAR</td><td>31.22</td><td>46.05</td><td>19.15</td><td>33.65</td><td>49.77</td><td>20.68</td><td>39.10</td><td>57.90</td><td>24.56</td><td>34.13</td><td>50.57</td><td>21.13</td></tr>
+    <tr><td>VA/td><td>31.22</td><td>46.05</td><td>19.15</td><td>33.65</td><td>49.77</td><td>20.68</td><td>39.10</td><td>57.90</td><td>24.56</td><td>34.13</td><td>50.57</td><td>21.13</td></tr>
     <tr><td>AGCRN</td><td>27.56</td><td>47.33</td><td>14.22</td><td>27.89</td><td>48.05</td><td>14.30</td><td>33.82</td><td>53.90</td><td>18.05</td><td>29.22</td><td>49.42</td><td>15.23</td></tr>
     <tr><td>AllDeepSet</td><td>20.88</td><td>30.45</td><td>14.32</td><td>26.45</td><td>35.60</td><td>38.20</td><td>38.12</td><td>54.30</td><td>26.50</td><td>27.78</td><td>39.78</td><td>20.67</td></tr>
     <tr><td>DCRNN</td><td>17.98</td><td>27.33</td><td>13.45</td><td>21.05</td><td>32.15</td><td>15.00</td><td>27.70</td><td>41.80</td><td>20.30</td><td>21.57</td><td>32.76</td><td>15.58</td></tr>
@@ -352,7 +352,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
     <tr><td>STG-NCDE</td><td>17.85</td><td>26.50</td><td>14.00</td><td>18.95</td><td>29.65</td><td>15.05</td><td>23.20</td><td>36.30</td><td>17.80</td><td>19.67</td><td>30.48</td><td>15.42</td></tr>
     <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
     <tr><td>DASTNet</td><td>18.66</td><td>27.55</td><td>13.68</td><td>21.55</td><td>32.05</td><td>15.25</td><td>28.20</td><td>41.30</td><td>19.65</td><td>22.14</td><td>33.00</td><td>16.20</td></tr>
-    <tr><td>D2MHyper</td><td>16.10</td><td><ins>24.20</ins></td><td><ins>12.60</ins></td><td>17.85</td><td><ins>27.05</ins></td><td><ins>13.35</ins></td><td>22.70</td><td>34.50</td><td><ins>17.55</ins></td><td>18.42</td><td><ins>27.90</ins></td><td><ins>14.12</ins></td></tr>
+    <tr><td>D2MHype/td><td>16.10</td><td><ins>24.20</ins></td><td><ins>12.60</ins></td><td>17.85</td><td><ins>27.05</ins></td><td><ins>13.35</ins></td><td>22.70</td><td>34.50</td><td><ins>17.55</ins></td><td>18.42</td><td><ins>27.90</ins></td><td><ins>14.12</ins></td></tr>
     <tr><td>DAGN</td><td>17.68</td><td>25.30</td><td>13.20</td><td>18.60</td><td>27.70</td><td>14.70</td><td>22.85</td><td>35.05</td><td>18.05</td><td>19.28</td><td>28.85</td><td>15.28</td></tr>
     <tr><td>ST-DAAN</td><td>19.25</td><td>28.20</td><td>12.90</td><td>23.05</td><td>34.05</td><td>15.90</td><td>30.55</td><td>44.80</td><td>20.65</td><td>23.55</td><td>34.68</td><td>15.98</td></tr>
     <tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr>
@@ -393,7 +393,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
 
 <tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></td></tr>
 <tr><td>GBRT</td><td>8.73</td><td>16.05</td><td>16.57</td><td>9.81</td><td>18.53</td><td>18.59</td><td>11.28</td><td>20.77</td><td>20.93</td><td>9.73</td><td>18.16</td><td>18.38</td></tr>
-<tr><td>VAR</td><td>8.38</td><td>15.32</td><td>15.14</td><td>9.48</td><td>16.93</td><td>17.04</td><td>11.04</td><td>19.28</td><td>20.28</td><td>9.45</td><td>16.84</td><td>17.12</td></tr>
+<tr><td>VA/td><td>8.38</td><td>15.32</td><td>15.14</td><td>9.48</td><td>16.93</td><td>17.04</td><td>11.04</td><td>19.28</td><td>20.28</td><td>9.45</td><td>16.84</td><td>17.12</td></tr>
 <tr><td>AGCRN</td><td>5.47</td><td>10.86</td><td>9.56</td><td>6.43</td><td>12.94</td><td>11.91</td><td>8.03</td><td>15.56</td><td>15.51</td><td>6.45</td><td>13.05</td><td>12.02</td></tr>
 <tr><td>AllDeepSet</td><td>3.39</td><td>6.58</td><td>9.14</td><td>4.10</td><td>8.03</td><td>11.21</td><td>5.14</td><td>10.31</td><td>14.87</td><td>4.09</td><td>8.02</td><td>11.33</td></tr>
 <tr><td>DCRNN</td><td>3.44</td><td>6.89</td><td>8.94</td><td>4.07</td><td>8.25</td><td>11.67</td><td>5.21</td><td>9.94</td><td>15.54</td><td>4.08</td><td>8.15</td><td>11.72</td></tr>
@@ -407,7 +407,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
 <tr><td>DASTNet</td><td>3.72</td><td>7.50</td><td>9.30</td><td>4.57</td><td>9.52</td><td>12.07</td><td>6.01</td><td>11.58</td><td>16.25</td><td>4.59</td><td>9.07</td><td>12.07</td></tr>
 
 <tr>
-<td>D2MHyper</td>
+<td>D2MHype/td>
 <td><strong>2.31</strong></td><td><strong>4.36</strong></td><td><strong>6.09</strong></td>
 <td><strong>2.66</strong></td><td><strong>5.00</strong></td><td><strong>6.99</strong></td>
 <td><strong>3.55</strong></td><td><strong>7.17</strong></td><td><strong>10.45</strong></td>
@@ -472,7 +472,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
   <tbody>
     <tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></td></tr>
     <tr><td>GBRT</td><td>9.56</td><td>17.20</td><td>17.80</td><td>10.68</td><td>19.65</td><td>19.90</td><td>12.20</td><td>22.10</td><td>22.30</td><td>10.62</td><td>19.38</td><td>19.75</td></tr>
-    <tr><td>VAR</td><td>9.12</td><td>16.45</td><td>16.25</td><td>10.30</td><td>18.10</td><td>18.20</td><td>12.05</td><td>20.55</td><td>21.60</td><td>10.27</td><td>18.02</td><td>18.35</td></tr>
+    <tr><td>VA/td><td>9.12</td><td>16.45</td><td>16.25</td><td>10.30</td><td>18.10</td><td>18.20</td><td>12.05</td><td>20.55</td><td>21.60</td><td>10.27</td><td>18.02</td><td>18.35</td></tr>
     <tr><td>AGCRN</td><td>6.05</td><td>11.70</td><td>10.30</td><td>7.08</td><td>13.95</td><td>12.80</td><td>8.85</td><td>16.75</td><td>16.70</td><td>7.10</td><td>14.08</td><td>13.00</td></tr>
     <tr><td>AllDeepSet</td><td>3.78</td><td>7.20</td><td>10.05</td><td>4.55</td><td>8.85</td><td>12.30</td><td>5.68</td><td>11.35</td><td>16.30</td><td>4.52</td><td>8.82</td><td>12.40</td></tr>
     <tr><td>DCRNN</td><td>3.82</td><td>7.55</td><td>9.85</td><td>4.50</td><td>9.05</td><td>12.80</td><td>5.75</td><td>10.90</td><td>17.00</td><td>4.51</td><td>8.96</td><td>12.85</td></tr>
@@ -483,7 +483,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
     <tr><td>STG-NCDE</td><td>4.10</td><td>7.55</td><td>8.20</td><td>5.40</td><td>11.25</td><td>11.45</td><td>7.58</td><td>15.45</td><td>16.30</td><td>5.24</td><td>11.10</td><td>11.18</td></tr>
     <tr><td colspan="13"><strong>Alignment-Based Transfer (Paradigm 2)</strong></td></tr>
     <tr><td>DASTNet</td><td>4.10</td><td>8.25</td><td>10.20</td><td>5.02</td><td>10.45</td><td>13.25</td><td>6.60</td><td>12.70</td><td>17.80</td><td>5.05</td><td>9.97</td><td>13.25</td></tr>
-    <tr><td>D2MHyper</td><td><strong>2.55</strong></td><td><strong>4.80</strong></td><td><strong>6.70</strong></td><td><strong>2.93</strong></td><td><strong>5.50</strong></td><td><strong>7.70</strong></td><td><strong>3.90</strong></td><td><strong>7.88</strong></td><td><strong>11.50</strong></td><td><strong>3.02</strong></td><td><strong>5.81</strong></td><td><strong>8.22</strong></td></tr>
+    <tr><td>D2MHype/td><td><strong>2.55</strong></td><td><strong>4.80</strong></td><td><strong>6.70</strong></td><td><strong>2.93</strong></td><td><strong>5.50</strong></td><td><strong>7.70</strong></td><td><strong>3.90</strong></td><td><strong>7.88</strong></td><td><strong>11.50</strong></td><td><strong>3.02</strong></td><td><strong>5.81</strong></td><td><strong>8.22</strong></td></tr>
     <tr><td>DAGN</td><td><ins>3.13</ins></td><td><ins>6.10</ins></td><td><ins>7.95</ins></td><td><ins>3.58</ins></td><td>7.24</td><td><ins>9.35</ins></td><td>4.32</td><td><ins>8.15</ins></td><td><ins>11.85</ins></td><td>3.67</td><td><ins>6.99</ins></td><td><ins>9.50</ins></td></tr>
     <tr><td>ST-DAAN</td><td>3.48</td><td>6.58</td><td>8.82</td><td>4.12</td><td>8.32</td><td>11.75</td><td>5.45</td><td>10.42</td><td>16.75</td><td>4.20</td><td>8.28</td><td>11.98</td></tr>
     <tr><td colspan="13"><strong>Meta-Learning-Based Transfer (Paradigm 3)</strong></td></tr>
@@ -523,7 +523,7 @@ Details of the three foundation models/LLM-based transfer methods can be found i
   <tbody>
     <tr><td colspan="13"><strong>Single-Domain Models (Paradigm 1)</strong></td></tr>
     <tr><td>GBRT</td><td>6.88</td><td>12.25</td><td>13.45</td><td>7.68</td><td>14.05</td><td>15.00</td><td>8.85</td><td>15.70</td><td>16.90</td><td>7.65</td><td>13.83</td><td>14.85</td></tr>
-    <tr><td>VAR</td><td>6.55</td><td>11.70</td><td>12.20</td><td>7.40</td><td>12.90</td><td>13.70</td><td>8.65</td><td>14.60</td><td>16.35</td><td>7.40</td><td>13.02</td><td>13.92</td></tr>
+    <tr><td>VA/td><td>6.55</td><td>11.70</td><td>12.20</td><td>7.40</td><td>12.90</td><td>13.70</td><td>8.65</td><td>14.60</td><td>16.35</td><td>7.40</td><td>13.02</td><td>13.92</td></tr>
     <tr><td>AGCRN</td><td>4.32</td><td>8.30</td><td>7.70</td><td>5.05</td><td>9.90</td><td>9.55</td><td>6.30</td><td>11.90</td><td>12.40</td><td>5.07</td><td>10.02</td><td>9.73</td></tr>
     <tr><td>AllDeepSet</td><td>2.68</td><td>5.05</td><td>7.55</td><td>3.22</td><td>6.20</td><td>9.20</td><td>4.02</td><td>7.95</td><td>12.20</td><td>3.20</td><td>6.17</td><td>9.27</td></tr>
     <tr><td>DCRNN</td><td>2.72</td><td>5.30</td><td>7.40</td><td>3.20</td><td>6.35</td><td>9.60</td><td>4.08</td><td>7.65</td><td>12.75</td><td>3.20</td><td>6.28</td><td>9.63</td></tr>
@@ -1140,7 +1140,7 @@ As shown in Table 6A, the prototype bank is constructed via K-means (K=8, elbow 
 
 (2) STPB correlates well with human interpretability.
 
-From Table 6B-6C, STPB similarity is strongly aligned with expert ratings (Pearson \\( r=0.79 \\), \\( p<0.01 \\)), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
+From Table 6B-6C, STPB similarity is strongly aligned with expert ratings (Pearson $`r = 0.79`$, $`p < 0.01`$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
 
 (3) STPB captures meaningful differences across models.
 

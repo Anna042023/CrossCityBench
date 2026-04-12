@@ -1128,7 +1128,7 @@ We construct and validate STPB in three steps:
 | p-value                      | **0.008**|
 | Spearman $\rho$            | **0.74**|
 | p-value                      | **0.014**|
-| Inter-rater agreement (ICC)  | **0.81**|
+| Intraclass correlation coefficient (ICC)  | **0.81**|
 
 </div>
 

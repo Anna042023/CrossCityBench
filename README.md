@@ -1481,7 +1481,7 @@ This experiment evaluates whether federated learning methods provide stronger pr
 
 - Measures the extent to which raw input information can be reconstructed from shared gradients or model updates.
   
-- A lower value indicates stronger resistance to gradient-based privacy leakage.
+- A higher value indicates stronger resistance to gradient-based privacy leakage.
 
 $$\mathrm{GILR} =
 \frac{1}{N}\sum_{i=1}^{N}
@@ -1542,17 +1542,13 @@ Higher values indicate a better balance between privacy protection and predictiv
 
 ⚙️ Setup
 - Federated methods:
-FedCTPM
-pFedCTP
-FedGTP
+FedCTPM, pFedCTP, FedGTP
 
 - Reference settings:
-centralized training
-isolated local training
+centralized training, isolated local training
 
 - Datasets / scenarios:
-PeMS-BAY
-METR-LA
+PeMS-BAY, METR-LA
 
 <p align="center"><b>Table 8A: Privacy Strength Evaluation for Federated Learning</b></p>
 

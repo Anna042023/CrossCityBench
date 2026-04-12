@@ -982,7 +982,7 @@ Below, we briefly summarize the three representative LLM-based methods included 
       <td align="left">ST-LLM+, UrbanGPT, UniST</td>
       <td align="left">5-10× higher latency;<br>10-20× larger GPU memory</td>
       <td align="left">
-        MAE 16.71–17.89 vs. CrossST 16.25<br>
+        MAE 16.71-17.89 vs. CrossST 16.25<br>
         (PeMS03→PeMS08)
       </td>
     </tr>

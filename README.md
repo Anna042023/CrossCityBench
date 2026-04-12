@@ -1393,6 +1393,7 @@ D_{\text{topo}}(s,t)=
 \right)
 $$
 
+
 $$
 \Delta M_{\text{topo}} =
 \frac{1}{|\mathcal{S}_{\text{topo}}|}

@@ -1614,11 +1614,26 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
   
 ### Revision 10: Performance Comparison on Traffic Prediction: Centralized Learning vs. Federated Learning
 
+We thank the reviewer for pointing out the concern regarding the comparability across paradigms. We would like to clarify that federated learning (FL)-based methods are intentionally evaluated separately due to their fundamentally different experimental protocol from standard cross-city transfer methods.
+
+Specifically, most existing cross-city transfer methods (e.g., alignment-based, meta-learning, pre-training, and distillation-based approaches) follow a source-to-target paradigm, where a model is trained on one source city and then adapted or evaluated on a single target city (e.g., PeMS03 → PeMS08). In contrast, federated learning methods adopt a multi-client collaborative training paradigm, where multiple cities simultaneously participate as clients during training, and a global model is learned via parameter aggregation without sharing raw data.
+
+This difference leads to two key incompatibilities:
+
+1.Training protocol mismatch: FL methods assume that the target city participates in training as a client, while standard transfer methods treat the target city as an unseen domain (or with limited fine-tuning data). 
+
+2.Data accessibility assumption: FL allows joint optimization across all cities (including the target), whereas transfer methods restrict knowledge flow from source to target without joint training. 
+
+As a result, directly placing FL methods into the same table as source-to-target transfer methods would lead to an unfair comparison, since FL methods benefit from additional collaborative information during training.
+To ensure a fair and meaningful evaluation, we therefore report FL-based methods under a separate setting, following the standard practice in prior work. 
+
+Importantly, to further strengthen the completeness of our benchmark, we additionally extend the evaluation of federated learning methods to cross-city settings with multiple datasets, where each city is treated as a client. The corresponding results are reported in Table 10A. This provides a complementary view of privacy-preserving collaborative learning under realistic multi-city scenarios, while maintaining a clear distinction from conventional transfer learning protocols.
+
+We will clarify this distinction explicitly in the revised version to avoid confusion.
+
 <p align="center"><b>Table 10A: Performance comparison: Centralized Learning vs. Federated Learning</b></p>
 
 <table>
-  <caption><strong>Performance comparison: Centralized Learning vs. Federated Learning (6 datasets)</strong><br>
-  Best results in centralized learning are <strong>bold</strong>; <ins>underlined (ins)</ins> values indicate the <strong>second-best</strong> results among federated models for each metric.</caption>
   <thead>
     <tr>
       <th rowspan="2">Category</th>
@@ -1644,12 +1659,12 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
     <tr>
       <td rowspan="3"><strong>Centralized</strong></td>
       <td>DCRNN</td>
-      <td>4.04</td><td>9.38</td><td>9.98</td>
+      <td><ins>4.04</ins></td><td><ins>9.38</ins></td><td>9.98</td>
       <td>1.69</td><td>3.78</td><td>3.90</td>
-      <td>4.35</td><td>9.70</td><td>10.5</td>
-      <td>4.72</td><td>10.45</td><td>11.3</td>
-      <td>16.6</td><td>27.4</td><td>14.6</td>
-      <td>20.2</td><td>32.0</td><td>16.2</td>
+      <td><ins>4.35</ins></td><td><ins>9.70</ins></td><td><ins>10.5</ins></td>
+      <td><ins>4.72</ins></td><td><ins>10.45</ins></td><td><ins>11.3</ins></td>
+      <td><ins>16.6</ins></td><td><ins>27.4</ins></td><td><ins>14.6</ins></td>
+      <td><ins>20.2</ins></td><td><ins>32.0</ins></td><td><ins>16.2</ins></td>
     </tr>
     <tr>
       <td>GWNet</td>
@@ -1674,9 +1689,9 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
       <td rowspan="3"><strong>Federated</strong></td>
       <td>FedCTPM</td>
       <!-- METR-LA: MAE best (4.33) no ins; RMSE second-best (10.53) -> ins; MAPE best (9.94) no ins -->
-      <td>4.33</td><td><ins>10.53</ins></td><td>9.94</td>
+      <td>4.33</td><td>10.53</td><td><ins>9.94</ins></td>
       <!-- PeMS-BAY: all best (no ins) -->
-      <td>1.68</td><td>3.68</td><td>3.77</td>
+      <td><ins>1.68</ins></td><td><ins>3.68</ins></td><td><ins>3.77</ins></td>
       <!-- Taiyuan: all best (no ins) -->
       <td>4.55</td><td>10.10</td><td>10.6</td>
       <!-- Fuzhou: all best (no ins) -->
@@ -1700,17 +1715,17 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
     <tr>
       <td>FedGTP</td>
       <!-- METR-LA: MAE second-best (4.44) -> ins; MAPE second-best (10.41) -> ins -->
-      <td><ins>4.44</ins></td><td>10.86</td><td><ins>10.41</ins></td>
+      <td>4.44</td><td>10.86</td><td>10.41</td>
       <!-- PeMS-BAY: all second-best -> ins -->
-      <td><ins>1.75</ins></td><td><ins>3.83</ins></td><td><ins>3.85</ins></td>
+      <td>1.75</td><td>3.83</td><td>3.85</td>
       <!-- Taiyuan: all second-best -> ins -->
-      <td><ins>4.70</ins></td><td><ins>10.45</ins></td><td><ins>11.1</ins></td>
+      <td>4.70</td><td>10.45</td><td>11.1</td>
       <!-- Fuzhou: all second-best -> ins -->
-      <td><ins>5.10</ins></td><td><ins>11.25</ins></td><td><ins>12.0</ins></td>
+      <td>5.10</td><td>11.25</td><td>12.0</td>
       <!-- PEMS03: all second-best -> ins -->
-      <td><ins>18.2</ins></td><td><ins>29.5</ins></td><td><ins>16.1</ins></td>
+      <td>18.2</td><td>29.5</td><td>16.1</td>
       <!-- PEMS08: all second-best -> ins -->
-      <td><ins>22.0</ins></td><td><ins>34.2</ins></td><td><ins>17.8</ins></td>
+      <td>22.0</td><td>34.2</td><td>17.8</td>
     </tr>
   </tbody>
 </table>

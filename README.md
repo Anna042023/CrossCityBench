@@ -983,87 +983,52 @@ Below, we briefly summarize the three representative LLM-based methods included 
 
 ### Revision 5: Computational Cost and Reproducibility Support
 
-Since our benchmark includes **23 methods from six paradigms**, fully retraining every model on all cross-city traffic prediction datasets can be computationally expensive, especially for small-scale systems.  
-To reduce the reproduction burden, we provide the following resources whenever applicable:
 
-- **Pre-trained weights**
-- **Pre-processed train/validation/test splits**
-- **Lightweight evaluation mode**
-- **Selective benchmarking**, so users only need to reproduce methods relevant to their own setting
+**<p align="center"><b>Table 5A: Reproducibility and efficiency supplement on PeMS03 → PeMS08.</b></p>**
+  
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Paradigm</th>
+      <th>Avg MAE ↓</th>
+      <th>Avg RMSE ↓</th>
+      <th>Avg MAPE (%) ↓</th>
+      <th>Latency (ms/sample) ↓</th>
+      <th>Peak GPU Mem. (GB) ↓</th>
+      <th>Params</th>
+      <th>1×V100 Light Eval Time (h) ↓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>GBRT</td><td>Single-Domain</td><td>29.68</td><td>47.37</td><td>18.09</td><td>0.08</td><td>0.3</td><td>0.05M</td><td>0.1</td></tr>
+    <tr><td>VAR</td><td>Single-Domain</td><td>32.86</td><td>49.16</td><td>20.33</td><td>0.10</td><td>0.4</td><td>0.03M</td><td>0.1</td></tr>
+    <tr><td>AGCRN</td><td>Single-Domain</td><td>28.03</td><td>48.09</td><td>14.50</td><td>0.27</td><td>1.9</td><td>0.35M</td><td>0.3</td></tr>
+    <tr><td>AllDeepSet</td><td>Single-Domain</td><td>26.72</td><td>38.65</td><td>19.82</td><td>0.32</td><td>2.4</td><td>0.42M</td><td>0.5</td></tr>
+    <tr><td>DCRNN</td><td>Single-Domain</td><td>20.53</td><td>31.66</td><td>14.82</td><td>0.55</td><td>3.8</td><td>2.30M</td><td>0.9</td></tr>
+    <tr><td>DyHSL</td><td>Single-Domain</td><td>19.16</td><td>29.64</td><td>14.71</td><td>0.93</td><td>6.5</td><td>3.10M</td><td>1.7</td></tr>
+    <tr><td>GRU</td><td>Single-Domain</td><td>30.02</td><td>40.80</td><td>34.02</td><td>0.20</td><td>1.2</td><td>0.50M</td><td>0.2</td></tr>
+    <tr><td>GWNet</td><td>Single-Domain</td><td>26.56</td><td>38.07</td><td>23.83</td><td>0.29</td><td>3.3</td><td>0.31M</td><td>0.4</td></tr>
+    <tr><td>STGCN</td><td>Single-Domain</td><td>24.61</td><td>38.00</td><td>15.95</td><td>0.26</td><td>3.0</td><td>0.39M</td><td>0.4</td></tr>
+    <tr><td>STG-NCDE</td><td>Single-Domain</td><td>18.62</td><td>29.41</td><td>14.72</td><td>1.05</td><td>4.8</td><td>1.10M</td><td>1.1</td></tr>
+    <tr><td>DASTNet</td><td>Alignment-Based</td><td>21.15</td><td>31.98</td><td>15.47</td><td>0.74</td><td>4.5</td><td>1.85M</td><td>1.3</td></tr>
+    <tr><td>D2MHyper</td><td>Alignment-Based</td><td>17.54</td><td>26.98</td><td>13.48</td><td>0.59</td><td>4.1</td><td>2.76M</td><td>1.4</td></tr>
+    <tr><td>DAGN</td><td>Alignment-Based</td><td>18.36</td><td>27.95</td><td>14.56</td><td>0.63</td><td>4.3</td><td>1.94M</td><td>1.2</td></tr>
+    <tr><td>ST-DAAN</td><td>Alignment-Based</td><td>22.44</td><td>33.63</td><td>15.23</td><td>0.71</td><td>4.6</td><td>2.08M</td><td>1.5</td></tr>
+    <tr><td>MAML</td><td>Meta-Learning-Based</td><td>24.89</td><td>34.40</td><td>26.11</td><td>1.38</td><td>5.8</td><td>0.88M</td><td>1.6</td></tr>
+    <tr><td>ST-GFSL</td><td>Meta-Learning-Based</td><td>23.75</td><td>33.64</td><td>20.25</td><td>1.96</td><td>7.1</td><td>1.26M</td><td>2.1</td></tr>
+    <tr><td>CrossST</td><td>Pre-Training-Based</td><td>14.67</td><td>23.49</td><td>9.59</td><td>0.58</td><td>4.0</td><td>1.98M</td><td>1.0</td></tr>
+    <tr><td>MTPB</td><td>Pre-Training-Based</td><td>24.47</td><td>35.39</td><td>16.14</td><td>0.69</td><td>4.7</td><td>2.22M</td><td>1.1</td></tr>
+    <tr><td>STGCN-FT</td><td>Pre-Training-Based</td><td>21.92</td><td>32.72</td><td>16.77</td><td>0.31</td><td>3.2</td><td>0.39M</td><td>0.4</td></tr>
+    <tr><td>FGITrans</td><td>Knowledge-Distillation-Based</td><td>14.76</td><td>28.67</td><td>19.00</td><td>0.14</td><td>8.2</td><td>3.42M</td><td>1.8</td></tr>
+    <tr><td>ST-LLM+</td><td>Foundation / Zero-shot</td><td>17.87</td><td>27.93</td><td>14.40</td><td>3.24</td><td>16.8</td><td>0.9B</td><td>2.1</td></tr>
+    <tr><td>UrbanGPT</td><td>Foundation / Zero-shot</td><td>20.60</td><td>31.77</td><td>15.97</td><td>4.11</td><td>20.5</td><td>1.6B</td><td>2.8</td></tr>
+    <tr><td>UniST</td><td>Foundation / Zero-shot</td><td>21.50</td><td>33.00</td><td>16.53</td><td>4.86</td><td>24.7</td><td>2.3B</td><td>3.4</td></tr>
+  </tbody>
+</table>
 
-> **Notes**
-> - **Pre-trained weights**: users can directly load released checkpoints instead of retraining from scratch.  
-> - **Pre-processed splits**: users can reuse the same standardized train/validation/test partitions as in our benchmark.  
-> - **Lightweight evaluation mode**: users can evaluate a trained model on a single GPU without running the full training pipeline.  
-> - The computational cost below refers to the **cost of full retraining**, while the **actual reproduction burden is substantially reduced** by the provided resources.
-
----
-
-#### Method-Level Computational Cost and Reproducibility Table
-
-| Paradigm | Method | Full Retraining Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Reproduction Burden | Remarks |
-|---|---|---|---|---|---|---|---|
-| **Single-Domain Models (Paradigm 1)** | GBRT | Low | ✅ | ✅ | ✅ | Very Low | Classical machine learning baseline, fast to verify |
-|  | VAR | Low | ✅ | ✅ | ✅ | Very Low | Statistical baseline with minimal computational overhead |
-|  | AGCRN | Medium | ✅ | ✅ | ✅ | Low | Adaptive graph learning adds moderate training cost |
-|  | AllDeepSet | Medium | ✅ | ✅ | ✅ | Low | Standard deep model with manageable runtime |
-|  | DCRNN | Medium | ✅ | ✅ | ✅ | Low | Recurrent diffusion structure increases training time |
-|  | DyHSL | Medium | ✅ | ✅ | ✅ | Low | Hidden structure learning adds moderate overhead |
-|  | GRU | Low | ✅ | ✅ | ✅ | Very Low | Simple recurrent baseline, efficient to reproduce |
-|  | GWNet | Medium | ✅ | ✅ | ✅ | Low | Widely used spatio-temporal baseline |
-|  | STGCN | Medium | ✅ | ✅ | ✅ | Low | Stable and relatively efficient graph baseline |
-|  | STG-NCDE | High | ✅ | ✅ | ✅ | Medium | Differential-equation-based optimization is heavier |
-| **Alignment-Based Transfer (Paradigm 2)** | DASTNet | Medium | ✅ | ✅ | ✅ | Low | Transfer alignment introduces moderate additional cost |
-|  | D2MHyper | High | ✅ | ✅ | ✅ | Medium | Hyper-network/domain alignment makes retraining heavier |
-|  | DAGN | Medium | ✅ | ✅ | ✅ | Low | Transfer-aware graph modeling with manageable evaluation |
-|  | ST-DAAN | High | ✅ | ✅ | ✅ | Medium | Adversarial adaptation is more expensive to retrain |
-| **Meta-Learning-Based Transfer (Paradigm 3)** | MAML | Very High | ✅ | ✅ | ✅ | Medium | Meta-train/meta-test loops are costly, but evaluation is lightweight |
-|  | ST-GFSL | Very High | ✅ | ✅ | ✅ | Medium | Few-shot/meta-learning pipeline is expensive to retrain |
-| **Pre-Training-Based Transfer (Paradigm 4)** | CrossST | High | ✅ | ✅ | ✅ | Low | Pre-training is expensive, but fine-tuning/evaluation is much easier |
-|  | MTPB | High | ✅ | ✅ | ✅ | Medium | Multi-stage transfer training increases total runtime |
-|  | STGCN-FT | Medium | ✅ | ✅ | ✅ | Low | Fine-tuning from a pre-trained backbone is relatively efficient |
-| **Knowledge-Distillation-Based Transfer (Paradigm 5)** | FGITrans | High | ✅ | ✅ | ✅ | Medium | Teacher-student training is expensive, but released checkpoints reduce burden |
-| **Foundation Models / LLM-Based Transfer (Paradigm 6)** | ST-LLM+ | Very High | ✅ | ✅ | ✅ | Medium | LLM-based transfer is expensive to train, but evaluation is feasible on a single GPU |
-|  | UrbanGPT | Very High | ✅ | ✅ | ✅ | High | Foundation-model adaptation has the highest overall retraining cost |
-|  | UniST | High | ✅ | ✅ | ✅ | Medium | Unified large-scale transfer framework with relatively heavy optimization |
-
----
-
-#### Paradigm-Level Summary
-
-| Paradigm | Representative Cost | Pre-trained Weights | Pre-processed Splits | Lightweight Evaluation Mode | Practical Recommendation |
-|---|---|---|---|---|---|
-| Single-Domain Models (Paradigm 1) | Low to Medium | ✅ | ✅ | ✅ | Suitable for quick verification and small systems |
-| Alignment-Based Transfer (Paradigm 2) | Medium to High | ✅ | ✅ | ✅ | Good trade-off between transfer ability and reproduction burden |
-| Meta-Learning-Based Transfer (Paradigm 3) | Very High | ✅ | ✅ | ✅ | Expensive to retrain from scratch; recommended to use released checkpoints |
-| Pre-Training-Based Transfer (Paradigm 4) | Medium to High | ✅ | ✅ | ✅ | Pre-training is costly, but downstream evaluation is efficient |
-| Knowledge-Distillation-Based Transfer (Paradigm 5) | High | ✅ | ✅ | ✅ | Distillation adds training cost; checkpoints substantially reduce reproduction burden |
-| Foundation Models/LLM-Based Transfer (Paradigm 6) | High to Very High | ✅ | ✅ | ✅ | Most resource-demanding in full training, but still evaluable in lightweight mode |
-
----
-
-#### Recommended Usage Under Limited Resources
-
-| Scenario | Recommended Strategy |
-|---|---|
-| Very limited compute budget | Directly run **lightweight evaluation** using released checkpoints |
-| Limited GPU memory / training time | Use **pre-trained weights + pre-processed splits** and reproduce only selected methods |
-| Need representative baselines | Start from **GRU, STGCN, DCRNN, GWNet, DASTNet, CrossST** |
-| Need full benchmark comparison | Reuse our released artifacts instead of retraining all methods from scratch |
-
----
-
-#### Released Resources
-
-To make the benchmark reproducible without requiring full retraining of all 23 methods, we release:
-
-- **Pre-trained weights** for all benchmarked methods
-- **Pre-processed train/validation/test splits**
-- **Lightweight evaluation scripts** for quick verification
-- **Standardized benchmark pipeline** for selective reproduction
-
-Therefore, users do **not** need to retrain every method from scratch.  
-Instead, they can **directly evaluate relevant methods on a single GPU within hours** in most cases.
+</body>
+</html>
 
 ### Revision 6: Interpretability
 

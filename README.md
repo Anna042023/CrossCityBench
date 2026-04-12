@@ -190,22 +190,24 @@ In the comparative experimental section, we further introduce three LLM-based me
 
 #### Algorithm: Adapting Single-Domain LLMs for Cross-City Transfer
 
-<p><strong>Input:</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;Source-city dataset D<sub>s</sub><br>
-&nbsp;&nbsp;&nbsp;&nbsp;Target-city dataset D<sub>t</sub><br>
-&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model M ∈ {ST-LLM+, UrbanGPT, UniST}</p>
+```plaintext
+**Input:**  
+&nbsp;&nbsp;&nbsp;&nbsp;Source-city dataset $D_s$  
+&nbsp;&nbsp;&nbsp;&nbsp;Target-city dataset $D_t$  
+&nbsp;&nbsp;&nbsp;&nbsp;Single-domain LLM-based model $M \in \{\text{ST-LLM+}, \text{UrbanGPT}, \text{UniST}\}$
 
-<p><strong>Output:</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;Cross-city prediction results on D<sub>t</sub></p>
+**Output:**  
+&nbsp;&nbsp;&nbsp;&nbsp;Cross-city prediction results on $D_t$
 
-<p><strong>Algorithm:</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;1. Initialize model M with its original single-domain architecture<br>
-&nbsp;&nbsp;&nbsp;&nbsp;2. Train/fine-tune M on the source-city dataset D<sub>s</sub><br>
-&nbsp;&nbsp;&nbsp;&nbsp;3. Obtain the source-trained model M<sub>s</sub><br>
-&nbsp;&nbsp;&nbsp;&nbsp;4. Transfer M<sub>s</sub> directly to the target-city task<br>
-&nbsp;&nbsp;&nbsp;&nbsp;5. Evaluate M<sub>s</sub> on the target-city dataset D<sub>t</sub> in a zero-shot manner<br>
-&nbsp;&nbsp;&nbsp;&nbsp;6. Compute MAE, RMSE, and MAPE on D<sub>t</sub><br>
-&nbsp;&nbsp;&nbsp;&nbsp;7. Return the evaluation results</p>
+**Algorithm:**  
+&nbsp;&nbsp;&nbsp;&nbsp;1. Initialize model $M$ with its original single-domain architecture  
+&nbsp;&nbsp;&nbsp;&nbsp;2. Train/fine-tune $M$ on the source-city dataset $D_s$  
+&nbsp;&nbsp;&nbsp;&nbsp;3. Obtain the source-trained model $M_s$  
+&nbsp;&nbsp;&nbsp;&nbsp;4. Transfer $M_s$ directly to the target-city task  
+&nbsp;&nbsp;&nbsp;&nbsp;5. Evaluate $M_s$ on the target-city dataset $D_t$ in a zero-shot manner  
+&nbsp;&nbsp;&nbsp;&nbsp;6. Compute $\text{MAE}$, $\text{RMSE}$, and $\text{MAPE}$ on $D_t$  
+&nbsp;&nbsp;&nbsp;&nbsp;7. Return the evaluation results
+```
 
 Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. 
 

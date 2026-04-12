@@ -852,7 +852,7 @@ Below, we briefly summarize the three representative foundation models/LLM-based
   <thead>
     <tr>
       <th align="center">Categories</th>
-      <th align="center">Sub-categories</th>
+      <th align="center">Sub-Categories</th>
       <th align="center">Guiding Principles</th>
       <th align="center">Representative Methods</th>
       <th align="center">Key Strengths</th>

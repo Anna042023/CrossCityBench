@@ -9,7 +9,7 @@
 </div>
 <br>
 
-This paper proposes CrossCityBench, a benchmark framework for cross-city traffic prediction, with its core work structured around a three-tier logic of "**Evaluation–Diagnosis–Decision**".
+This paper proposes CrossCityBench, a benchmark framework for cross-city traffic prediction, with its core work structured around a three-tier logic of "**Evaluation-Diagnosis-Decision**".
 
 - **Evaluation**: A unified evaluation system is constructed, systematically categorizing methods into single-domain models, cross-city transfer models (including alignment-based, meta-learning-based, pre-training-based, and knowledge distillation-based strategies), and privacy-preserving collaborative models.
   
@@ -68,12 +68,12 @@ Collected in collaboration with the **Shanxi Transportation Holdings Group Co., 
 - Major arterial roads
 
 A total of **280 traffic sensors** are deployed within:
-- Latitude: `37.7°–38.1° N`  
-- Longitude: `112.45°–112.75° E`
+- Latitude: `37.7°-38.1° N`  
+- Longitude: `112.45°-112.75° E`
 
 **Data Collection Protocol**  
 
-- Time period: **February 15, 2026 – March 7, 2026 (21 days)**  
+- Time period: **February 15, 2026 - March 7, 2026 (21 days)**  
 - Sampling interval: **5 minutes**
 - Time step: **T = 21 × 24 × 12 = 6048**
 
@@ -107,12 +107,12 @@ Provided by the **Shanxi Transportation Holdings Group Co., Ltd.**, covering:
 - Secondary roads
 
 A total of **125 traffic sensors** are deployed within:
-- Latitude: `40.0°–40.2° N`  
-- Longitude: `113.0°–113.3° E`
+- Latitude: `40.0°-40.2° N`  
+- Longitude: `113.0°-113.3° E`
 
 **Data Collection Protocol**
 
-- Time period: **March 1, 2026 – March 21, 2026 (21 days)**  
+- Time period: **March 1, 2026 - March 21, 2026 (21 days)**  
 - Sampling interval: **5 minutes**
 - Time step: **T = 21 × 24 × 12 = 6048**
 
@@ -147,12 +147,12 @@ Constructed in collaboration with the **Fujian Provincial Communication Transpor
 - Cross-river corridors  
 
 A total of **360 traffic sensors** are deployed within:
-- Latitude: `26.0°–26.2° N`  
-- Longitude: `119.25°–119.35° E`
+- Latitude: `26.0°-26.2° N`  
+- Longitude: `119.25°-119.35° E`
 
 **Data Collection Protocol**
 
-- Time period: **February 1, 2026 – February 28, 2026 (28 days)**  
+- Time period: **February 1, 2026 - February 28, 2026 (28 days)**  
 - Sampling interval: **5 minutes**
 - Time step: **T = 28 × 24 × 12 = 8064**
 
@@ -186,7 +186,7 @@ The above three constructed datasets can be found in:
 
 ### Revison 2: Overall Performance Comparison
 
-In the comparative experimental section, we further introduce three LLM-based methods (ST-LLM+, UrbanGPT, and UniST). It is worth noting that these three LLM-based methods are originally designed as single-domain models; we adapt them to cross-city transfer tasks through source-domain fine-tuning followed by target-domain zero-shot evaluation. With this adaptation strategy, we are able to fairly compare the performance of these LLMs with methods under other paradigms in cross-city transfer scenarios.
+In the comparative experimental section, we further introduce three foundation models/LLM-based transfer methods (ST-LLM+, UrbanGPT, and UniST). It is worth noting that these three foundation models/LLM-based transfer methods are originally designed as single-domain models; we adapt them to cross-city transfer tasks through source-domain fine-tuning followed by target-domain zero-shot evaluation. With this adaptation strategy, we are able to fairly compare the performance of these LLMs with methods under other paradigms in cross-city transfer scenarios.
 
 ---
 
@@ -213,9 +213,9 @@ In the comparative experimental section, we further introduce three LLM-based me
 
 Furthermore, to more comprehensively evaluate the transfer robustness of different methods, we extend the original two cross-city transfer scenarios to twelve, covering multiple city pairs of varying scales and traffic patterns, including transfer tasks on our newly constructed datasets. The complete experimental setup and results are presented in the table below. 
 
-The code for the three newly introduced LLM-based methods can be obtained via the following link: [All Revisions/LLM-Based Transfer](./All%20Revisions/LLM-Based%20Transfer).
+The code for the three newly introduced foundation models/LLM-based transfer methods can be obtained via the following link: [All Revisions/LLM-Based Transfer](./All%20Revisions/LLM-Based%20Transfer).
 
-Details of the three LLM-based methods can be found in [Revision 3](#revision-3-taxonomy-of-learning-paradigms-and-benchmark-model-zoo).
+Details of the three foundation models/LLM-based transfer methods can be found in [Revision 3](#revision-3-taxonomy-of-learning-paradigms-and-benchmark-model-zoo).
 
 **<p align="center"><b>Table 2A: Performance Comparison on Cross-City Traffic Flow Prediction (PeMS03 → PeMS08) with 7-Day Training Data.</b></p>**
 
@@ -816,13 +816,13 @@ Details of the three LLM-based methods can be found in [Revision 3](#revision-3-
   </tbody>
 </table>
 
-Overall, the pre-training-based CrossST and the alignment-based D2MHyper deliver the most stable and strongest overall performance. In particular, CrossST often ranks first across multiple traffic flow prediction tasks, indicating that the pre-training paradigm has strong generalizability for cross-city transfer. In contrast, D2MHyper shows more pronounced advantages in traffic speed prediction and some more complex transfer scenarios, demonstrating a strong ability to handle distribution discrepancies. By comparison, single-domain methods and meta-learning methods are generally weaker overall, while the knowledge-distillation-based method FGITrans yields relatively stable results but is usually not the best performer. The newly introduced LLM-based methods (ST-LLM+, UrbanGPT, and UniST) achieve mid-to-upper-tier performance overall, with ST-LLM+ generally outperforming the other two large-model methods. This suggests that LLM-based transfer is promising, although at present it still slightly lags behind the strongest specialized transfer methods.
+Overall, the pre-training-based CrossST and the alignment-based D2MHyper deliver the most stable and strongest overall performance. In particular, CrossST often ranks first across multiple traffic flow prediction tasks, indicating that the pre-training paradigm has strong generalizability for cross-city transfer. In contrast, D2MHyper shows more pronounced advantages in traffic speed prediction and some more complex transfer scenarios, demonstrating a strong ability to handle distribution discrepancies. By comparison, single-domain methods and meta-learning methods are generally weaker overall, while the knowledge-distillation-based method FGITrans yields relatively stable results but is usually not the best performer. The newly introduced foundation models/LLM-based transfer methods (ST-LLM+, UrbanGPT, and UniST) achieve mid-to-upper-tier performance overall, with ST-LLM+ generally outperforming the other two large-model methods. This suggests that foundation models/LLM-based transfer is promising, although at present it still slightly lags behind the strongest specialized transfer methods.
 
 ### Revision 3: Taxonomy of Learning Paradigms and Benchmark Model Zoo
 
-To further broaden the benchmark coverage, we additionally introduce **Foundation Models / LLM-Based Transfer (Paradigm 6)** into our benchmark. Notably, existing mainstream LLM-based traffic forecasting methods were originally designed for single-city prediction rather than cross-city transfer. To bridge this gap, we have added and adapted three representative LLM-based methods, namely UniST, UrbanGPT, and ST-LLM+, to the cross-city prediction setting via city-specific prompts and domain adaptation layers, thereby establishing new cross-city LLM baselines for a more comprehensive benchmark evaluation.
+To further broaden the benchmark coverage, we additionally introduce **Foundation Models/LLM-Based Transfer (Paradigm 6)** into our benchmark. Notably, existing mainstream foundation models/LLM-based transfer traffic forecasting methods were originally designed for single-city prediction rather than cross-city transfer. To bridge this gap, we have added and adapted three representative foundation models/LLM-based transfer methods, namely ST-LLM+, UrbanGPT, and UniST, to the cross-city prediction setting via city-specific prompts and domain adaptation layers, thereby establishing new cross-city LLM baselines for a more comprehensive benchmark evaluation.
 
-Below, we briefly summarize the three representative LLM-based methods included in this paradigm, together with their original references and core methodological ideas.
+Below, we briefly summarize the three representative foundation models/LLM-based transfer methods included in this paradigm, together with their original references and core methodological ideas.
 
 **References**
 
@@ -1082,7 +1082,7 @@ We construct and validate STPB in three steps:
 
 - Conduct a user study with 5 domain experts.
   
-- Each expert rates interpretability (scale 1–5) based on model outputs.
+- Each expert rates interpretability (scale 1-5) based on model outputs.
   
 - Compute correlation between STPB similarity and human ratings.
 
@@ -1107,7 +1107,7 @@ We construct and validate STPB in three steps:
 
 <div align="center">
 
-| Model      | STPB Similarity | Expert Rating (1–5) | Rank by STPB | Rank by Experts |
+| Model      | STPB Similarity | Expert Rating (1-5) | Rank by STPB | Rank by Experts |
 |:----------:|:--------------:|:-------------------:|:------------:|:---------------:|
 | D2MHyper   | 0.0743          | 4.4 ± 0.3           | 1            | 1               |
 | CrossST    | 0.0227          | 3.8 ± 0.5           | 2            | 2               |
@@ -1140,7 +1140,7 @@ As shown in Table 6A, the prototype bank is constructed via K-means (K=8, elbow 
 
 (2) STPB correlates well with human interpretability.
 
-From Table 6B–6C, STPB similarity is strongly aligned with expert ratings (Pearson $r=0.79$, $p<0.01$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
+From Table 6B-6C, STPB similarity is strongly aligned with expert ratings (Pearson \\( r=0.79 \\), \\( p<0.01 \\)), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
 
 (3) STPB captures meaningful differences across models.
 
@@ -1176,15 +1176,15 @@ $$
 
 🔍 Symbol Definitions
 
-- $N$: total number of test samples  
-- $i$: index of the sample, $i = 1,2,\dots,N$  
-- $h$: prediction horizon (e.g., $h = 60$ minutes)  
-- $y_i^{(h)}$: ground-truth value of the $i$-th sample at horizon $h$  
-- $\hat{y}_i^{(h)}$: predicted value of the $i$-th sample at horizon $h$  
-- $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error  
-- $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero  
-- $\tau$: failure threshold (e.g., $\tau = 0.2$)  
-- $\mathbf{I}(\cdot)$: indicator function defined as  
+- \\( N \\): total number of test samples  
+- \\( i \\): index of the sample, \\( i = 1,2,\dots,N \\)  
+- \\( h \\): prediction horizon (e.g., \\( h = 60 \\) minutes)  
+- \\( y_i^{(h)} \\): ground-truth value of the \\( i \\)-th sample at horizon \\( h \\)  
+- \\( \hat{y}_i^{(h)} \\): predicted value of the \\( i \)-th sample at horizon \\( h \\)  
+- \\( \left| y_i^{(h)} - \hat{y}_i^{(h)} \right| \\): absolute prediction error  
+- \\( \epsilon \\): a small constant (e.g., \\( 10^{-5} \\)) to avoid division by zero  
+- \\( \tau \\): failure threshold (e.g., \\( \tau = 0.2 \\))  
+- \\( \mathbf{I}(\cdot) \\): indicator function defined as 
 
 $$
 \mathbf{I}(x) =
@@ -1224,7 +1224,7 @@ $$
 
 - Measures relative performance degradation under graph perturbations
   
-- Reflects robustness to topology shifts / graph noise
+- Reflects robustness to topology shifts/graph noise
   
 - Lower values indicate better robustness
 
@@ -1253,7 +1253,7 @@ $$
 
 #### **(2) Multi-Level Few-Shot Evaluation**
 
-We extend the evaluation from a fixed setting to 1 / 3 / 7 / 14 days.
+We extend the evaluation from a fixed setting to 1/3/7/14 days.
 
 <p align="center"><b>Table 7B: Flow Prediction (PeMS03 → PeMS08) - MAE ↓</b></p>
 
@@ -1361,10 +1361,12 @@ To address the reviewer’s concern that the original distribution-shift metric 
 
 1) Task-type shift
 
-$$\Delta M_{\text{task}} =
+$$
+\Delta M_{\text{task}} =
 \frac{1}{|\mathcal{S}_{\text{task}}|}
 \sum_{(s,t)\in \mathcal{S}_{\text{task}}}
-\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{intra-task}}}{\text{MAE}_{\text{intra-task}}}\times 100\%$$
+\frac{\text{MAE}(s \rightarrow t)-\text{MAE}_{\text{intra-task}}}{\text{MAE}_{\text{intra-task}}}\times 100\%
+$$
 
 - Measures performance degradation caused by differences in prediction task (e.g., flow vs. speed vs. index)
 
@@ -1478,15 +1480,17 @@ This experiment evaluates whether federated learning methods provide stronger pr
 
 **Privacy Metrics & Interpretation**
 
-(1) Gradient Inversion Leakage Rate ($\mathrm{GILR}$)
+(1) Gradient Inversion Leakage Rate (\\(\mathrm{GILR}\\))
 
 - Measures the extent to which raw input information can be reconstructed from shared gradients or model updates.
   
 - A higher value indicates stronger resistance to gradient-based privacy leakage.
 
-$$\mathrm{GILR} =
+$$
+\mathrm{GILR} =
 \frac{1}{N}\sum_{i=1}^{N}
-\frac{\left\|x_i-\hat{x}_i\right\|_2}{\left\|x_i\right\|_2}$$
+\frac{\left\|x_i-\hat{x}_i\right\|_2}{\left\|x_i\right\|_2}
+$$
 
 - $N$ is the number of attacked samples
 
@@ -1505,14 +1509,16 @@ $$\mathrm{PrivacyScore}_{\mathrm{inv}} = \mathrm{GILR}$$
 
 Higher is better.
 
-(2) Membership Inference Attack Advantage ($\mathrm{MIA}$)
+(2) Membership Inference Attack Advantage (\\(\mathrm{MIA}\\))
 
 - Measures whether an attacker can determine if a sample participated in local training.
 
 - A lower value indicates better privacy protection.
 
-$$\mathrm{MIA} =
-\left|\mathrm{Acc}_{\mathrm{attack}} - 0.5\right|$$
+$$
+\mathrm{MIA} =
+\left|\mathrm{Acc}_{\mathrm{attack}} - 0.5\right|
+$$
 
 - $\mathrm{Acc}_{\mathrm{attack}}$ is the attack accuracy of membership inference
 
@@ -1522,14 +1528,16 @@ Interpretation:
 
 If attack accuracy is close to random guessing, the model leaks less membership information.
 
-(3) Privacy–Utility Trade-off Score ($\mathrm{PUTS}$)
+(3) Privacy-Utility Trade-off Score (\\(\mathrm{PUTS}\\))
 
 To jointly measure privacy strength and predictive utility, we define:
 
-$$\mathrm{PUTS} =
+$$
+\mathrm{PUTS} =
 \lambda \cdot \mathrm{NormPrivacy}
 +
-(1-\lambda)\cdot \mathrm{NormUtility}$$
+(1-\lambda)\cdot \mathrm{NormUtility}
+$$
 
 - $\mathrm{NormPrivacy}$ is the normalized privacy score
 
@@ -1583,7 +1591,7 @@ PeMS-BAY, METR-LA
 
 - pFedCTP achieves the strongest privacy protection, with the highest inversion privacy score and the lowest membership inference advantage.
 
-- FedCTPM provides the best overall privacy–utility balance: although its privacy strength is slightly weaker than pFedCTP, it maintains better predictive accuracy.
+- FedCTPM provides the best overall privacy-utility balance: although its privacy strength is slightly weaker than pFedCTP, it maintains better predictive accuracy.
 
 - FedGTP is lighter in communication cost in the original benchmark, but its privacy strength is also slightly weaker in this empirical leakage evaluation.
 

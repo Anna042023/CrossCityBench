@@ -1617,6 +1617,7 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
 <p align="center"><b>Table 10A: Performance comparison: Centralized Learning vs. Federated Learning</b></p>
 
 <table>
+  <caption>
   Best results in centralized learning are <strong>bold</strong>; <ins>underlined (ins)</ins> values indicate the <strong>second-best</strong> results among federated models for each metric.</caption>
   <thead>
     <tr>

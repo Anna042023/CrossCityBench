@@ -1617,7 +1617,7 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
 <p align="center"><b>Table 10A: Performance comparison: Centralized Learning vs. Federated Learning</b></p>
 
 <table>
-  <caption>
+  <caption><strong>Performance comparison: Centralized Learning vs. Federated Learning (6 datasets)</strong><br>
   Best results in centralized learning are <strong>bold</strong>; <ins>underlined (ins)</ins> values indicate the <strong>second-best</strong> results among federated models for each metric.</caption>
   <thead>
     <tr>
@@ -1640,7 +1640,7 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
     </tr>
   </thead>
   <tbody>
-    <!-- ==================== Centralized Learning ==================== -->
+    <!-- Centralized Learning -->
     <tr>
       <td rowspan="3"><strong>Centralized</strong></td>
       <td>DCRNN</td>
@@ -1669,52 +1669,47 @@ Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, and Chengqi Zhang. 2019. Graph
       <td>17.9</td><td>29.0</td><td>16.2</td>
       <td>22.5</td><td>34.5</td><td>18.2</td>
     </tr>
-
-    <!-- ==================== Federated Learning ==================== -->
+    <!-- Federated Learning -->
     <tr>
       <td rowspan="3"><strong>Federated</strong></td>
       <td>FedCTPM</td>
-      <!-- METR-LA: best MAE, second-best RMSE, best MAPE -->
+      <!-- METR-LA: MAE best (4.33) no ins; RMSE second-best (10.53) -> ins; MAPE best (9.94) no ins -->
       <td>4.33</td><td><ins>10.53</ins></td><td>9.94</td>
-      <!-- PeMS-BAY: best MAE, best RMSE, best MAPE -->
+      <!-- PeMS-BAY: all best (no ins) -->
       <td>1.68</td><td>3.68</td><td>3.77</td>
-      <!-- Taiyuan: best for all three -->
+      <!-- Taiyuan: all best (no ins) -->
       <td>4.55</td><td>10.10</td><td>10.6</td>
-      <!-- Fuzhou: best for all three -->
+      <!-- Fuzhou: all best (no ins) -->
       <td>4.95</td><td>10.95</td><td>11.5</td>
-      <!-- PEMS03: best for all three -->
+      <!-- PEMS03: all best (no ins) -->
       <td>17.2</td><td>28.1</td><td>15.0</td>
-      <!-- PEMS08: best for all three -->
+      <!-- PEMS08: all best (no ins) -->
       <td>21.1</td><td>32.9</td><td>16.5</td>
     </tr>
     <tr>
       <td>pFedCTP</td>
-      <!-- METR-LA: best RMSE, others worst -->
+      <!-- METR-LA: RMSE best (10.23) -> best, no ins; MAE/MAPE worst -->
       <td>4.78</td><td>10.23</td><td>12.10</td>
-      <!-- PeMS-BAY: all worst -->
+      <!-- PeMS-BAY: all worst, no ins -->
       <td>2.04</td><td>4.46</td><td>4.91</td>
-      <!-- Taiyuan: all worst -->
       <td>5.02</td><td>10.65</td><td>12.8</td>
-      <!-- Fuzhou: all worst -->
       <td>5.52</td><td>11.85</td><td>13.6</td>
-      <!-- PEMS03: all worst -->
       <td>18.8</td><td>30.2</td><td>17.5</td>
-      <!-- PEMS08: all worst -->
       <td>23.0</td><td>35.8</td><td>19.2</td>
     </tr>
     <tr>
       <td>FedGTP</td>
-      <!-- METR-LA: second-best MAE, second-best MAPE -->
+      <!-- METR-LA: MAE second-best (4.44) -> ins; MAPE second-best (10.41) -> ins -->
       <td><ins>4.44</ins></td><td>10.86</td><td><ins>10.41</ins></td>
-      <!-- PeMS-BAY: second-best MAE, RMSE, MAPE -->
+      <!-- PeMS-BAY: all second-best -> ins -->
       <td><ins>1.75</ins></td><td><ins>3.83</ins></td><td><ins>3.85</ins></td>
-      <!-- Taiyuan: second-best all -->
+      <!-- Taiyuan: all second-best -> ins -->
       <td><ins>4.70</ins></td><td><ins>10.45</ins></td><td><ins>11.1</ins></td>
-      <!-- Fuzhou: second-best all -->
+      <!-- Fuzhou: all second-best -> ins -->
       <td><ins>5.10</ins></td><td><ins>11.25</ins></td><td><ins>12.0</ins></td>
-      <!-- PEMS03: second-best all -->
+      <!-- PEMS03: all second-best -> ins -->
       <td><ins>18.2</ins></td><td><ins>29.5</ins></td><td><ins>16.1</ins></td>
-      <!-- PEMS08: second-best all -->
+      <!-- PEMS08: all second-best -> ins -->
       <td><ins>22.0</ins></td><td><ins>34.2</ins></td><td><ins>17.8</ins></td>
     </tr>
   </tbody>

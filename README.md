@@ -192,20 +192,20 @@ In the comparative experimental section, we further introduce three LLM-based me
 
 ```plaintext
 Input:
-    Source-city dataset Ds
-    Target-city dataset Dt
-    Single-domain LLM-based model M ∈ {ST-LLM+, UrbanGPT, UniST}
+    Source-city dataset $D_s$
+    Target-city dataset $D_t$
+    Single-domain LLM-based model $M \in \{\text{ST-LLM+}, \text{UrbanGPT}, \text{UniST}\}$
 
 Output:
-    Cross-city prediction results on Dt
+    Cross-city prediction results on $D_t$
 
 Algorithm:
-    1. Initialize model M with its original single-domain architecture
-    2. Train/fine-tune M on the source-city dataset Ds
-    3. Obtain the source-trained model Ms
-    4. Transfer Ms directly to the target-city task
-    5. Evaluate Ms on the target-city dataset Dt in a zero-shot manner
-    6. Compute MAE, RMSE, and MAPE on Dt
+    1. Initialize model $M$ with its original single-domain architecture
+    2. Train/fine-tune $M$ on the source-city dataset $D_s$
+    3. Obtain the source-trained model $M_s$
+    4. Transfer $M_s$ directly to the target-city task
+    5. Evaluate $M_s$ on the target-city dataset $D_t$ in a zero-shot manner
+    6. Compute $\text{MAE}$, $\text{RMSE}$, and $\text{MAPE}$ on $D_t$
     7. Return the evaluation results
 ```
 

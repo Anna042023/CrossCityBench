@@ -1182,8 +1182,8 @@ $$
 - $y_i^{(h)}$: ground-truth value of the i-th sample at horizon $h$  
 - $\hat{y}_i^{(h)}$: predicted value of the i-th sample at horizon $h$  
 - $\left|y_i^{(h)} - \hat{y}_i^{(h)}\right|$: absolute prediction error  
-- $\epsilon$: a small constant (e.g., $10^{-5}$) to avoid division by zero  
-- $\tau$: failure threshold (e.g., $\tau = 0.2$)  
+- $\epsilon$: a small constant to avoid division by zero  
+- $\tau$: failure threshold  
 - $\mathbf{I}(\cdot)$: indicator function defined as
 
 $$
@@ -1480,7 +1480,7 @@ This experiment evaluates whether federated learning methods provide stronger pr
 
 **Privacy Metrics & Interpretation**
 
-(1) Gradient Inversion Leakage Rate ($GILR$)
+(1) Gradient Inversion Leakage Rate (GILR)
 
 - Measures the extent to which raw input information can be reconstructed from shared gradients or model updates.
   
@@ -1509,7 +1509,7 @@ $$\mathrm{PrivacyScore}_{\mathrm{inv}} = \mathrm{GILR}$$
 
 Higher is better.
 
-(2) Membership Inference Attack Advantage ($MIA$)
+(2) Membership Inference Attack Advantage (MIA)
 
 - Measures whether an attacker can determine if a sample participated in local training.
 
@@ -1528,7 +1528,7 @@ Interpretation:
 
 If attack accuracy is close to random guessing, the model leaks less membership information.
 
-(3) Privacy-Utility Trade-off Score ($PUTS$)
+(3) Privacy-Utility Trade-off Score (PUTS)
 
 To jointly measure privacy strength and predictive utility, we define:
 

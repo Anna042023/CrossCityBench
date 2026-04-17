@@ -39,20 +39,6 @@ class SimpleLinearRegressor:
     def predict(self, x: np.ndarray) -> np.ndarray:
         return x @ self.w
 
-
-def build_demo_dataset(
-    n_samples: int = 4000,
-    input_dim: int = 16,
-    noise_std: float = 0.5,
-    seed: int = 42,
-) -> Tuple[np.ndarray, np.ndarray]:
-    rng = np.random.default_rng(seed)
-    x = rng.normal(size=(n_samples, input_dim))
-    w_true = rng.normal(size=(input_dim, 1))
-    y = x @ w_true + noise_std * rng.normal(size=(n_samples, 1))
-    return x.astype(np.float64), y.astype(np.float64)
-
-
 def per_sample_loss(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
     return np.mean((y_true - y_pred) ** 2, axis=1)
 

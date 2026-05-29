@@ -199,7 +199,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 ## 🎯 The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
 
-Based on quantitative insights from our multidimensional diagnostic evaluation, the following evidence-based decision matrix maps practical constraints (e.g., data scarcity, distribution shifts, privacy needs) to suitable learning paradigms. Each recommendation is directly linked to the diagnostic analyses that quantify its trade-offs, providing a traceable, data-driven selection tool—moving from qualitative advice to empirically grounded guidance.
+Based on quantitative insights from our multi-dimensional diagnostic evaluation, the following evidence-based decision matrix maps practical constraints (e.g., data scarcity, distribution shifts, privacy needs) to suitable learning paradigms. Each recommendation is directly linked to the diagnostic analyses that quantify its trade-offs, providing a traceable, data-driven selection tool—moving from qualitative advice to empirically grounded guidance.
 
 <p align="center"><b>Table 7: The technical pathway decision matrix for cross-city spatio-temporal traffic prediction</b></p>
 

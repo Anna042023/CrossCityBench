@@ -25,6 +25,8 @@ All analyses are supported by a complete set of supplementary materials (includi
 
 ### Core Datasets
 
+<p align="center"><b>Table 1: The overview of core datasets</b></p>
+
 <div align="center">
 
 |  Datasets  |     Tasks      | #Nodes |   Interval   | Time Span (min) |
@@ -39,6 +41,8 @@ All analyses are supported by a complete set of supplementary materials (includi
 Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google Drive](https://drive.google.com/file/d/1oPLRyEN32peSLWLVNVcropHt5iBNUQxo).
 
 ### Extended Datasets
+
+<p align="center"><b>Table 2: The overview of extended datasets</b></p>
 
 <div align="center">
 
@@ -61,9 +65,10 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 ## Taxonomy of Learning Paradigms and the Benchmark Model Zoo
 
+<p align="center"><b>Table 3: Taxonomy of learning paradigms and the benchmark model zoo</b></p>
+
 <div align="center">
 
-<table align="center">
   <thead>
     <tr>
       <th align="center">Categories</th>
@@ -136,7 +141,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 **Interpretability Validation:** Conduct a user study with 5 domain experts. Each expert rates interpretability (scale 1--5) based on model outputs. Compute correlation between STPB similarity and human ratings.
 
 
-<p align="center"><b>Formal Specification of STPB Prototypes.</b></p>
+<p align="center"><b>Table 4: Formal specification of STPB prototypes</b></p>
 
 <div align="center">
 
@@ -153,7 +158,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 </div>
 
-<p align="center"><b>STPB vs. Human Interpretability.</b></p>
+<p align="center"><b>Table 5: STPB vs. human interpretability</b></p>
 
 <div align="center">
 
@@ -168,7 +173,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 </div>
 
-<p align="center"><b>Statistical Validity of STPB.</b></p>
+<p align="center"><b>Table 6: Statistical validity of STPB</b></p>
 
 <div align="center">
 
@@ -184,17 +189,18 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 **Results Analysis**
 
-(1) **STPB is now clearly defined.** As shown in Table~\ref{tab:stpb_spec}, the prototype bank is constructed via K-means ($K=8$, elbow method) on patterns from PeMS03 + PeMS-BAY, with a $>70\%$ cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
+(1) **STPB is now clearly defined.** As shown in Table 4, the prototype bank is constructed via K-means ($K=8$, elbow method) on patterns from PeMS03 + PeMS-BAY, with a $>70\%$ cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
 
-(2) **STPB correlates well with human interpretability.** From Tables~\ref{tab:stpb_vs_human}--\ref{tab:stpb_stats}, STPB similarity is strongly aligned with expert ratings (Pearson $r = 0.79$, $p < 0.01$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
+(2) **STPB correlates well with human interpretability.** From Tables 5-6, STPB similarity is strongly aligned with expert ratings (Pearson $r = 0.79$, $p < 0.01$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
 
 (3) **STPB captures meaningful differences across models.** Models such as D2MHyper and CrossST achieve higher STPB scores and human ratings, while others are lower, showing that STPB can effectively distinguish interpretability across methods.
 
 ## The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
 
+<p align="center"><b>Table 7: The technical pathway decision matrix for cross-city spatio-temporal traffic prediction</b></p>
+
 <div align="center">
 
-<table align="center">
   <thead>
     <tr>
       <th align="center">Constraints</th>

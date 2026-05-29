@@ -148,13 +148,13 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 | Item                     | Setting                                                                 |
 |:------------------------:|:-----------------------------------------------------------------------:|
-| Prototype source data    | Pattern segments extracted from **PeMS03 + PeMS-BAY**                   |
+| Prototype source data    | Pattern segments extracted from PeMS03 + PeMS-BAY                   |
 | Candidate pattern pool   | Trend, periodicity, peak-shift, burstiness, local fluctuation segments |
-| Prototype construction   | **K-means clustering** on normalized pattern embeddings                |
-| Number of clusters \(K\) | **8**                                                                   |
-| K selection criterion    | **Elbow method** on within-cluster SSE                                 |
-| Prototype retention rule | Retain prototypes appearing in **>70%** of cities                       |
-| Final prototype bank size| **8 prototypes**                                                        |
+| Prototype construction   | K-means clustering on normalized pattern embeddings                |
+| Number of clusters \(K\) | 8                                                                   |
+| K selection criterion    | Elbow method on within-cluster SSE                                 |
+| Prototype retention rule | Retain prototypes appearing in >70% of cities                       |
+| Final prototype bank size| 8 prototypes                                                        |
 | Similarity metric        | Average cosine similarity between model representation and prototype vectors |
 
 </div>
@@ -168,9 +168,8 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 | D2MHyper   | 0.0743          | 4.4 ± 0.3           | 1            | 1               |
 | CrossST    | 0.0227          | 3.8 ± 0.5           | 2            | 2               |
 | FGITrans   | -0.0226         | 3.1 ± 0.4           | 3            | 3               |
-| ST-LLM+    | -0.0268         | 2.9 ± 0.6           | 4            | 4               |
-| ST-GFSL    | -0.0368         | 2.6 ± 0.4           | 5            | 5               |
-| DyHSL      | -0.0473         | 2.5 ± 0.5           | 6            | 6               |
+| ST-GFSL    | -0.0368         | 2.6 ± 0.4           | 4            | 4               |
+| DyHSL      | -0.0473         | 2.5 ± 0.5           | 5            | 5               |
 
 </div>
 

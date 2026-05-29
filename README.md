@@ -181,11 +181,11 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 | Metric                       | Value   |
 |:---------------------------:|:-------:|
-| Pearson $r$                | **0.79**|
-| p-value                      | **0.008**|
-| Spearman $\rho$            | **0.74**|
-| p-value                      | **0.014**|
-| Intraclass Correlation Coefficient (ICC)  | **0.81**|
+| Pearson $r$                | 0.79|
+| p-value                      | 0.008|
+| Spearman $\rho$            | 0.74|
+| p-value                      | 0.014|
+| Intraclass Correlation Coefficient (ICC)  | 0.81|
 
 </div>
 

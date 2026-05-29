@@ -69,6 +69,7 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 <div align="center">
 
+<table align="center">
   <thead>
     <tr>
       <th align="center">Categories</th>
@@ -201,6 +202,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 <div align="center">
 
+<table align="center">
   <thead>
     <tr>
       <th align="center">Constraints</th>

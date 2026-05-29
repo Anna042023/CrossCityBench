@@ -1,5 +1,7 @@
 # 🏙️ CrossCityBench: A Comprehensive Benchmark for Cross-City Traffic Prediction
 
+<img src="https://img.shields.io/badge/Paper-VLDB-blue" alt="Paper">  <img src="https://img.shields.io/badge/Dataset-Public-green" alt="Dataset">
+
 ## 🏆 Contribution
 
 <div align="center">

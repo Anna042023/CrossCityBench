@@ -1,4 +1,4 @@
-# 🏙️ CrossCityBench: A Comprehensive Benchmark for Cross-City Traffic Prediction
+# 🏙️ CrossCityBench: A Comprehensive Benchmark for Cross-City Spatio-Temporal Traffic Prediction
 
 <img src="https://img.shields.io/badge/Paper-VLDB-blue" alt="Paper">  <img src="https://img.shields.io/badge/Dataset-Public-green" alt="Dataset">
 
@@ -61,6 +61,8 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 ## Taxonomy of Learning Paradigms and the Benchmark Model Zoo
 
+<div align="center">
+
 <table align="center">
   <thead>
     <tr>
@@ -75,14 +77,14 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
   <tbody>
     <tr>
       <td align="center" rowspan="1"><strong>Single-Domain Models</strong></td>
-      <td align="center"></td>
+      <td align="center">—</td>
       <td align="center">Learn city-specific dynamics without transfer</td>
       <td align="center">GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE</td>
       <td align="center">No cross-city bias</td>
       <td align="center">Performance degrades under data scarcity</td>
     </tr>
     <tr>
-      <td align="center" rowspan="5"><strong>Cross-City Transfer Models</strong></td>
+      <td align="center" rowspan="4"><strong>Cross-City Transfer Models</strong></td>
       <td align="center"><em>Alignment-based transfer</em></td>
       <td align="center">Explicitly align source-target distributions</td>
       <td align="center">DASTNet, D2MHyper, DAGN, ST-DAAN</td>
@@ -110,16 +112,9 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
       <td align="center">Efficient deployment</td>
       <td align="center">Teacher-student capability gap; distillation loss</td>
     </tr>
-     <tr>
-      <td align="center"><em>Foundation models/LLM-based transfer</em></td>
-      <td align="center">Leverage large pre-trained foundation models to capture general spatio-temporal patterns and enhance cross-city transferability</td>
-      <td align="center">ST-LLM+, UrbanGPT, UniST</td>
-      <td align="center">Strong representation capacity; better generalization and transferability across cities</td>
-      <td align="center">High computational cost; complex adaptation pipeline; limited interpretability</td>
-    </tr>
     <tr>
       <td align="center" rowspan="1"><strong>Privacy-Preserving Collaborative Models</strong></td>
-      <td align="center"></td>
+      <td align="center">—</td>
       <td align="center">Collaborate without sharing raw data</td>
       <td align="center">FedCTPM, pFedCTP, FedGTP</td>
       <td align="center">Addresses scarcity and privacy jointly</td>
@@ -128,124 +123,20 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
   </tbody>
 </table>
 
-## The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th align="center">Constraints</th>
-      <th align="center">Primary Goals</th>
-      <th align="center">Paradigms</th>
-      <th align="center">Example Models</th>
-      <th align="center">Key Limitations</th>
-      <th align="center">Quantitative References</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="left">
-      Large distribution shift
-      <img src="https://latex.codecogs.com/svg.latex?(\Delta\mathcal{M}_{\text{shift}}%20%3E%2025\%)" alt="(Delta M shift > 25%)">
-      </td>
-      <td align="left">Optimal accuracy</td>
-      <td align="left">Alignment</td>
-      <td align="left">D2MHyper</td>
-      <td align="left">Needs source data; Unstable training</td>
-      <td align="left">
-        High
-        <img src="https://latex.codecogs.com/svg.latex?\Delta\mathcal{M}_{\text{shift}}" alt="Delta M shift">
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        Extreme data scarcity<br>
-        (target training days &lt; 3)
-      </td>
-      <td align="left">Fast adaptation</td>
-      <td align="left">Meta-learning</td>
-      <td align="left">ST-GFSL</td>
-      <td align="left">High meta-training cost; Task-sensitive</td>
-      <td align="left">
-        High latency; Robustness
-      </td>
-    </tr>
-    <tr>
-      <td align="left">Multi-source data available</td>
-      <td align="left">Zero-shot robustness</td>
-      <td align="left">Pre-training</td>
-      <td align="left">CrossST</td>
-      <td align="left">High pre-training resource cost</td>
-      <td align="left">
-        High memory use; Robustness
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        Deployment efficiency critical<br>
-        (latency &lt; 0.5s)
-      </td>
-      <td align="left">Efficient inference</td>
-      <td align="left">Distillation</td>
-      <td align="left">FGITrans</td>
-      <td align="left">Teacher-dependent</td>
-      <td align="left">Low latency, small size</td>
-    </tr>
-    <tr>
-      <td align="left">
-        Privacy constraints<br>
-        (no data sharing)
-      </td>
-      <td align="left">Privacy-preserving performance</td>
-      <td align="left">Federated learning</td>
-      <td align="left">FedCTPM</td>
-      <td align="left">Communication cost; Utility gap</td>
-      <td align="left">
-        Communication overhead and
-        <img src="https://latex.codecogs.com/svg.latex?\mathcal{G}_{\text{util}}" alt="G_util">
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        Ample resources<br>
-        (high compute budget)
-      </td>
-      <td align="left">Competitive zero-shot accuracy</td>
-      <td align="left">Foundation model<br>(zero-shot/fine-tune)</td>
-      <td align="left">ST-LLM+, UrbanGPT, UniST</td>
-      <td align="left">5-10× higher latency;<br>10-20× larger GPU memory</td>
-      <td align="left">
-        MAE 16.71-17.89 vs. CrossST 16.25<br>
-        (PeMS03→PeMS08)
-      </td>
-    </tr>
-  </tbody>
-</table>
+## STPB Specification and Interpretability Validation
 
-### Revision 6: Interpretability
+To ensure the reproducibility and validity of the interpretability analysis, the construction and validation of STPB proceeds in three clearly defined steps.
 
-We construct and validate STPB in three steps:
+**Prototype Construction:** Extract pattern segments from PeMS03 and PeMS-BAY datasets. Perform K-means clustering on normalized pattern embeddings.
 
-**Prototype Construction**
+**Prototype Selection:** Determine the number of clusters using the elbow method. Retain only prototypes that appear in more than 70\% of cities, ensuring generality.
 
-- Extract pattern segments from PeMS03 and PeMS-BAY datasets.
-  
-- Perform K-means clustering on normalized pattern embeddings.
-  
-**Prototype Selection**
+**Interpretability Validation:** Conduct a user study with 5 domain experts. Each expert rates interpretability (scale 1--5) based on model outputs. Compute correlation between STPB similarity and human ratings.
 
-- Determine the number of clusters using the elbow method.
-  
-- Retain only prototypes that appear in more than 70% of cities, ensuring generality.
-  
-**Interpretability Validation**
 
-- Conduct a user study with 5 domain experts.
-  
-- Each expert rates interpretability (scale 1-5) based on model outputs.
-  
-- Compute correlation between STPB similarity and human ratings.
-
-<p align="center"><b>Table 6A: Formal Specification of STPB Prototypes.</b></p>
+<p align="center"><b>Formal Specification of STPB Prototypes.</b></p>
 
 <div align="center">
 
@@ -262,7 +153,7 @@ We construct and validate STPB in three steps:
 
 </div>
 
-<p align="center"><b>Table 6B: STPB vs. Human Interpretability.</b></p>
+<p align="center"><b>STPB vs. Human Interpretability.</b></p>
 
 <div align="center">
 
@@ -277,7 +168,7 @@ We construct and validate STPB in three steps:
 
 </div>
 
-<p align="center"><b>Table 6C: Statistical Validity of STPB.</b></p>
+<p align="center"><b>Statistical Validity of STPB.</b></p>
 
 <div align="center">
 
@@ -293,15 +184,77 @@ We construct and validate STPB in three steps:
 
 **Results Analysis**
 
-(1) STPB is now clearly defined.
+(1) **STPB is now clearly defined.** As shown in Table~\ref{tab:stpb_spec}, the prototype bank is constructed via K-means ($K=8$, elbow method) on patterns from PeMS03 + PeMS-BAY, with a $>70\%$ cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
 
-As shown in Table 6A, the prototype bank is constructed via K-means (K=8, elbow method) on patterns from PeMS03 + PeMS-BAY, with a >70% cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
+(2) **STPB correlates well with human interpretability.** From Tables~\ref{tab:stpb_vs_human}--\ref{tab:stpb_stats}, STPB similarity is strongly aligned with expert ratings (Pearson $r = 0.79$, $p < 0.01$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
 
-(2) STPB correlates well with human interpretability.
+(3) **STPB captures meaningful differences across models.** Models such as D2MHyper and CrossST achieve higher STPB scores and human ratings, while others are lower, showing that STPB can effectively distinguish interpretability across methods.
 
-From Table 6B-6C, STPB similarity is strongly aligned with expert ratings (Pearson r = 0.79, p < 0.01), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
+## The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
 
-(3) STPB captures meaningful differences across models.
+<div align="center">
 
-Models like D2MHyper and CrossST achieve higher STPB scores and human ratings, while others are lower, showing that STPB can effectively distinguish interpretability across methods.
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center">Constraints</th>
+      <th align="center">Primary Goals</th>
+      <th align="center">Paradigms</th>
+      <th align="center">Example Models</th>
+      <th align="center">Key Limitations</th>
+      <th align="center">Quantitative References</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Large distribution shift (Δℳ_shift > 25%)</td>
+      <td align="left">Optimal accuracy</td>
+      <td align="left">Alignment</td>
+      <td align="left">D2MHyper</td>
+      <td align="left">Needs source data; Unstable training</td>
+      <td align="left">High Δℳ_shift (Figure 8(b))</td>
+    </tr>
+    <tr>
+      <td align="left">Extreme data scarcity (target training days &lt; 3)</td>
+      <td align="left">Fast adaptation</td>
+      <td align="left">Meta-learning</td>
+      <td align="left">ST-GFSL</td>
+      <td align="left">High meta-training cost; Task-sensitive</td>
+      <td align="left">High latency (Figure 9); Robustness (Section 4.3)</td>
+    </tr>
+    <tr>
+      <td align="left">Multi-source data available</td>
+      <td align="left">Zero-shot robustness</td>
+      <td align="left">Pre-training</td>
+      <td align="left">CrossST</td>
+      <td align="left">High pre-training resource cost</td>
+      <td align="left">High memory use (Figure 9); Robustness (Section 4.3)</td>
+    </tr>
+    <tr>
+      <td align="left">Deployment efficiency critical (latency &lt; 0.5s)</td>
+      <td align="left">Efficient inference</td>
+      <td align="left">Distillation</td>
+      <td align="left">FGITrans</td>
+      <td align="left">Teacher-dependent</td>
+      <td align="left">Low latency, small size (Figure 9)</td>
+    </tr>
+    <tr>
+      <td align="left">Privacy constraints (no data sharing)</td>
+      <td align="left">Privacy-preserving performance</td>
+      <td align="left">Federated learning</td>
+      <td align="left">FedCTPM</td>
+      <td align="left">Communication cost; Utility gap</td>
+      <td align="left">Communication overhead and 𝒢_util (Section 4.4)</td>
+    </tr>
+    <tr>
+      <td align="left">Ample resources (high compute budget)</td>
+      <td align="left">Competitive zero-shot accuracy</td>
+      <td align="left">Foundation model (zero-shot/fine-tune)</td>
+      <td align="left">UniST, UrbanGPT, ST-LLM+</td>
+      <td align="left">5–10× higher latency; 10–20× larger GPU memory</td>
+      <td align="left">MAE 16.71–17.89 vs. CrossST 16.25 (PeMS03→08)</td>
+    </tr>
+  </tbody>
+</table>
 
+</div>

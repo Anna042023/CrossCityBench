@@ -63,7 +63,9 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 </div>
 
-## Taxonomy of Learning Paradigms and the Benchmark Model Zoo
+## 📚 Taxonomy of Learning Paradigms and the Benchmark Model Zoo
+
+To guide the benchmark design and clarify the methodological landscape, we categorize existing works into a structured taxonomy and construct a comprehensive model suite for evaluation. The taxonomy, summarizing the paradigms, their principles, and characteristics, is presented in Table 3.
 
 <p align="center"><b>Table 3: Taxonomy of learning paradigms and the benchmark model zoo</b></p>
 
@@ -131,7 +133,7 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 </div>
 
-## STPB Specification and Interpretability Validation
+## 🔍 STPB Specification and Interpretability Validation
 
 To ensure the reproducibility and validity of the interpretability analysis, the construction and validation of STPB proceeds in three clearly defined steps.
 
@@ -195,7 +197,9 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 (3) **STPB captures meaningful differences across models.** Models such as D2MHyper and CrossST achieve higher STPB scores and human ratings, while others are lower, showing that STPB can effectively distinguish interpretability across methods.
 
-## The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
+## 🎯 The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
+
+Based on quantitative insights from our multidimensional diagnostic evaluation, the following evidencebased decision matrix maps practical constraints (e.g., data scarcity, distribution shifts, privacy needs) to suitable learning paradigms. Each recommendation is directly linked to the diagnostic analyses that quantify its tradeoffs, providing a traceable, datadriven selection tool—moving from qualitative advice to empirically grounded guidance.
 
 <p align="center"><b>Table 7: The technical pathway decision matrix for cross-city spatio-temporal traffic prediction</b></p>
 
@@ -214,12 +218,12 @@ To ensure the reproducibility and validity of the interpretability analysis, the
   </thead>
   <tbody>
     <tr>
-      <td align="left">Large distribution shift (Δℳ_shift > 25%)</td>
+      <td align="left">Large distribution shift ($\Delta\mathcal{M}_\text{shift} > 25\%$)</td>
       <td align="left">Optimal accuracy</td>
       <td align="left">Alignment</td>
       <td align="left">D2MHyper</td>
       <td align="left">Needs source data; Unstable training</td>
-      <td align="left">High Δℳ_shift (Figure 8(b))</td>
+      <td align="left">High $\Delta\mathcal{M}_\text{shift}$</td>
     </tr>
     <tr>
       <td align="left">Extreme data scarcity (target training days &lt; 3)</td>
@@ -227,7 +231,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
       <td align="left">Meta-learning</td>
       <td align="left">ST-GFSL</td>
       <td align="left">High meta-training cost; Task-sensitive</td>
-      <td align="left">High latency (Figure 9); Robustness (Section 4.3)</td>
+      <td align="left">High latency; Robustness</td>
     </tr>
     <tr>
       <td align="left">Multi-source data available</td>
@@ -235,7 +239,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
       <td align="left">Pre-training</td>
       <td align="left">CrossST</td>
       <td align="left">High pre-training resource cost</td>
-      <td align="left">High memory use (Figure 9); Robustness (Section 4.3)</td>
+      <td align="left">High memory use; Robustness</td>
     </tr>
     <tr>
       <td align="left">Deployment efficiency critical (latency &lt; 0.5s)</td>
@@ -243,7 +247,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
       <td align="left">Distillation</td>
       <td align="left">FGITrans</td>
       <td align="left">Teacher-dependent</td>
-      <td align="left">Low latency, small size (Figure 9)</td>
+      <td align="left">Low latency, small size</td>
     </tr>
     <tr>
       <td align="left">Privacy constraints (no data sharing)</td>
@@ -251,7 +255,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
       <td align="left">Federated learning</td>
       <td align="left">FedCTPM</td>
       <td align="left">Communication cost; Utility gap</td>
-      <td align="left">Communication overhead and 𝒢_util (Section 4.4)</td>
+      <td align="left">Communication overhead and 𝒢_util</td>
     </tr>
     <tr>
       <td align="left">Ample resources (high compute budget)</td>

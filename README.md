@@ -191,7 +191,7 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 **Results Analysis**
 
-(1) **STPB is now clearly defined.** As shown in Table 4, the prototype bank is constructed via K-means ($K=8$, elbow method) on patterns from PeMS03 + PeMS-BAY, with a $>70\%$ cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
+(1) **STPB is clearly defined.** As shown in Table 4, the prototype bank is constructed via K-means ($K=8$, elbow method) on patterns from PeMS03 + PeMS-BAY, with a $>70\%$ cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
 
 (2) **STPB correlates well with human interpretability.** From Tables 5-6, STPB similarity is strongly aligned with expert ratings (Pearson $r = 0.79$, $p < 0.01$), and the model rankings are fully consistent. This validates STPB as a reliable interpretability proxy.
 

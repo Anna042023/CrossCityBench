@@ -1,6 +1,6 @@
-# 🏙️ CrossCityBench: A Comprehensive Benchmark for Cross-City Spatio-Temporal Traffic Prediction
+# 🏙️ CrossCityBench: A Comprehensive Benchmark for Cross-City Spatio-Temporal Data Management
 
-<img src="https://img.shields.io/badge/Paper-VLDB-blue" alt="Paper">  <img src="https://img.shields.io/badge/Dataset-Public-green" alt="Dataset">
+<img src="https://img.shields.io/badge/Paper-ICDE-blue" alt="Paper">  <img src="https://img.shields.io/badge/Dataset-Public-green" alt="Dataset">
 
 ## 🏆 Contribution
 

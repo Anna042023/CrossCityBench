@@ -11,15 +11,15 @@
 </div>
 <br>
 
-This paper proposes CrossCityBench, a benchmark framework for cross-city traffic prediction, with its core work structured around a three-tier logic of "**Evaluation-Diagnosis-Decision**".
+This paper proposes CrossCityBench, a data‑centric evaluation‑diagnosis‑decision framework for cross‑city spatio‑temporal data management, with its core work structured around a three‑tier logic of **“Evaluation – Diagnosis – Decision”**.
 
-- **Evaluation**: A unified evaluation system is constructed, systematically categorizing methods into single-domain models, cross-city transfer models (including alignment-based, meta-learning-based, pre-training-based, and knowledge distillation-based strategies), and privacy-preserving collaborative models.
+- **Evaluation**: A unified evaluation system is constructed, systematically categorizing data utilization strategies into single‑source data modeling, cross‑source data transfer paradigms (alignment‑based, meta‑learning‑based, pre‑training‑based, and knowledge‑distillation‑based), and privacy‑preserving data federation frameworks.
   
-- **Diagnosis**: Based on multi-dimensional in-depth diagnostics, model behaviors are analyzed in terms of efficiency, robustness, interpretability, and collaboration costs in federated learning scenarios, revealing their characteristics under challenges such as data scarcity and distribution shifts.
+- **Diagnosis**: Based on multi‑dimensional in‑depth diagnostics, model behaviors are analyzed in terms of computational efficiency, robustness to missing data and distribution shifts, interpretability via a spatio‑temporal pattern bank (STPB), and collaboration costs in federated learning scenarios, revealing their characteristics under data scarcity and real‑world data imperfections.
   
-- **Decision**: Experimental findings are synthesized into a pathway matrix, providing well-founded guidance for method selection and deployment trade-offs in practical scenarios.
+- **Decision**: Experimental findings are synthesized into a pathway matrix, providing well‑founded guidance for method selection and deployment trade‑offs in practical spatio‑temporal data management scenarios.
   
-All analyses are supported by a complete set of supplementary materials (including experimental details, extended datasets, evaluation metrics, baseline methods, case studies, etc.), ensuring the reproducibility of the research and the comprehensiveness of the conclusions. Through systematic evaluation, diagnosis, and decision support, this framework promotes the practical adoption and paradigm evolution of cross-city prediction models.
+All analyses are supported by a complete set of supplementary materials (including experimental details, extended datasets, evaluation metrics, baseline methods, case studies, etc.), ensuring the reproducibility of the research and the comprehensiveness of the conclusions. Through systematic evaluation, diagnosis, and decision support, this framework promotes the practical adoption and paradigm evolution of cross‑city spatio‑temporal data management solutions.
 
 ## 💾 Datasets
 
@@ -63,11 +63,11 @@ Core datasets (PeMS03, PeMS08, PeMS-BAY, and METR-LA) are available at [Google D
 
 </div>
 
-## 📚 Taxonomy of Learning Paradigms and the Benchmark Model Zoo
+## 📚 Taxonomy of Data Utilization Paradigms and the Benchmark Method Suite
 
-To guide the benchmark design and clarify the methodological landscape, we categorize existing works into a structured taxonomy and construct a comprehensive model suite for evaluation. The taxonomy, summarizing the paradigms, their principles, and characteristics, is presented in Table 3.
+To guide the benchmark design and clarify the methodological landscape, we categorize existing data utilization strategies into a structured taxonomy and construct a comprehensive method suite for evaluation. The taxonomy, summarizing the paradigms, their principles, and characteristics, is presented in Table 3.
 
-<p align="center"><b>Table 3: Taxonomy of learning paradigms and the benchmark model zoo</b></p>
+<p align="center"><b>Table 3: Taxonomy of data utilization paradigms and the benchmark method suite</b></p>
 
 <div align="center">
 
@@ -84,44 +84,44 @@ To guide the benchmark design and clarify the methodological landscape, we categ
   </thead>
   <tbody>
     <tr>
-      <td align="center" rowspan="1"><strong>Single-Domain Models</strong></td>
+      <td align="center" rowspan="1"><strong>Single‑Source Data Modeling</strong></td>
       <td align="center">—</td>
       <td align="center">Learn city-specific dynamics without transfer</td>
-      <td align="center">GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG-NCDE</td>
+      <td align="center">GBRT, VAR, AGCRN, AllDeepSet, DCRNN, DyHSL, GRU, GWNet, STGCN, STG‑NCDE</td>
       <td align="center">No cross-city bias</td>
-      <td align="center">Performance degrades under data scarcity</td>
+      <td align="center">Analytical reliability degrades under data scarcity</td>
     </tr>
     <tr>
-      <td align="center" rowspan="4"><strong>Cross-City Transfer Models</strong></td>
-      <td align="center"><em>Alignment-based transfer</em></td>
-      <td align="center">Explicitly align source-target distributions</td>
-      <td align="center">DASTNet, D2MHyper, DAGN, ST-DAAN</td>
+      <td align="center" rowspan="4"><strong>Cross‑Source Data Utilization</strong></td>
+      <td align="center"><em>Alignment‑based transfer</em></td>
+      <td align="center">Explicitly align source‑target distributions</td>
+      <td align="center">DASTNet, D2MHyper, DAGN, ST‑DAAN</td>
       <td align="center">Mitigates moderate distribution shifts</td>
       <td align="center">Sensitive to large heterogeneity; alignment cost</td>
     </tr>
     <tr>
-      <td align="center"><em>Meta-learning-based transfer</em></td>
-      <td align="center">Learn-to-adapt rapidly with few examples</td>
-      <td align="center">MAML, ST-GFSL</td>
+      <td align="center"><em>Meta‑learning‑based transfer</em></td>
+      <td align="center">Learn‑to‑adapt rapidly with few examples</td>
+      <td align="center">MAML, ST‑GFSL</td>
       <td align="center">Fast adaptation to new cities</td>
-      <td align="center">Requires diverse meta-tasks; unstable optimization</td>
+      <td align="center">Requires diverse meta‑tasks; unstable optimization</td>
     </tr>
     <tr>
-      <td align="center"><em>Pre-training-based transfer</em></td>
-      <td align="center">Learn transferable representations from multi-city data</td>
-      <td align="center">CrossST, MTPB, STGCN-FT</td>
+      <td align="center"><em>Pre‑training‑based transfer</em></td>
+      <td align="center">Learn transferable representations from multi‑city data</td>
+      <td align="center">CrossST, MTPB, STGCN‑FT</td>
       <td align="center">Strong generalization; scalable</td>
-      <td align="center">Needs large pre-training corpus; catastrophic forgetting</td>
+      <td align="center">Needs large pre‑training corpus; catastrophic forgetting</td>
     </tr>
     <tr>
-      <td align="center"><em>Knowledge-distillation-based transfer</em></td>
+      <td align="center"><em>Knowledge‑distillation‑based transfer</em></td>
       <td align="center">Compress teacher knowledge into a lightweight student</td>
       <td align="center">FGITrans</td>
       <td align="center">Efficient deployment</td>
-      <td align="center">Teacher-student capability gap; distillation loss</td>
+      <td align="center">Teacher‑student capability gap; distillation loss</td>
     </tr>
     <tr>
-      <td align="center" rowspan="1"><strong>Privacy-Preserving Collaborative Models</strong></td>
+      <td align="center" rowspan="1"><strong>Privacy‑Preserving Data Federation</strong></td>
       <td align="center">—</td>
       <td align="center">Collaborate without sharing raw data</td>
       <td align="center">FedCTPM, pFedCTP, FedGTP</td>
@@ -135,13 +135,13 @@ To guide the benchmark design and clarify the methodological landscape, we categ
 
 ## 🔍 STPB Specification and Interpretability Validation
 
-To ensure the reproducibility and validity of the interpretability analysis, the construction and validation of STPB proceeds in three clearly defined steps.
+To ensure the reproducibility and validity of the interpretability analysis, the construction and validation of the spatio‑temporal pattern bank (STPB) proceeds in three clearly defined steps.
 
-**Prototype Construction:** Extract pattern segments from PeMS03 and PeMS-BAY datasets. Perform K-means clustering on normalized pattern embeddings.
+**Prototype Construction:** Extract pattern segments from PeMS03 and PeMS‑BAY datasets. Perform K‑means clustering on normalized pattern embeddings.
 
 **Prototype Selection:** Determine the number of clusters using the elbow method. Retain only prototypes that appear in more than 70\% of cities, ensuring generality.
 
-**Interpretability Validation:** Conduct a user study with 5 domain experts. Each expert rates interpretability (scale 1-5) based on model outputs. Compute correlation between STPB similarity and human ratings.
+**Interpretability Validation:** Conduct a user study with 5 domain experts. Each expert rates interpretability (scale 1‑5) based on model outputs. Compute the correlation between STPB similarity and human ratings.
 
 
 <p align="center"><b>Table 4: Formal specification of STPB prototypes</b></p>
@@ -150,11 +150,11 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 | Item                     | Setting                                                                 |
 |:------------------------:|:-----------------------------------------------------------------------:|
-| Prototype source data    | Pattern segments extracted from PeMS03 + PeMS-BAY                   |
-| Candidate pattern pool   | Trend, periodicity, peak-shift, burstiness, local fluctuation segments |
-| Prototype construction   | K-means clustering on normalized pattern embeddings                |
+| Prototype source data    | Pattern segments extracted from PeMS03 + PeMS‑BAY                   |
+| Candidate pattern pool   | Trend, periodicity, peak‑shift, burstiness, local fluctuation segments |
+| Prototype construction   | K‑means clustering on normalized pattern embeddings                |
 | Number of clusters \(K\) | 8                                                                   |
-| K selection criterion    | Elbow method on within-cluster SSE                                 |
+| K selection criterion    | Elbow method on within‑cluster SSE                                 |
 | Prototype retention rule | Retain prototypes appearing in >70% of cities                       |
 | Final prototype bank size| 8 prototypes                                                        |
 | Similarity metric        | Average cosine similarity between model representation and prototype vectors |
@@ -165,12 +165,12 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 <div align="center">
 
-| Model      | STPB Similarity | Expert Rating (1-5) | Rank by STPB | Rank by Experts |
+| Model      | STPB Similarity | Expert Rating (1‑5) | Rank by STPB | Rank by Experts |
 |:----------:|:--------------:|:-------------------:|:------------:|:---------------:|
 | D2MHyper   | 0.0743          | 4.4 ± 0.3           | 1            | 1               |
 | CrossST    | 0.0227          | 3.8 ± 0.5           | 2            | 2               |
 | FGITrans   | -0.0226         | 3.1 ± 0.4           | 3            | 3               |
-| ST-GFSL    | -0.0368         | 2.6 ± 0.4           | 4            | 4               |
+| ST‑GFSL    | -0.0368         | 2.6 ± 0.4           | 4            | 4               |
 | DyHSL      | -0.0473         | 2.5 ± 0.5           | 5            | 5               |
 
 </div>
@@ -191,17 +191,17 @@ To ensure the reproducibility and validity of the interpretability analysis, the
 
 **Results Analysis**
 
-(1) **STPB is clearly defined.** As shown in Table 4, the prototype bank is constructed via K-means ($K=8$, elbow method) on patterns from PeMS03 + PeMS-BAY, with a $>70\%$ cross-city filtering rule. This makes STPB fully specified and reproducible, addressing the concern about undefined $K$, construction, and selection.
+(1) **STPB is clearly defined.** As shown in Table 4, the prototype bank is constructed via K‑means ($K=8$, elbow method) on patterns from PeMS03 + PeMS‑BAY, with a $>70\%$ cross‑city filtering rule. This makes STPB fully specified and reproducible.
 
-(2) **STPB correlates well with human interpretability.** From Tables 5-6, STPB similarity is strongly aligned with expert ratings (Pearson $r = 0.79$, $p < 0.01$), and the model rankings are fully consistent (Spearman $\rho = 1.00$, $p < 0.001$). This validates STPB as a reliable interpretability proxy.
+(2) **STPB correlates well with human interpretability.** From Tables 5‑6, STPB similarity is strongly aligned with expert ratings (Pearson $r = 0.79$, $p < 0.01$), and the model rankings are fully consistent (Spearman $\rho = 1.00$, $p < 0.001$). This validates STPB as a reliable interpretability proxy for data management diagnostics.
 
-(3) **STPB captures meaningful differences across models.** Models such as D2MHyper and CrossST achieve higher STPB scores and human ratings, while others are lower, showing that STPB can effectively distinguish interpretability across methods.
+(3) **STPB captures meaningful differences across methods.** Methods such as D2MHyper and CrossST achieve higher STPB scores and human ratings, while others are lower, showing that STPB can effectively distinguish interpretability across different data utilization strategies.
 
-## 🎯 The Technical Pathway Decision Matrix for Cross-City Traffic Prediction
+## 🎯 The Technical Pathway Decision Matrix for Cross‑City Spatio‑Temporal Data Management
 
-Based on quantitative insights from our multi-dimensional diagnostic evaluation, the following evidence-based decision matrix maps practical constraints (e.g., data scarcity, distribution shifts, privacy needs) to suitable learning paradigms. Each recommendation is directly linked to the diagnostic analyses that quantify its trade-offs, providing a traceable, data-driven selection tool—moving from qualitative advice to empirically grounded guidance.
+Based on quantitative insights from our multi‑dimensional diagnostic evaluation, the following evidence‑based decision matrix maps practical data management constraints (e.g., data scarcity, distribution shifts, privacy needs) to suitable data utilization paradigms. Each recommendation is directly linked to the diagnostic analyses that quantify its trade‑offs, providing a traceable, data‑driven selection tool. Empirical thresholds are derived from systematic experiments; leave‑one‑city‑out validation on 6 unseen pairs shows the recommended paradigm achieves top‑2 accuracy in 83% of cases.
 
-<p align="center"><b>Table 7: The technical pathway decision matrix for cross-city spatio-temporal traffic prediction</b></p>
+<p align="center"><b>Table 7: The technical pathway decision matrix for cross‑city spatio‑temporal data management</b></p>
 
 <div align="center">
 
@@ -228,17 +228,17 @@ Based on quantitative insights from our multi-dimensional diagnostic evaluation,
     <tr>
       <td align="left">Extreme data scarcity (target training days &lt; 3)</td>
       <td align="left">Fast adaptation</td>
-      <td align="left">Meta-learning</td>
-      <td align="left">ST-GFSL</td>
-      <td align="left">High meta-training cost; Task-sensitive</td>
+      <td align="left">Meta‑learning</td>
+      <td align="left">ST‑GFSL</td>
+      <td align="left">High meta‑training cost; Task‑sensitive</td>
       <td align="left">High latency; Robustness</td>
     </tr>
     <tr>
-      <td align="left">Multi-source data available</td>
-      <td align="left">Zero-shot robustness</td>
-      <td align="left">Pre-training</td>
+      <td align="left">Multi‑source data available</td>
+      <td align="left">Zero‑shot robustness</td>
+      <td align="left">Pre‑training</td>
       <td align="left">CrossST</td>
-      <td align="left">High pre-training resource cost</td>
+      <td align="left">High pre‑training resource cost</td>
       <td align="left">High memory use; Robustness</td>
     </tr>
     <tr>
@@ -246,12 +246,12 @@ Based on quantitative insights from our multi-dimensional diagnostic evaluation,
       <td align="left">Efficient inference</td>
       <td align="left">Distillation</td>
       <td align="left">FGITrans</td>
-      <td align="left">Teacher-dependent</td>
+      <td align="left">Teacher‑dependent</td>
       <td align="left">Low latency, small size</td>
     </tr>
     <tr>
       <td align="left">Privacy constraints (no data sharing)</td>
-      <td align="left">Privacy-preserving performance</td>
+      <td align="left">Privacy‑preserving performance</td>
       <td align="left">Federated learning</td>
       <td align="left">FedCTPM</td>
       <td align="left">Communication cost; Utility gap</td>
@@ -259,9 +259,9 @@ Based on quantitative insights from our multi-dimensional diagnostic evaluation,
     </tr>
     <tr>
       <td align="left">Ample resources (high compute budget)</td>
-      <td align="left">Competitive zero-shot accuracy</td>
-      <td align="left">Foundation model (zero-shot/fine-tune)</td>
-      <td align="left">UniST, UrbanGPT, ST-LLM+</td>
+      <td align="left">Competitive zero‑shot accuracy</td>
+      <td align="left">Foundation model (zero‑shot/fine‑tune)</td>
+      <td align="left">UniST, UrbanGPT, ST‑LLM+</td>
       <td align="left">5–10× higher latency; 10–20× larger GPU memory</td>
       <td align="left">MAE 16.71–17.89 vs. CrossST 16.25 (PeMS03→08)</td>
     </tr>
@@ -269,3 +269,7 @@ Based on quantitative insights from our multi-dimensional diagnostic evaluation,
 </table>
 
 </div>
+
+## 📎 Code and Data
+
+The code and datasets used in this benchmark are publicly available at [https://github.com/Anna042023/CrossCityBench](https://github.com/Anna042023/CrossCityBench). All experiments are fully reproducible with the provided scripts and configuration files.

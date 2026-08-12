@@ -286,7 +286,7 @@ Code, data, and documentation: https://github.com/Anna042023/CrossCityBench.
 
 CrossCityBench is not a database engine or a query‑processing system. Its novelty does not lie in a new forecasting algorithm. Instead, it introduces a unified benchmark‑level evaluation capability for comparing cross‑city spatio‑temporal data‑utilization paradigms under identical, operationally realistic conditions. The contribution is structured in three layers.
 
-**Layer 1: Unified evaluation protocol.** Prior studies evaluate different paradigms on heterogeneous datasets, with inconsistent prediction horizons, target‑data budgets, and normalization procedures. CrossCityBench standardises these elements: all 23 methods listed in Table III use the same 12‑step input, 12‑step output configuration, a fixed 3‑day target training window, Z‑score normalization computed from the training split only, and identical random seeds. This eliminates the confounding effect of differing experimental setups and makes cross‑paradigm comparison fair for the first time.
+**Layer 1: Unified evaluation protocol.** Prior studies evaluate different paradigms on heterogeneous datasets, with inconsistent prediction horizons, target‑data budgets, and normalization procedures. CrossCityBench standardises these elements: all 23 methods listed in Table III use the same 12‑step input, 12‑step output configuration, a fixed 7‑day target training window, Z‑score normalization computed from the training split only, and identical random seeds. This eliminates the confounding effect of differing experimental setups and makes cross‑paradigm comparison fair for the first time.
 
 **Layer 2: Multi‑dimensional diagnosis beyond accuracy.** Existing benchmarks typically report only point‑forecast accuracy (MAE, RMSE, MAPE). CrossCityBench adds five complementary diagnostic dimensions. Computational efficiency is captured through training time, inference latency, GPU memory footprint, and model size. Robustness is measured via degradation under controlled missing‑data ratios (10%–50%) and under heterogeneous versus homogeneous city‑pair shifts. Interpretability is quantified through the Spatio‑Temporal Pattern Bank (STPB), a learned reference space of recurring traffic patterns that measures how well a model’s internal representations align with these canonical patterns. Federated collaboration cost is expressed as communication overhead (MB) and utility gap (ΔMAE relative to centralized training). The resulting profile reveals deployment‑relevant characteristics that a pure accuracy table cannot show.
 
@@ -301,9 +301,9 @@ Taken together, these three layers define the data‑management contribution of 
 The revised manuscript will include a new Diagnostic Discussion section that draws out benchmark‑level findings that are not visible from accuracy alone. Four findings, supported by the existing experimental data, collectively demonstrate why accuracy is insufficient for selecting a cross‑city data‑utilization paradigm.
 
 ### Finding 1: Cross‑city transfer is not uniformly beneficial.
-Under extreme data scarcity (3 days of target training data), only two transfer paradigms consistently outperform the strongest single‑source baselines on both traffic flow and speed tasks. The following table synthesises the relevant numbers from the original Tables IV and V (whose captions will be corrected from 7 days to 3 days).
+Under extreme data scarcity (7 days of target training data), only two transfer paradigms consistently outperform the strongest single‑source baselines on both traffic flow and speed tasks. The following table synthesises the relevant numbers from the original Tables IV and V (whose captions will be corrected from 3 days to 7 days).
 
-**Table: Cross‑city transfer performance under 3‑day scarcity.**
+**Table: Cross‑city transfer performance under 7‑day scarcity.**
 
 | Task | Best single‑source MAE | D2MHyper MAE | CrossST MAE | Other transfer methods |
 |------|------------------------|--------------|-------------|------------------------|
@@ -362,7 +362,7 @@ All methods currently share one configuration (learning rate 0.001, batch size 1
 
 ### Methodological details.
 The following elements, which were absent or underspecified in the original submission, will be added to Section IV‑A and to the relevant definitions.
-- **Data split.** A precise chronological 70/10/20 (training/validation/test) split will be described. The 3‑day target training window corresponds to the first three days of the training portion, not a random sample.
+- **Data split.** A precise chronological 70/10/20 (training/validation/test) split will be described. The 7‑day target training window corresponds to the first seven days of the training portion, not a random sample.
 - **Validation usage.** Validation sets are used for early stopping in all centralized methods; the stopping criterion will be stated explicitly.
 - **Compatibility matrix.** A new table will indicate which paradigm–dataset combinations are valid. For example, federated methods require multiple clients and are therefore evaluated only in the multi‑source setting, while single‑source methods cannot handle cross‑city transfers involving structural mismatches.
 - **Source‑data usage.** For each paradigm, we will describe exactly how source data are utilized during training versus inference, distinguishing between scenarios that require ongoing source‑data access (alignment) and those that only need the source data during a pre‑training phase.
@@ -390,7 +390,7 @@ We will also add “Data Category” and “Geographic Region” columns to Tabl
 We sincerely apologize for the incorrect references. All citations will be corrected so that each baseline method points to the paper that introduced it. Unrelated text‑to‑SQL and vector‑DB citations that appeared in the introduction will be removed.
 
 ### Training data amount.
-The core experimental setting uses 3 days of target training data, not 7 days. The captions of Tables IV and V incorrectly state 7 days; they will be corrected to 3 days. The text describing the scarcity regime will be unified accordingly.
+The core experimental setting uses 7 days of target training data, not 3 days. The captions of Tables IV and V incorrectly state 3 days; they will be corrected to 7 days. The text describing the scarcity regime will be unified accordingly.
 
 ### Claim about transfer versus single‑source.
 The original claim that “most transfer paradigms outperform single‑source” is not supported by the tables. As shown in Finding 1 (Table 1 above), only D2MHyper and CrossST consistently beat the best single‑source baseline on both tasks. We will replace the sweeping statement with the accurate, nuanced finding: under extreme scarcity, only alignment and pre‑training deliver consistent accuracy improvements over strong no‑transfer models; other paradigms offer complementary benefits such as efficiency or privacy, but they do not always improve accuracy.
@@ -414,7 +414,7 @@ For a consolidated view of all factual corrections described above, the followin
 
 | Issue | Original text | Corrected text | Reference |
 |-------|---------------|----------------|-----------|
-| Training data amount | Table IV/V captions state 7‑day training data | 3‑day target training data | Section IV‑A, Tables IV, V |
+| Training data amount | Table IV/V captions state 3‑day training data | 7‑day target training data | Section IV‑A, Tables IV, V |
 | Transfer vs. single‑source claim | “Most transfer paradigms outperform single‑source” | Only alignment (D2MHyper) and pre‑training (CrossST) consistently beat the best no‑transfer baseline | Section IV‑B1 |
 | Shenzhen DASTNet vs. DCRNN | “DASTNet consistently outperforms DCRNN” | DASTNet slightly worse; ST‑GFSL best overall | Table VII |
 | FedCTPM recommendation | FedCTPM recommended for privacy‑preserving scenarios | FedGTP (utility gap 0.1327, comm. 0.1106 MB) is preferred; FedCTPM retained as baseline | Table XI |

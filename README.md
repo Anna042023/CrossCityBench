@@ -274,7 +274,7 @@ Based on quantitative insights from our multi‑dimensional diagnostic evaluatio
 
 The code and datasets used in this benchmark are publicly available at [https://github.com/Anna042023/CrossCityBench](https://github.com/Anna042023/CrossCityBench). All experiments are fully reproducible with the provided scripts and configuration files.
 
-# 🆕 CrossCityBench Revision Notes — ICDE 2027
+# CrossCityBench Revision Notes — ICDE 2027
 
 These notes accompany the revised manuscript *CrossCityBench: A Comprehensive Benchmark for Cross‑City Spatio‑Temporal Data Management* (ICDE 2027).  
 We expand upon the rebuttal clarifications with precise evidence extracted from the original manuscript, highlighting the logical connections between each component and the overall data‑management contribution.  
@@ -301,7 +301,9 @@ Taken together, these three layers define the data‑management contribution of 
 The revised manuscript will include a new Diagnostic Discussion section that draws out benchmark‑level findings that are not visible from accuracy alone. Four findings, supported by the existing experimental data, collectively demonstrate why accuracy is insufficient for selecting a cross‑city data‑utilization paradigm.
 
 ### Finding 1: Cross‑city transfer is not uniformly beneficial.
-Under extreme data scarcity (3 days of target training data), only two transfer paradigms consistently outperform the strongest single‑source baselines on both traffic flow and speed tasks. Table 1 synthesises the relevant numbers from the original Tables IV and V (whose captions will be corrected from 7 days to 3 days).
+Under extreme data scarcity (3 days of target training data), only two transfer paradigms consistently outperform the strongest single‑source baselines on both traffic flow and speed tasks. The following table synthesises the relevant numbers from the original Tables IV and V (whose captions will be corrected from 7 days to 3 days).
+
+**Table: Cross‑city transfer performance under 3‑day scarcity.**
 
 | Task | Best single‑source MAE | D2MHyper MAE | CrossST MAE | Other transfer methods |
 |------|------------------------|--------------|-------------|------------------------|
@@ -311,7 +313,9 @@ Under extreme data scarcity (3 days of target training data), only two transfer 
 These results show that meta‑learning, knowledge distillation, and several alignment baselines do not beat the best model trained only on the scarce target data. Therefore, the usefulness of external data is conditional on the utilization paradigm. This finding directly challenges the commonly held assumption that more external data necessarily improves target performance.
 
 ### Finding 2: Robustness and accuracy are decoupled.
-Table 2 summarizes the distribution‑shift degradation (ΔMshift) reported in Fig. 5(b) of the manuscript. A lower value indicates better resilience to cross‑city heterogeneity.
+The following table summarizes the distribution‑shift degradation (ΔMshift) reported in Fig. 5(b) of the manuscript. A lower value indicates better resilience to cross‑city heterogeneity.
+
+**Table: Distribution‑shift degradation (ΔMshift) across paradigms.**
 
 | Paradigm | Method | ΔMshift |
 |----------|--------|---------|
@@ -324,7 +328,9 @@ Table 2 summarizes the distribution‑shift degradation (ΔMshift) reported in F
 Pre‑training achieves near‑zero degradation, while the most accurate alignment method (D2MHyper) experiences the largest shift sensitivity. Distillation remains stable despite not being the top‑accuracy option. These divergences mean that a practitioner cannot assume that the best‑accuracy method will also be the most robust under changing city conditions; rather, robustness and accuracy must be evaluated and traded off explicitly.
 
 ### Finding 3: Federated methods reveal a clear utility–communication trade‑off.
-The three federated strategies evaluated in Table VI and Fig. 7 of the manuscript form a distinct frontier, summarised in Table 3.
+The three federated strategies evaluated in Table VI and Fig. 7 of the manuscript form a distinct frontier, summarised in the following table.
+
+**Table: Federated learning utility–communication trade‑off.**
 
 | Method | Utility gap (ΔMAE) | Communication cost (MB) |
 |--------|--------------------|--------------------------|
@@ -402,9 +408,9 @@ The original decision matrix (Table XI in the manuscript) contained two incorrec
 ### Additional corrections.
 The missing isolated local training results will be added to Fig. 7, providing the lower bound for the federated analysis. The apparent contradiction in ST‑GFSL’s ranking (worst in the few‑shot setting of Tables IV–V, best in the multi‑source setting of Table VII) will be discussed in terms of meta‑learning’s dependence on diverse source tasks, thereby turning a potential inconsistency into an informative benchmark observation.
 
-For a consolidated view of all factual corrections described above, Table 4 provides a concise cross‑reference between each original issue and its corresponding revision.
+For a consolidated view of all factual corrections described above, the following table provides a concise cross‑reference between each original issue and its corresponding revision.
 
-**Table 4. Summary of factual corrections in the revised manuscript.**
+**Table: Summary of factual corrections in the revised manuscript.**
 
 | Issue | Original text | Corrected text | Reference |
 |-------|---------------|----------------|-----------|
@@ -419,9 +425,9 @@ For a consolidated view of all factual corrections described above, Table 4 prov
 | Unrelated text‑to‑SQL/vector‑DB citations | Present in introduction | Removed | Introduction |
 
 ### Traceability of the decision matrix.
-To address the concern that the decision matrix is a qualitative summary, we will make every entry in Table XI explicitly traceable to the specific figures, tables, and metric values that support it. This transforms the matrix from a heuristic guide into a verifiable, evidence‑grounded decision aid. Table 5 maps each row of the revised decision matrix to its supporting quantitative evidence and, where applicable, the correction applied.
+To address the concern that the decision matrix is a qualitative summary, we will make every entry in Table XI explicitly traceable to the specific figures, tables, and metric values that support it. This transforms the matrix from a heuristic guide into a verifiable, evidence‑grounded decision aid. The following table maps each row of the revised decision matrix to its supporting quantitative evidence and, where applicable, the correction applied.
 
-**Table 5. Traceability mapping for the revised decision matrix (Table XI).**
+**Table: Traceability mapping for the revised decision matrix (Table XI).**
 
 | Constraint | Recommended paradigm | Key quantitative evidence | Supporting reference | Correction applied |
 |------------|----------------------|--------------------------|----------------------|-------------------|
@@ -460,7 +466,7 @@ Collectively, the revision reframes CrossCityBench as a reproducible, evidence�
 - A new Diagnostic Discussion presenting benchmark‑level findings not visible from accuracy alone, together with mechanistic analysis and dataset‑characteristic stratification.
 - Statistical re‑runs with multiple seeds, hyper‑parameter sensitivity analysis, and the addition of isolated local training results.
 - Expanded cross‑city experiments on inter‑regional transfer pairs with matched task semantics, establishing a two‑tier validity framework.
-- Full correction of citation errors, factual claims, and decision‑matrix entries, making every recommendation traceable to the underlying quantitative evidence, as detailed in Tables 4 and 5.
+- Full correction of citation errors, factual claims, and decision‑matrix entries, making every recommendation traceable to the underlying quantitative evidence, as detailed in the summary and traceability tables.
 - Completion of all missing code, including the seven baseline implementations and the STPB module, together with a unified benchmark runner and environment specification.
 
 These revisions directly address the reviewers’ concerns on novelty, analytical depth, experimental rigor, cross‑city validity, reproducibility, and ICDE relevance. We hope that the revised manuscript will be found suitable for publication.

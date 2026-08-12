@@ -274,7 +274,7 @@ Based on quantitative insights from our multi‑dimensional diagnostic evaluatio
 
 The code and datasets used in this benchmark are publicly available at [https://github.com/Anna042023/CrossCityBench](https://github.com/Anna042023/CrossCityBench). All experiments are fully reproducible with the provided scripts and configuration files.
 
-# CrossCityBench Revision Notes — ICDE 2027
+# 🆕 CrossCityBench Revision Notes — ICDE 2027
 
 These notes accompany the revised manuscript *CrossCityBench: A Comprehensive Benchmark for Cross‑City Spatio‑Temporal Data Management* (ICDE 2027).  
 We expand upon the rebuttal clarifications with precise evidence extracted from the original manuscript, highlighting the logical connections between each component and the overall data‑management contribution.  
